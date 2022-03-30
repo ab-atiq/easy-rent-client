@@ -1,13 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import Appbar from './pages/Shared/Appbar/Appbar';
+import Home from './pages/Home/Home/Home';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+
+          <Route path='/home' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <header className="App-header">
         <Counter />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -50,7 +58,7 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
+      </header> */}
     </div>
   );
 }
