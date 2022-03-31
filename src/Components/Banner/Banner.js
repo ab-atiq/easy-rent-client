@@ -9,11 +9,12 @@ import "./Banner.css";
 
 // import required modules
 import { Pagination } from "swiper";
-
+import { Box } from "@mui/system";
 
 const Banner = () => {
-    return (
-        <>
+  return (
+    <>
+      <Box sx={{ textAlign: "center", m: 1 }}>Center aligned text.</Box>
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -21,17 +22,38 @@ const Banner = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide> <img style={{ width:'100%', height:'550px'}} src="https://i.ibb.co/mqqvx1X/pexels-mike-136872.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img style={{ width:'100%', height:'550px'}} src="https://i.ibb.co/h79szJF/pexels-sourav-mishra-2710043.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img style={{ width:'100%', height:'550px'}} src="https://i.ibb.co/6wNmYDJ/pexels-aaron-curtis-119435.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img style={{ width:'100%', height:'550px'}} src="https://i.ibb.co/fG7fRfL/pexels-mike-120049.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img style={{ width:'100%', height:'550px'}} src="https://i.ibb.co/6J83Qz0/pexels-pixabay-358070.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img style={{ width:'100%', height:'550px'}} src="https://i.ibb.co/8sYMnRB/pexels-mike-116675.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide> <img style={{ width:'100%', height:'550px'}} src="https://i.ibb.co/hBnkLGJ/pexels-mike-170811.jpg" alt="" /></SwiperSlide>
-        
+        <SwiperSlide>
+          {" "}
+          <img
+            style={{ width: "80%", height: "550px" }}
+            src="https://i.ibb.co/Gck3SHm/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-1.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px" }}
+            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-Model-S-PNG-Pic.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px" }}
+            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-PNG-Free-Image.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px", }}
+            src="https://pngimg.com/uploads/tesla_car/tesla_car_PNG3.png"
+            alt=""
+          />
+        </SwiperSlide>
       </Swiper>
     </>
-    );
+  );
 };
 
 export default Banner;
