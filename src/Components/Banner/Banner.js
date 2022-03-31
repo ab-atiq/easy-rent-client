@@ -14,7 +14,7 @@ import { Box } from "@mui/system";
 const Banner = () => {
   return (
     <>
-      <Box sx={{ textAlign: "center", m: 1 }}>Center aligned text.</Box>
+     
       <Swiper
         pagination={{
           dynamicBullets: true,
