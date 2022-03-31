@@ -6,16 +6,14 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Banner from './Components/Banner/Banner';
+import Home from './Components/Banner/Home/Home';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Banner />}/>
- 
-      
+      <Route path="/" element={<Home />}/>
     </Routes>
   </BrowserRouter>,
     </div>
