@@ -32,15 +32,16 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            style={{ width: "80%", height: "550px" }}
-            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-Model-S-PNG-Pic.png"
+            style={{ width: "80%", height: "550px", }}
+            src="https://www.pngkey.com/png/full/662-6622854_mercedes-benz-cls-500-black-car-png-image.png"
             alt=""
           />
         </SwiperSlide>
+        
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
-            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-PNG-Free-Image.png"
+            src="https://freepngimg.com/thumb/audi/165305-suv-sports-audi-hq-image-free.png"
             alt=""
           />
         </SwiperSlide>
@@ -48,6 +49,28 @@ const Banner = () => {
           <img
             style={{ width: "80%", height: "550px", }}
             src="https://pngimg.com/uploads/tesla_car/tesla_car_PNG3.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px", }}
+            src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px" }}
+            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-Model-S-PNG-Pic.png"
+            alt=""
+          />
+        </SwiperSlide>
+      
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px", }}
+            src="https://pngimg.com/uploads/audi/audi_PNG99485.png"
             alt=""
           />
         </SwiperSlide>
