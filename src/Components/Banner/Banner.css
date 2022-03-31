@@ -45,3 +45,25 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+@media only screen and (min-width: 200px)  {
+
+img {
+  width: 100% !important;
+  height: 100% !important;
+}
+}
+@media only screen and (min-width: 1133px)  {
+
+img {
+  width: 80% !important;
+  height: 550px !important;
+}
+}
+@media only screen and (min-width: 1400px)  {
+
+img {
+  width: 85% !important;
+  height: 950px !important;
+}
+}
