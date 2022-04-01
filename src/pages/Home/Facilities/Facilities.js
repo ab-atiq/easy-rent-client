@@ -1,43 +1,66 @@
+import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHospital, faHeart, faUser, faAward } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faBriefcaseMedical, faUser, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import './Facilities.css';
 
 const Facilities = () => {
 
     // font awesome
-    const hospital = <FontAwesomeIcon icon={faHospital} />
-    const patients = <FontAwesomeIcon icon={faHeart} />
-    const staff = <FontAwesomeIcon icon={faUser} />
-    const award = <FontAwesomeIcon icon={faAward} />
+    const Car = <FontAwesomeIcon icon={faCar} />
+    const support = <FontAwesomeIcon icon={faBriefcaseMedical} />
+    const user = <FontAwesomeIcon icon={faUser} />
+    const info = <FontAwesomeIcon icon={faCircleInfo} />
 
     return (
-        <div className='available'>
-            <div className="container">
-                <div className="achievement row p-4 mt-5">
-                    <div className="list col-md-3 text-center">
-                        <h2>{hospital}</h2>
-                        <h1>164</h1>
-                        <p>Hospital Rooms</p>
-                    </div>
-                    <div className="list col-md-3 text-center">
-                        <h2>{staff}</h2>
-                        <h1>564</h1>
-                        <p>Qualified Staff</p>
-                    </div>
-                    <div className="list col-md-3 text-center">
-                        <h2>{patients}</h2>
-                        <h1>9542</h1>
-                        <p>Satisfied Patients</p>
-                    </div>
-                    <div className="list col-md-3 text-center">
-                        <h2>{award}</h2>
-                        <h1>741</h1>
-                        <p>Doctors Medals</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Container>
+            <Grid container spacing={2}>
+                <Grid item xs={6} sm={12} md={3}>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h3" component="div">
+                        {Car}
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h5" component="div">
+                        50
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h6" component="div">
+                        Car Available
+                    </Typography>
+                </Grid>
+                <Grid item xs={6} sm={12} md={3}>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h3" component="div">
+                        {user}
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h5" component="div">
+                        15+
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h6" component="div">
+                        Happy Client
+                    </Typography>
+                </Grid>
+                <Grid item xs={6} sm={12} md={3}>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h3" component="div">
+                        {info}
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h5" component="div">
+                        Get 10% off 1 Item
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h6" component="div">
+                        When you sign up
+                    </Typography>
+                </Grid>
+                <Grid item xs={6} sm={12} md={3}>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h3" component="div">
+                        {support}
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h5" component="div">
+                        24/7
+                    </Typography>
+                    <Typography sx={{ fontWeight: 500, m: 2, color: 'white.main' }} variant="h6" component="div">
+                        Our Support
+                    </Typography>
+                </Grid>
+            </Grid>
+        </Container>
     );
 };
 
