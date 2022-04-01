@@ -9,12 +9,7 @@ const Home = () => {
     return (
         <div>
             <Appbar></Appbar>
-<<<<<<< HEAD
-            <Banner></Banner>
-            <AnimationCar></AnimationCar>
-=======
             <Facilities></Facilities>
->>>>>>> md-tanber
         </div>
     );
 };
