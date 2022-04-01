@@ -10,19 +10,11 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <Routes>
-<<<<<<< HEAD
-          <Route path='/' element={<Login />} />
-          <Route path='login' element={<Login />} />
-          <Route path='register' element={<Register />} />
-        </Routes>
-        <Footer></Footer>
-=======
           <Route path='/' exact element={<Home />} />
-          <Route path='/home'  element={<Home />} />
-          <Route path='/aboutus'  element={<Aboutus />} />
-          <Route path='/*'  element={<Notfound />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/aboutus' element={<Aboutus />} />
+          <Route path='/*' element={<Notfound />} />
         </Routes>
->>>>>>> 68faf2b65b6f87a2a787cebc68b43e9bb015fcce
       </BrowserRouter>
     </div>
   );
