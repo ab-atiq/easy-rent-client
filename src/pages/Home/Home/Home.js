@@ -9,6 +9,8 @@ const Home = () => {
     return (
         <div>
             <Appbar></Appbar>
+            <Banner></Banner>
+            <AnimationCar></AnimationCar>
             <Facilities></Facilities>
         </div>
     );
