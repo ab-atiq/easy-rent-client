@@ -1,11 +1,16 @@
 import React from 'react';
+import AnimationCar from '../../../Components/Banner/AnimationCar/AnimationCar';
+import Banner from '../../../Components/Banner/Banner';
 import Appbar from '../../Shared/Appbar/Appbar';
+
 
 const Home = () => {
     return (
         <div>
             <Appbar></Appbar>
-            <h1>this is home</h1>
+            <Banner></Banner>
+            <AnimationCar></AnimationCar>
+
         </div>
     );
 };
