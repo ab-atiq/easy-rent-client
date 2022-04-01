@@ -1,11 +1,12 @@
 import React from 'react';
 import Appbar from '../../Shared/Appbar/Appbar';
+import Hero from '../Hero/Hero';
 
 const Home = () => {
     return (
         <div>
             <Appbar></Appbar>
-            <h1>this is home</h1>
+            <Hero></Hero>
         </div>
     );
 };
