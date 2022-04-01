@@ -1,6 +1,6 @@
 import React from 'react';
-import AnimationCar from '../../../Components/Banner/AnimationCar/AnimationCar';
-import Banner from '../../../Components/Banner/Banner';
+import AnimationCar from '../../../components/Banner/AnimationCar/AnimationCar';
+import Banner from '../../../components/Banner/Banner';
 import Appbar from '../../Shared/Appbar/Appbar';
 
 
