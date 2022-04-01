@@ -10,7 +10,6 @@ const Home = () => {
             <Appbar></Appbar>
             <Banner></Banner>
             <AnimationCar></AnimationCar>
-
         </div>
     );
 };
