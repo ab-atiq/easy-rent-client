@@ -1,5 +1,6 @@
 import React from 'react';
 import AnimationCar from '../../../components/Banner/AnimationCar/AnimationCar';
+import Banner from '../../../Components/Banner/Banner';
 import Appbar from '../../Shared/Appbar/Appbar';
 import Facilities from '../Facilities/Facilities';
 
@@ -7,11 +8,10 @@ import Facilities from '../Facilities/Facilities';
 const Home = () => {
     return (
         <div>
-            <h2>Hello</h2>
-            {/* <Appbar></Appbar> */}
-            {/* <Banner></Banner> */}
-            {/* <AnimationCar></AnimationCar> */}
-
+            <Appbar></Appbar>
+            <Banner></Banner>
+            <AnimationCar></AnimationCar>
+            <Facilities></Facilities>
         </div>
     );
 };
