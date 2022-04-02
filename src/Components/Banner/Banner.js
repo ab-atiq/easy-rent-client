@@ -22,13 +22,13 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          {" "}
           <img
             style={{ width: "80%", height: "550px" }}
-            src="https://i.ibb.co/ry0ckV5/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-4.png"
+            src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
             alt=""
           />
         </SwiperSlide>
+
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
@@ -45,12 +45,14 @@ const Banner = () => {
           />
         </SwiperSlide>
         <SwiperSlide>
+          {" "}
           <img
             style={{ width: "80%", height: "550px" }}
-            src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
+            src="https://i.ibb.co/ry0ckV5/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-4.png"
             alt=""
           />
         </SwiperSlide>
+
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
@@ -58,8 +60,6 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-
-       
       </Swiper>
     </>
   );
