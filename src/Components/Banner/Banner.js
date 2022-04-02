@@ -21,14 +21,14 @@ const Banner = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          {" "}
+           <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
-            src="https://i.ibb.co/ry0ckV5/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-4.png"
+            src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
             alt=""
           />
         </SwiperSlide>
+       
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
@@ -44,17 +44,19 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
-          <img
-            style={{ width: "80%", height: "550px" }}
-            src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
-            alt=""
-          />
-        </SwiperSlide>
+     
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
             src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-Model-S-PNG-Pic.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <img
+            style={{ width: "80%", height: "550px" }}
+            src="https://i.ibb.co/ry0ckV5/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-4.png"
             alt=""
           />
         </SwiperSlide>
