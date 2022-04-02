@@ -1,13 +1,14 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaceSharp } from '@mui/icons-material';
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCar, faBriefcaseMedical, faUser, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+
 import './Facilities.css';
 
 const Facilities = () => {
 
     // font awesome
-    const Car = <FontAwesomeIcon icon={faCar} />
+    const Car = <FontAwesomeIcon icon={FaceSharp} />
     const support = <FontAwesomeIcon icon={faBriefcaseMedical} />
     const user = <FontAwesomeIcon icon={faUser} />
     const info = <FontAwesomeIcon icon={faCircleInfo} />
