@@ -21,14 +21,13 @@ const Banner = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-           <SwiperSlide>
+        <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
             src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
             alt=""
           />
         </SwiperSlide>
-       
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
@@ -44,14 +43,6 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-     
-        <SwiperSlide>
-          <img
-            style={{ width: "80%", height: "550px" }}
-            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-Model-S-PNG-Pic.png"
-            alt=""
-          />
-        </SwiperSlide>
         <SwiperSlide>
           {" "}
           <img
@@ -61,7 +52,13 @@ const Banner = () => {
           />
         </SwiperSlide>
 
-       
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px" }}
+            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-Model-S-PNG-Pic.png"
+            alt=""
+          />
+        </SwiperSlide>
       </Swiper>
     </>
   );
