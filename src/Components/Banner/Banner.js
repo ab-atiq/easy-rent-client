@@ -9,7 +9,6 @@ import "./Banner.css";
 
 // import required modules
 import { Pagination } from "swiper";
-import { Box } from "@mui/system";
 
 const Banner = () => {
   return (
