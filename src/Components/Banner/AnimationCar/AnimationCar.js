@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-// import animationCar from "../../../Asset/animation_car.svg";
+import animationCar from "../../../Asset/animation_car.svg";
 import "./AnimationCar.css";
 
 const AnimationCar = () => {
@@ -22,7 +22,7 @@ const AnimationCar = () => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
-          {/* <img width='100%' height='100%' src={animationCar} alt="" /> */}
+          <img width='100%' height='100%' src={animationCar} alt="" />
         </Grid>
       </Grid>
     </div>
