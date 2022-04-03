@@ -9,11 +9,12 @@ import Facilities from '../Facilities/Facilities';
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Appbar></Appbar>
             <Banner></Banner>
             <AnimationCar></AnimationCar>
             <Facilities></Facilities>
+            
         </div>
     );
 };

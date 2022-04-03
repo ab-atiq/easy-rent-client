@@ -28,7 +28,6 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
