@@ -9,7 +9,7 @@ const Footer = () => {
             Easy <span>Rent</span>
           </h3>
 
-          <p classNameName="footer-links">
+          <p className="footer-links">
             <a href="#">Home</a>
 
             <a href="#">Blog</a>
