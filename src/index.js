@@ -4,7 +4,6 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import 'react-slideshow-image/dist/styles.css'
 
 ReactDOM.render(
   <React.StrictMode>

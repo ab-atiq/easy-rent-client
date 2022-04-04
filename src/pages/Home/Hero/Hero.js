@@ -1,17 +1,17 @@
-import { Button, Grid, TextField, Card, CardContent, Typography } from '@mui/material';
+import React from 'react';
 import { useForm } from "react-hook-form";
+import './Hero.css';
+import { Button, Grid, TextField, Card, CardContent, Typography } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import TimePicker from '@mui/lab/TimePicker';
 import MobileDatePicker from '@mui/lab/MobileDatePicker';
-import React from 'react';
-import './Hero.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Hero = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
+    const [value, setValue] = React.useState(new Date());
 
     const handleChange = (newValue) => {
         setValue(newValue);
@@ -48,7 +48,7 @@ const Hero = () => {
                                         <Stack spacing={3}>
                                             <MobileDatePicker
                                                 {...register("date")}
-                                                label="Date mobile"
+                                                label="Date"
                                                 inputFormat="MM/dd/yyyy"
                                                 value={value}
                                                 onChange={handleChange}

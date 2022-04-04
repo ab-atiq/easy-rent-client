@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Aboutus from './Component/AboutUs/Aboutus';
-import Home from './Component/Home/Home';
 import Notfound from './Component/Shared/NotFound/Notfound';
+import Home from './pages/Home/Home/Home';
 
 function App() {
   return (
