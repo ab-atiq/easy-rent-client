@@ -18,7 +18,7 @@ const Hero = () => {
     };
     const onSubmit = data => {
         console.log(data);
-        reset();
+        // reset();
     };
     return (
         <div className='hero'>
@@ -28,7 +28,7 @@ const Hero = () => {
             <Grid container>
                 <Grid item md={8} style={{margin:'0 auto'}}>
                     <Typography style={{margin:'0 0 30px 0'}} className='title' gutterBottom variant="h5">
-                    <span style={{marginRight:'3rem'}}><FontAwesomeIcon icon="fa-solid fa-check" /> Free cancellations on most bookings </span> <span style={{marginRight:'3rem'}}>60,000+ locations </span> <span style={{marginRight:'3rem'}}> Customer support in 40+ languages </span>
+                    <span style={{marginRight:'3rem'}}> Free cancellations on most bookings </span> <span style={{marginRight:'3rem'}}>60,000+ locations </span> <span style={{marginRight:'3rem'}}> Customer support in 40+ languages </span>
                     </Typography>
                 </Grid>
             </Grid>
