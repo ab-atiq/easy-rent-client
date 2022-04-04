@@ -27,7 +27,7 @@ const Appbar = () => {
           </Typography>
           <NavLink
             style={{ textDecoration: "none", color: "white" }}
-            to="/login"
+            to="/"
           >
             <Button color="inherit">Login</Button>
           </NavLink>
