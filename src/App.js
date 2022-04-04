@@ -1,23 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Aboutus from './Component/AboutUs/Aboutus';
-import Notfound from './Component/Shared/NotFound/Notfound';
+import Footer from './pages/Home/Footer/Footer';
 import Home from './pages/Home/Home/Home';
-import Login from './pages/Shared/Login/Login';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
+
       <BrowserRouter>
         <Routes>
-          <Route path='/' exact element={<Home />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/aboutus' element={<Aboutus />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/*' element={<Notfound />} />
+          <Route path='/' element={<Home />} />
+          {/* <Route path='login' element={<Login />} /> */}
+          {/* <Route path='register' element={<Register />} /> */}
+          <Route path='/' element={<Home />} />
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
+
     </div>
   );
 }
