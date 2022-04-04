@@ -4,6 +4,7 @@ import Banner from '../../Banner/Banner';
 import Appbar from '../../Shared/Appbar/Appbar';
 import Facilities from '../Facilities/Facilities';
 import Hero from '../Hero/Hero';
+import HomeQuestion from '../Question/HomeQuestion';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Hero></Hero>
             <AnimationCar></AnimationCar>
             <Facilities></Facilities>
+            <HomeQuestion />
         </div>
     );
 };
