@@ -58,7 +58,15 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-      </Swiper >
+
+        <SwiperSlide>
+          <img
+            style={{ width: "80%", height: "550px", }}
+            src="https://pngimg.com/uploads/audi/audi_PNG99485.png"
+            alt=""
+          />
+        </SwiperSlide>
+      </Swiper>
     </>
   );
 };

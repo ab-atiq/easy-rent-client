@@ -1,7 +1,8 @@
 import React from 'react';
-import AnimationCar from '../../AnimationCar/AnimationCar';
-import Banner from '../../Banner/Banner';
+import AnimationCar from '../../../Components/AnimationCar/AnimationCar';
+import Banner from '../../../Components/Banner/Banner';
 import Appbar from '../../Shared/Appbar/Appbar';
+import Footer from '../../Shared/Footer/Footer';
 import Facilities from '../Facilities/Facilities';
 import Hero from '../Hero/Hero';
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Hero></Hero>
             <AnimationCar></AnimationCar>
             <Facilities></Facilities>
+            <Footer></Footer>
         </div>
     );
 };
