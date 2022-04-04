@@ -1,0 +1,11 @@
+.login-container{
+    min-height:70vh;
+    margin-top:170px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 16px;
+    padding-left: 80px;
+}
+
+.login-header{
+    text-align: center;
+}
