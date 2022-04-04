@@ -14,7 +14,6 @@ function App() {
           {/* <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} /> */}
         </Routes>
-        <Footer></Footer>
       </BrowserRouter>
     </div>
   );
