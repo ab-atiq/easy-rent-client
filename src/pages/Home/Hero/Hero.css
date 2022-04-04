@@ -1,0 +1,21 @@
+.hero{
+    background-image: url("https://content.skyscnr.com/m/5f1f024b086bcf73/original/Car-hero-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 92vh;
+    padding-top: 3rem;
+
+}
+.title{
+    color: #fff;
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+.form-container{
+    display: flex;
+    background-color: rgb(169, 30, 30);
+    max-width: 450px;
+    margin: 0 auto;
+}

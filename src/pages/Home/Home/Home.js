@@ -1,15 +1,16 @@
 import React from 'react';
-import AnimationCar from '../../../components/Banner/AnimationCar/AnimationCar';
-import Banner from '../../../components/Banner/Banner';
+import AnimationCar from '../../AnimationCar/AnimationCar';
+import Banner from '../../Banner/Banner';
 import Appbar from '../../Shared/Appbar/Appbar';
 import Facilities from '../Facilities/Facilities';
-
+import Hero from '../Hero/Hero';
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Appbar></Appbar>
             <Banner></Banner>
+            <Hero></Hero>
             <AnimationCar></AnimationCar>
             <Facilities></Facilities>
         </div>
