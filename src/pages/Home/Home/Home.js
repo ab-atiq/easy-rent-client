@@ -1,18 +1,18 @@
 import React from 'react';
-// import AnimationCar from '../../../components/Banner/AnimationCar/AnimationCar';
 import Banner from '../../../Components/Banner/Banner';
-// import AnimationCar from '../../../components/Banner/AnimationCar/AnimationCar';
 import Appbar from '../../Shared/Appbar/Appbar';
-// import Facilities from '../Facilities/Facilities';
-
+import AnimationCar from '../../../Components/Banner/AnimationCar/AnimationCar';
+import Services from '../Services/Services';
+import AboutUs from '../../../Components/AboutUs/AboutUs';
 
 const Home = () => {
     return (
         <div>
             <Appbar></Appbar>
             <Banner></Banner>
-            {/* <AnimationCar></AnimationCar> */}
-            {/* <Facilities></Facilities> */}
+            <AnimationCar></AnimationCar>
+            <Services />
+            <AboutUs />
         </div>
     );
 };
