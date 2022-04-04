@@ -13,10 +13,6 @@ import { Pagination } from "swiper";
 const Banner = () => {
   return (
     <>
-<<<<<<< HEAD:src/Components/Banner/Banner.js
-
-=======
->>>>>>> 8a9d8ccfd196baec1c39efb217777198d12b9333:src/pages/Banner/Banner.js
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -31,10 +27,6 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-<<<<<<< HEAD:src/Components/Banner/Banner.js
-
-=======
->>>>>>> 8a9d8ccfd196baec1c39efb217777198d12b9333:src/pages/Banner/Banner.js
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
@@ -66,18 +58,7 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-<<<<<<< HEAD:src/Components/Banner/Banner.js
-
-        <SwiperSlide>
-          <img
-            style={{ width: "80%", height: "550px", }}
-            src="https://pngimg.com/uploads/audi/audi_PNG99485.png"
-            alt=""
-          />
-        </SwiperSlide>
-=======
->>>>>>> 8a9d8ccfd196baec1c39efb217777198d12b9333:src/pages/Banner/Banner.js
-      </Swiper>
+      </Swiper >
     </>
   );
 };
