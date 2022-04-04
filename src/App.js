@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './pages/Home/Footer/Footer';
 import Home from './pages/Home/Home/Home';
-import Question from './pages/Home/Question/Question';
 import Login from './pages/Shared/Login/Login';
 
 function App() {

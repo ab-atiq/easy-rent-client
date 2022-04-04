@@ -3,6 +3,7 @@ import React from 'react';
 import CustomizedAccordions1 from './Accordion/Accordion';
 import CustomizedAccordions2 from './Accordion/Accordion2';
 import CustomizedAccordions3 from './Accordion/Accordion3';
+import CustomizedAccordions4 from './Accordion/Accordion4';
 
 
 
@@ -77,7 +78,7 @@ const Question = () => {
                 <CustomizedAccordions3 />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <CustomizedAccordions1 />
+                <CustomizedAccordions4 />
             </TabPanel>
             <TabPanel value={value} index={4}>
                 <CustomizedAccordions1 />
