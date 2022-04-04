@@ -14,7 +14,7 @@ import { Box } from "@mui/system";
 const Banner = () => {
   return (
     <>
-     
+
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -37,7 +37,7 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-        
+
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
@@ -66,7 +66,7 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
-      
+
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px", }}

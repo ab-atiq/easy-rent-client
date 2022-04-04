@@ -12,10 +12,10 @@ const Footer = () => {
                 <Grid container textAlign='left'>
                     <Grid item xs={12} sm={6} md={3} >
                         <Typography variant='h4'>
-                            Rental
+                            EasyRent
                         </Typography>
                         <br />
-                        <Typography variant='body1' sx={{width:'90%'}}>
+                        <Typography variant='body1' sx={{ width: '90%' }}>
                             We are available for your low-cost best service. We hope you will satisfy with our service.
                         </Typography>
                         <br />
