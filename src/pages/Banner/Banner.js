@@ -13,7 +13,10 @@ import { Pagination } from "swiper";
 const Banner = () => {
   return (
     <>
+<<<<<<< HEAD:src/Components/Banner/Banner.js
 
+=======
+>>>>>>> 8a9d8ccfd196baec1c39efb217777198d12b9333:src/pages/Banner/Banner.js
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -22,17 +25,20 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          {" "}
           <img
             style={{ width: "80%", height: "550px" }}
-            src="https://i.ibb.co/Gck3SHm/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-1.png"
+            src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
             alt=""
           />
         </SwiperSlide>
+<<<<<<< HEAD:src/Components/Banner/Banner.js
+
+=======
+>>>>>>> 8a9d8ccfd196baec1c39efb217777198d12b9333:src/pages/Banner/Banner.js
         <SwiperSlide>
           <img
-            style={{ width: "80%", height: "550px", }}
-            src="https://www.pngkey.com/png/full/662-6622854_mercedes-benz-cls-500-black-car-png-image.png"
+            style={{ width: "80%", height: "550px" }}
+            src="https://pngimg.com/uploads/audi/audi_PNG99485.png"
             alt=""
           />
         </SwiperSlide>
@@ -40,24 +46,19 @@ const Banner = () => {
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
-            src="https://freepngimg.com/thumb/audi/165305-suv-sports-audi-hq-image-free.png"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            style={{ width: "80%", height: "550px", }}
             src="https://pngimg.com/uploads/tesla_car/tesla_car_PNG3.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
+          {" "}
           <img
-            style={{ width: "80%", height: "550px", }}
-            src="https://pngimg.com/uploads/audi/audi_PNG99491.png"
+            style={{ width: "80%", height: "550px" }}
+            src="https://i.ibb.co/ry0ckV5/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-4.png"
             alt=""
           />
         </SwiperSlide>
+
         <SwiperSlide>
           <img
             style={{ width: "80%", height: "550px" }}
@@ -65,6 +66,7 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
+<<<<<<< HEAD:src/Components/Banner/Banner.js
 
         <SwiperSlide>
           <img
@@ -73,6 +75,8 @@ const Banner = () => {
             alt=""
           />
         </SwiperSlide>
+=======
+>>>>>>> 8a9d8ccfd196baec1c39efb217777198d12b9333:src/pages/Banner/Banner.js
       </Swiper>
     </>
   );
