@@ -2,22 +2,13 @@ import { Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Service from "./Service";
-
+import'./Services.css';
 
 const data = [
   {
     _id: "1",
     image: "https://i.ibb.co/K9pH3RG/car-1.png",
     name: "Car One",
-    price: "1500",
-    discountPrice: "800",
-    details:
-      "\nAssociate Medical Director, Center for Bioengineering Innovation and Design, Department of Biomedical Engineering\nAssistant Professor of Medicine",
-  },
-  {
-    _id: "2",
-    image: "https://i.ibb.co/VtksqQw/car-2.png",
-    name: "Car 2",
     price: "1500",
     discountPrice: "800",
     details:
@@ -107,7 +98,6 @@ const data = [
 ];
 
 const Services = () => {
-
   // const [services, setServices] = useState([]);
 
   // useEffect(() => {
@@ -118,14 +108,16 @@ const Services = () => {
 
   return (
     <div>
-      <Box sx={{textAlign:'center', fontSize: '3.5rem'}}> Our services</Box>
-      <Container fixed>
-      {data.map((serviceP) => (
-        <Service  key={serviceP._id} service={serviceP}>
-         
-        </Service>
-      ))}
-        </Container>
+      <Box sx={{ textAlign: "center", fontSize: "3.5rem" }}> Our services</Box>
+      <Container>
+      <Grid container  >
+        {data.map((serviceP) => (
+          <Grid item md={4} xs={6} className="Card" >
+            <Service key={serviceP._id} service={serviceP}></Service>
+          </Grid>
+        ))}
+      </Grid>
+      </Container>
     </div>
   );
 };

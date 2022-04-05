@@ -1,15 +1,14 @@
-import { Grid } from "@mui/material";
-import React from "react";
-
+import * as React from "react";
+import "./Services.css";
 const Service = ({ service }) => {
   const { _id, name, price, image } = service;
   return (
-    <div>
-      <Grid spacing={2}>
-        <Grid item md={3} xs={12}>
-          {name}
-        </Grid>
-      </Grid>
+    <div className="Singel_card">
+      <div >
+        <img className="image_Optimize" src={image} alt="" />
+        <h2>{name}</h2>
+        <h3>{price}</h3>
+      </div>
     </div>
   );
 };

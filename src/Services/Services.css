@@ -1,0 +1,16 @@
+.image_Optimize{
+    width: 100% !important;
+    height: 100% !important;
+    margin: auto;
+    display: block;
+}
+
+.Singel_card{
+  
+    margin: 5px;
+    border: 1px solid greenyellow;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 300px;
+}
