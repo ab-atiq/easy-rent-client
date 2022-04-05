@@ -3,13 +3,13 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
-      <footer class="footer-distributed">
-        <div class="footer-left">
+      <footer className="footer-distributed">
+        <div className="footer-left">
           <h3>
             Easy <span>Rent</span>
           </h3>
 
-          <p class="footer-links">
+          <p className="footer-links">
             <a href="#">Home</a>
 
             <a href="#">Blog</a>
@@ -23,48 +23,48 @@ const Footer = () => {
             <a href="#">Contact</a>
           </p>
 
-          <p class="footer-company-name">Easy Rent &copy; 2022</p>
+          <p className="footer-company-name">Easy Rent &copy; 2022</p>
         </div>
 
-        <div class="footer-center">
+        <div className="footer-center">
           <div>
-            <i class="fa fa-map-marker"></i>
+            <i className="fa fa-map-marker"></i>
             <p>
               <span>200 Revolution Street Dhaka</span> Dhaka , Bangladesh
             </p>
           </div>
 
           <div>
-            <i class="fa fa-phone"></i>
+            <i className="fa fa-phone"></i>
             <p>+18834384933</p>
           </div>
 
           <div>
-            <i class="fa fa-envelope"></i>
+            <i className="fa fa-envelope"></i>
             <p>
               <a href="mailto:support@company.com">teamdevager21@gmail.com </a>
             </p>
           </div>
         </div>
 
-        <div class="footer-right">
-          <p class="footer-company-about">
+        <div className="footer-right">
+          <p className="footer-company-about">
             <span>About the company</span>
             We Provide New Generataion Car for Rent (Easy Rent) .
           </p>
 
-          <div class="footer-icons">
+          <div className="footer-icons">
             <a href="#">
-              <i class="fa fa-facebook"></i>
+              <i className="fa fa-facebook"></i>
             </a>
             <a href="#">
-              <i class="fa fa-twitter"></i>
+              <i className="fa fa-twitter"></i>
             </a>
             <a href="#">
-              <i class="fa fa-linkedin"></i>
+              <i className="fa fa-linkedin"></i>
             </a>
             <a href="#">
-              <i class="fa fa-github"></i>
+              <i className="fa fa-github"></i>
             </a>
           </div>
         </div>

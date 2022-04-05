@@ -47,6 +47,16 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.BannerMain{
+  margin-bottom: 40px;
+  
+}
+.from_design{
+  background-color: #d2d2d6;
+}
+.input_group type{
+  color: #eee;
+}
 
 @media only screen and (min-width: 200px) {
   img {
