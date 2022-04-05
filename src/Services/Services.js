@@ -79,22 +79,14 @@ const data = [
   },
   {
     _id: "9",
-    image: "https://i.ibb.co/zsTVG2N/vehicle-1.png",
-    name: "Car 9",
+    image: "https://i.ibb.co/QcJFyn2/car-6.png",
+    name: "Car 6",
     price: "1500",
     discountPrice: "800",
     details:
       "\nAssociate Medical Director, Center for Bioengineering Innovation and Design, Department of Biomedical Engineering\nAssistant Professor of Medicine",
   },
-  {
-    _id: "10",
-    image: "https://i.ibb.co/WGP14g0/vehicle-3.png",
-    name: "Car 10",
-    price: "1500",
-    discountPrice: "800",
-    details:
-      "\nAssociate Medical Director, Center for Bioengineering Innovation and Design, Department of Biomedical Engineering\nAssistant Professor of Medicine",
-  },
+  
 ];
 
 const Services = () => {
@@ -108,11 +100,11 @@ const Services = () => {
 
   return (
     <div>
-      <Box sx={{ textAlign: "center", fontSize: "3.5rem" }}> Our services</Box>
+      <Box sx={{ textAlign: "center", fontSize: "3.5rem", mb:'70px' }}> Our services</Box>
       <Container>
       <Grid container  >
         {data.map((serviceP) => (
-          <Grid item md={4} xs={6} className="Card" >
+          <Grid item md={4} xs={6} className="Card"  container spacing={1}>
             <Service key={serviceP._id} service={serviceP}></Service>
           </Grid>
         ))}
