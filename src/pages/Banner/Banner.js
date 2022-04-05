@@ -37,46 +37,12 @@ const Banner = () => {
     <>
       <Grid container spacing={2} className='BannerMain'>
         <Grid item md={6} xs={12} sm={12}>
-          <Box sx={{  fontSize: 18, mx: 10 }}>
+          <Box sx={{ fontSize: 18, mx: 10 }}>
             <h1>
               <b style={{ color: "#2196f3" }}> Car Rental </b>
               <span style={{ color: "#FF4F5A" }}>In Bangladesh</span>
             </h1>
 
-<<<<<<< HEAD
-        <SwiperSlide>
-          <img
-            style={{ width: "80%", height: "550px" }}
-            src="https://pngimg.com/uploads/tesla_car/tesla_car_PNG3.png"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <img
-            style={{ width: "80%", height: "550px" }}
-            src="https://i.ibb.co/ry0ckV5/Dark-Purple-and-Orange-Minimalist-Business-Youtube-Channel-Art-4.png"
-            alt=""
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img
-            style={{ width: "80%", height: "550px" }}
-            src="https://www.pngall.com/wp-content/uploads/11/White-Tesla-Model-S-PNG-Pic.png"
-            alt=""
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img
-            style={{ width: "80%", height: "550px", }}
-            src="https://pngimg.com/uploads/audi/audi_PNG99485.png"
-            alt=""
-          />
-        </SwiperSlide>
-      </Swiper>
-=======
             <Card >
               <CardContent className='from_design'>
                 <form onSubmit={handleSubmit(onSubmit)} >
@@ -489,7 +455,6 @@ const Banner = () => {
           </div>
         </Grid>
       </Grid>
->>>>>>> 0d5329469ea019ea8c7df03ff3fbaebaaf9b50ac
     </>
   );
 };

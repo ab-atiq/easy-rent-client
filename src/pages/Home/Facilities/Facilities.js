@@ -1,4 +1,4 @@
-import { faBriefcaseMedical, faCircleInfo, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faBriefcaseMedical, faCircleInfo, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaceSharp } from '@mui/icons-material';
 
@@ -10,7 +10,7 @@ import './Facilities.css';
 const Facilities = () => {
 
     // font awesome
-    const Car = <FontAwesomeIcon icon={FaceSharp} />
+    const Car = <FontAwesomeIcon icon={faCar} />
     const support = <FontAwesomeIcon icon={faBriefcaseMedical} />
     const user = <FontAwesomeIcon icon={faUser} />
     const info = <FontAwesomeIcon icon={faCircleInfo} />
