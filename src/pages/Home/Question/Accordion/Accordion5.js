@@ -46,7 +46,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 
 
-const CustomizedAccordions4 = () => {
+const CustomizedAccordions5 = () => {
     const [expanded, setExpanded] = React.useState('panel1');
 
     const handleChange = (panel) => (event, newExpanded) => {
@@ -57,35 +57,32 @@ const CustomizedAccordions4 = () => {
         <Container sx={{ marginX: "auto" }}>
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                    <Typography>Renting a Car with a Credit Card</Typography>
+                    <Typography>What do I need to hire?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        A credit card must be presented with available credit, in the renter's name. The signature must match the name imprinted on the card and the signature on the car rental agreement. For online reservations, the number and name printed on the card presented must match the name and number stored for the online reservation.
+                        To book your car, all you need is a credit or debit card. When you pick the car up, you'll need:
+                        <ul>
+                            <li>Your voucher / eVoucher, to show that you've paid for the car.</li>
+                            <li>The main driver's credit / debit card, with enough available funds for the car's deposit.</li>
+                            <li>Each driver's full, valid driving licence, which they've held for at least 12 months (often 24).</li>
+                            <li>Your passport and any other ID the car hire company needs to see.</li>
+                        </ul>
                     </Typography>
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                 <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-                    <Typography>What are the payment method of rental system?</Typography>
+                    <Typography>What do you must need to rent a car?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
                         <ol type="i">
-                            <li>Credit Cards accepted: American Express®, Mastercard®, VISA® and Discover® Network</li>
-                            <li>Credit Cards accepted in Canada: American Express®, MasterCard®, and VISA®</li>
-                            <li>Credit Cards accepted in Puerto Rico: American Express, Mastercard, VISA, Diners Club and Discover Network.</li>
+                            <li>To be 25 years old (if you're under 25, you may be required to pay a young driver's fee, which varies by rental location)</li>
+                            <li>A valid driver's license with a photo</li>
+                            <li>A photo ID (For example: a driver's license or passport)</li>
+                            <li>Credit or debit card (check the acceptable forms of payment at the location you're renting from)</li>
                         </ol>
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-                    <Typography>Renting a Car with a Debit Card</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        Debit/Check cards are considered to be any non-credit card bearing the VISA, Mastercard® or Discover logo. Pre-paid cards or any other non-credit card without one of these logos is not accepted. (Discover not accepted in Canada.)
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -93,4 +90,4 @@ const CustomizedAccordions4 = () => {
     );
 };
 
-export default CustomizedAccordions4;
+export default CustomizedAccordions5;
