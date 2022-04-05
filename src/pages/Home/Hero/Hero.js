@@ -10,16 +10,7 @@ import MobileDatePicker from '@mui/lab/MobileDatePicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Hero = () => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const [value, setValue] = React.useState(new Date());
-
-    const handleChange = (newValue) => {
-        setValue(newValue);
-    };
-    const onSubmit = data => {
-        console.log(data);
-        // reset();
-    };
+   
     return (
         <div className='hero'>
             <Typography className='title' gutterBottom variant="h3">
@@ -29,49 +20,12 @@ const Hero = () => {
                 <Grid item md={8} style={{margin:'0 auto'}}>
                     <Typography style={{margin:'0 0 30px 0'}} className='title' gutterBottom variant="h5">
                     <span style={{marginRight:'3rem'}}> Free cancellations on most bookings </span> <span style={{marginRight:'3rem'}}>60,000+ locations </span> <span style={{marginRight:'3rem'}}> Customer support in 40+ languages </span>
+                    
                     </Typography>
                 </Grid>
             </Grid>
             <div className='form-container'>
-                <Card>
-                    <CardContent>
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <Grid container spacing={1}>
-                                <Grid item xs={12}>
-                                    <TextField {...register("pickup")} type="text" placeholder="Enter Pickup Location" label="Pickup Location" variant="outlined" fullWidth required />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextField {...register("number")} type="number" placeholder="Enter phone number" label="Phone" variant="outlined" fullWidth required />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                        <Stack spacing={3}>
-                                            <MobileDatePicker
-                                                {...register("date")}
-                                                label="Date"
-                                                inputFormat="MM/dd/yyyy"
-                                                value={value}
-                                                onChange={handleChange}
-                                                renderInput={(params) => <TextField {...params} />}
-                                            />
-                                            <TimePicker {...register("time")}
-                                                label="Time"
-                                                value={value}
-                                                onChange={handleChange}
-                                                renderInput={(params) => <TextField {...params} />}
-                                            />
-                                        </Stack>
-                                    </LocalizationProvider>
-                                </Grid>
-                                {errors.exampleRequired && <span>This field is required</span>}
-                                <Grid item xs={12}>
-                                    <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
-                                </Grid>
-
-                            </Grid>
-                        </form>
-                    </CardContent>
-                </Card>
+               
             </div>
         </div>
     );
