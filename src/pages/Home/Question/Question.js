@@ -3,6 +3,10 @@ import React from 'react';
 import CustomizedAccordions1 from './Accordion/Accordion';
 import CustomizedAccordions2 from './Accordion/Accordion2';
 import CustomizedAccordions3 from './Accordion/Accordion3';
+import CustomizedAccordions4 from './Accordion/Accordion4';
+import CustomizedAccordions5 from './Accordion/Accordion5';
+import CustomizedAccordions6 from './Accordion/Accordion6';
+import CustomizedAccordions7 from './Accordion/Accordion7';
 
 
 
@@ -63,9 +67,9 @@ const Question = () => {
                 <Tab label="Technical" {...a11yProps(1)} />
                 <Tab label="Purpose" {...a11yProps(2)} />
                 <Tab label="Payment" {...a11yProps(3)} />
-                <Tab label="Item Five" {...a11yProps(4)} />
-                <Tab label="Item Six" {...a11yProps(5)} />
-                <Tab label="Item Seven" {...a11yProps(6)} />
+                <Tab label="Needs" {...a11yProps(4)} />
+                <Tab label="Frequently Question" {...a11yProps(5)} />
+                <Tab label="Additional Info" {...a11yProps(6)} />
             </Tabs>
             <TabPanel value={value} index={0}>
                 <CustomizedAccordions1 />
@@ -77,16 +81,16 @@ const Question = () => {
                 <CustomizedAccordions3 />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <CustomizedAccordions1 />
+                <CustomizedAccordions4 />
             </TabPanel>
             <TabPanel value={value} index={4}>
-                <CustomizedAccordions1 />
+                <CustomizedAccordions5 />
             </TabPanel>
             <TabPanel value={value} index={5}>
-                <CustomizedAccordions1 />
+                <CustomizedAccordions6 />
             </TabPanel>
             <TabPanel value={value} index={6}>
-                <CustomizedAccordions1 />
+                <CustomizedAccordions7 />
             </TabPanel>
         </Box>
     );
