@@ -1,6 +1,5 @@
 import { faCar, faBriefcaseMedical, faCircleInfo, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaceSharp } from '@mui/icons-material';
 
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
