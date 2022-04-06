@@ -1,72 +1,69 @@
-import { Container, Typography, TextField, Button } from '@mui/material';
-import React, { useState } from 'react';
-import { Grid } from '@mui/material';
-import image from '../../../images/undraw_Access_account_re_8spm.png';
+import React from 'react';
+import image from '../../../images/undraw_press_play_re_85bj.svg';
 import { NavLink } from 'react-router-dom';
+import './Register.css';
 
 const Register = () => {
-    const [loginData, setLoginData] = useState({});
 
-    const handleOnBlur = e => {
-        const field = e.target.name;
-        const value = e.target.value;
-        const newLoginData = { ...loginData };
-        newLoginData[field] = value;
-        setLoginData(newLoginData);
-    }
 
     return (
-        <Container sx={{ mt: 16 }}>
-            <Grid container spacing={2}>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>Register</Typography>
-                    <form >
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Name"
-                            name="name"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Email"
-                            name="email"
-                            type="email"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Password"
-                            type="password"
-                            name="password"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="ReType Your Password"
-                            type="password"
-                            name="password2"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
+        <div class="container">
+            <div class="forms-container">
+                <div class="signup">
+                    <form action="#" class="sign-up-form">
+                        <h2 class="title">Please Register</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <input type="submit" value="Register" class="btn solid" />
+                        <p class="social-text">Or Sign up with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>One of us ?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                            laboriosam ad deleniti.
+                        </p>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/login">
-                            <Button variant="text">Already Registered? Please Login</Button>
+                            <button class="btn transparent" id="sign-up-btn">
+                                Login
+                            </button>
                         </NavLink>
-                    </form>
-
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <img style={{ width: '100%' }} src={image} alt="" />
-                </Grid>
-            </Grid>
-        </Container>
+                    </div>
+                    <img src={image} class="image" alt="" />
+                </div>
+            </div>
+        </div>
     );
 };
 
