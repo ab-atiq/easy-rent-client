@@ -9,7 +9,6 @@ import TimePicker from '@mui/lab/TimePicker';
 import MobileDatePicker from '@mui/lab/MobileDatePicker';
 
 const Hero = () => {
-<<<<<<< HEAD
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [value, setValue] = React.useState(new Date());
 
@@ -20,9 +19,6 @@ const Hero = () => {
         console.log(data);
         reset();
     };
-=======
-   
->>>>>>> development
     return (
         <div className='hero'>
             <Typography className='title' gutterBottom variant="h3">
