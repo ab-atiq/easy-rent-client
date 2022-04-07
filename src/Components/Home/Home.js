@@ -1,11 +1,14 @@
 import React from 'react'
-import Header from '../Shared/Header/Header'
+import Header from '../Shared/Header'
+import Banner from './Banner'
+
 
 const Home = () => {
   return (
     <div>
+        
         <Header />
-        <h1>This is home</h1>
+        <Banner></Banner>
     </div>
   )
 }

@@ -1,0 +1,39 @@
+.banner-img img{
+    width: 500px;
+    margin-bottom: 70px;
+}
+.main-box{
+    min-height: 110vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img-box{
+    background-image: url(../images/easyrent-home-background.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.banner-text{
+    display: flex;
+    align-content: center;
+    margin-bottom: 300px;
+}
+.banner-heading{
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+@media screen and (max-width: 800px){
+    .banner-img img{
+        width: 100%;       
+    }
+    .main-box{
+        flex-direction: column;
+    }
+    .banner-text{
+        margin-top: 50px;
+        margin-bottom: 0;       
+    }
+    .img-box{
+        background-position-y: 200px;
+    }
+}
