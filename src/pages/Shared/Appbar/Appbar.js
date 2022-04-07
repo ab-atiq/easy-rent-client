@@ -29,7 +29,7 @@ const Appbar = () => {
             style={{ textDecoration: "none", color: "white" }}
             to="/login"
           >
-          <Link to='/login'>Login</Link>
+            <Link to='/login'>Login</Link>
           </NavLink>
         </Toolbar>
       </AppBar>
