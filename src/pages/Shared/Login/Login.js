@@ -19,7 +19,7 @@ const Login = () => {
                     alignItems="center">
                     <Grid item xs={12} md={6}>
                         <img className='login-img' src={loginImage} alt="" /> <br />
-                        <Link to='/registration'>New here? Please Sign up </Link>
+                        <Link to='/register'>New here? Please Sign up </Link>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <form >
