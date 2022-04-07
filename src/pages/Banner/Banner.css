@@ -99,11 +99,12 @@ body {
 }
 .button_design {
   font-size: 15px !important;
-  border: 2px solid yellow !important;
+  border: 2px solid rgb(255, 204, 0) !important;
   border-radius: 5px !important;
   color: #000 !important;
   text-decoration: none;
   font-weight: 800 !important;
+  
 }
 .hyperlink {
   text-decoration: none;
@@ -111,5 +112,5 @@ body {
 
 .button_design:hover {
   background-color: rgb(227, 224, 20) !important;
-  color: #ffff !important;
+  
 }
