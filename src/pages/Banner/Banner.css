@@ -1,4 +1,6 @@
-#app { height: 100% }
+#app {
+  height: 100%;
+}
 html,
 body {
   position: relative;
@@ -45,25 +47,46 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.BannerMain{
+  margin-bottom: 40px;
+  
+}
+.from_design{
+  background-color: #d2d2d6;
+}
+.input_group type{
+  color: #eee;
+}
 
-@media only screen and (min-width: 200px)  {
+@media only screen and (min-width: 200px) {
+  img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+@media only screen and (min-width: 1133px) {
+  img {
+    width: 80% !important;
+    height: 550px !important;
+  }
+}
+@media only screen and (max-width: 2000px) {
+  img {
+    width: 100% !important;
+    height: 400px !important;
+  }
+}
 
-img {
-  width: 100% !important;
-  height: 100% !important;
+#world{
+  animation: rotate 60s  infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
 }
-}
-@media only screen and (min-width: 1133px)  {
-
-img {
-  width: 80% !important;
-  height: 550px !important;
-}
-}
-@media only screen and (min-width: 1400px)  {
-
-img {
-  width: 85% !important;
-  height: 950px !important;
-}
+@keyframes rotate {
+  form {
+    transform: rotateZ(-30deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }

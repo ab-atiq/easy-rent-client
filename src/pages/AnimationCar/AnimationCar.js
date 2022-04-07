@@ -1,13 +1,17 @@
 import { Box, Grid } from "@mui/material";
-import animationCar from "../../Asset/animation_car.svg";
+import animationCar from "../../Asset/mobailApp.svg";
 import "./AnimationCar.css";
 
 const AnimationCar = () => {
   return (
     <div className="animation_main">
       <Grid container spacing={2} >
+
         <Grid item xs={12} sm={6} md={6}>
-          <Box sx={{ mt: "30%", fontSize: 18, mx: 10 }}>
+          <img width='100%' height='100%' src={animationCar} alt="" />
+        </Grid>
+        <Grid item xs={12} sm={6} md={6}>
+          <Box sx={{ mt: "5%", fontSize: 18, mx: 10 }}>
             <h1>
               <b style={{ color: "#2196f3" }}> Our Apps</b> <br />{" "}
               <span style={{ color: "#FF4F5A" }}>Coming Soon...</span>
@@ -19,9 +23,6 @@ const AnimationCar = () => {
             </p>
             <button className="discover_btn">Download Now</button>
           </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={6}>
-          <img width='100%' height='100%' src={animationCar} alt="" />
         </Grid>
       </Grid>
     </div>

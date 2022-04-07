@@ -23,11 +23,11 @@ const Appbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Rental Car
+            EasyRent
           </Typography>
           <NavLink
             style={{ textDecoration: "none", color: "white" }}
-            to="/"
+            to="/login"
           >
             <Button color="inherit">Login</Button>
           </NavLink>
@@ -38,3 +38,4 @@ const Appbar = () => {
 };
 
 export default Appbar;
+
