@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink, Link } from "react-router-dom";
 
+
 const Appbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -28,7 +29,7 @@ const Appbar = () => {
             style={{ textDecoration: "none", color: "white" }}
             to="/login"
           >
-          <Link to='/login'>Login</Link>
+            <Link to='/login'>Login</Link>
           </NavLink>
         </Toolbar>
       </AppBar>
@@ -36,4 +37,8 @@ const Appbar = () => {
   );
 };
 
+
+
 export default Appbar;
+
+
