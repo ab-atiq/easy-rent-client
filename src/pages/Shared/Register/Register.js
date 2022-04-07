@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import image from '../../../images/undraw_press_play_re_85bj.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Box, Grid } from "@mui/material";
 import { useDispatch, useSelector } from 'react-redux';
 import './Register.css';
@@ -13,12 +13,14 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
     const { isFetching, error } = useSelector((state) => state.user);
+    const navigate = useNavigate()
 
     console.log(error);
 
     const handleClick = (e) => {
         e.preventDefault();
         register(dispatch, { userName, email, password });
+        navigate('/home')
         console.log(userName, email, password);
 
     };

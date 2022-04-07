@@ -8,10 +8,10 @@ export const register = async (dispatch, user) => {
     try {
         const response = await axios.post('http://localhost:5000/api/auth/register', user);
         dispatch(registerSuccess(response.data));
-    }
 
+    }
     catch (err) {
         dispatch(registerFailure());
     }
-
 }
+
