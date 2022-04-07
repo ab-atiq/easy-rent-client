@@ -1,21 +1,11 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Banner.css";
-
 // import required modules
-import { Pagination } from "swiper";
-import { Box, Button, Card, CardContent, Grid, TextField } from "@mui/material";
-import Stack from "@mui/material/Stack";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import TimePicker from "@mui/lab/TimePicker";
-import MobileDatePicker from "@mui/lab/MobileDatePicker";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useForm } from "react-hook-form";
+import { Box, Button, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 
 
