@@ -7,10 +7,18 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import TimePicker from '@mui/lab/TimePicker';
 import MobileDatePicker from '@mui/lab/MobileDatePicker';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Hero = () => {
-   
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const [value, setValue] = React.useState(new Date());
+
+    const handleChange = (newValue) => {
+        setValue(newValue);
+    };
+    const onSubmit = data => {
+        console.log(data);
+        reset();
+    };
     return (
         <div className='hero'>
             <Typography className='title' gutterBottom variant="h3">
