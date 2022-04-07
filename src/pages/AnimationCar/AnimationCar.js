@@ -6,7 +6,7 @@ const AnimationCar = () => {
   return (
     <div className="animation_main">
       <Grid container spacing={2} >
-        
+
         <Grid item xs={12} sm={6} md={6}>
           <img width='100%' height='100%' src={animationCar} alt="" />
         </Grid>
