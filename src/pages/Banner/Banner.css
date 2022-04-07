@@ -47,15 +47,14 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.BannerMain{
+.BannerMain {
   margin-bottom: 40px;
-  
 }
-.from_design{
-  background-color: #d2d2d6;
+.from_design {
+  background-color: #ededf02b;
 }
-.input_group type{
-  color: #eee;
+.input_group type {
+  color: rgba(86, 79, 79, 0.073);
 }
 
 @media only screen and (min-width: 200px) {
@@ -77,8 +76,8 @@ body {
   }
 }
 
-#world{
-  animation: rotate 60s  infinite linear;
+#world {
+  animation: rotate 60s infinite linear;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -89,4 +88,29 @@ body {
   to {
     transform: rotateZ(360deg);
   }
+}
+.Box_design {
+  text-align: center;
+  font-size: 20px;
+}
+.title_Car {
+  margin-top: 15%;
+  font-size: 45px;
+}
+.button_design {
+  font-size: 15px !important;
+  border: 2px solid rgb(255, 204, 0) !important;
+  border-radius: 5px !important;
+  color: #000 !important;
+  text-decoration: none;
+  font-weight: 800 !important;
+  
+}
+.hyperlink {
+  text-decoration: none;
+}
+
+.button_design:hover {
+  background-color: rgb(227, 224, 20) !important;
+  
 }

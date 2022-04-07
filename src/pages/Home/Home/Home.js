@@ -11,20 +11,20 @@ import Porsche from '../porsche/Porsche';
 import HomeQuestion from '../Question/HomeQuestion';
 
 const Home = () => {
-    return (
-        <div >
-            <Appbar></Appbar>
-            <Header></Header>
-            <Porsche></Porsche>
-            <Banner></Banner>
-            <Services></Services>
-            <AnimationCar></AnimationCar>
-            <Facilities></Facilities>
-            <HomeQuestion />
-            <Hero></Hero>
-            <Footer></Footer>
-        </div>
-    );
+  return (
+    <div >
+      <Appbar></Appbar>
+      <Header></Header>
+      <Porsche></Porsche>
+      <Banner></Banner>
+      <Services></Services>
+      <AnimationCar></AnimationCar>
+      <Facilities></Facilities>
+      <HomeQuestion />
+      <Hero></Hero>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Home;
