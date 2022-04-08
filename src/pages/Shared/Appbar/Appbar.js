@@ -7,10 +7,11 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink, Link } from "react-router-dom";
 
+
 const Appbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar sx={{ bgcolor: "transparent", color: "black", boxShadow: 0 }} position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -21,14 +22,14 @@ const Appbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black" }}>
             EasyRent
           </Typography>
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to="/login"
           >
-          <Link to='/login'>Login</Link>
+            <Link style={{ textDecoration: "none", color: "black" }} to='/login'>Login</Link>
           </NavLink>
         </Toolbar>
       </AppBar>
@@ -36,4 +37,8 @@ const Appbar = () => {
   );
 };
 
+
+
 export default Appbar;
+
+
