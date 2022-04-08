@@ -40,7 +40,7 @@ const Banner = () => {
             >
               <g
                 id="undraw_world_re_768g 1"
-                clip-path="url(#clip0_1_2)"
+                clipPath="url(#clip0_1_2)"
                 filter="url(#filter0_dd_1_2)"
               >
                 <path
@@ -321,9 +321,9 @@ const Banner = () => {
                   width="833.202"
                   height="599.419"
                   filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
                   <feColorMatrix
                     in="SourceAlpha"
                     type="matrix"

@@ -42,7 +42,6 @@ const Hero = () => {
         <Grid item md={6} style={{ margin: "0 auto" }}>
           <Box sx={{ fontSize: 18 }}>
          
-
             <Card className="background_color">
               <CardContent className="from_design">
                 <form className="from_control" onSubmit={handleSubmit(onSubmit)}>

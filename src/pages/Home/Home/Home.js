@@ -9,20 +9,21 @@ import Facilities from "../Facilities/Facilities";
 import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
 import HomeQuestion from "../Question/HomeQuestion";
+import Appbar from '../../Shared/Appbar/Appbar';
+import Porsche from '../porsche/Porsche';
 
 const Home = () => {
   return (
     <div>
-      {/* <Appbar></Appbar> */}
       <Header />
       <SecBanner />
+      <Porsche></Porsche>
       <Banner></Banner>
-      <Hero></Hero>
       <Services></Services>
       <AnimationCar></AnimationCar>
       <Facilities></Facilities>
       <HomeQuestion />
-
+      <Hero></Hero>
       <Footer></Footer>
     </div>
   );
