@@ -121,7 +121,7 @@ const data = [
   },
 ];
 
-const AllServices = () => {
+const AllServices= () => {
   // const [services, setServices] = useState([]);
 
   // useEffect(() => {
