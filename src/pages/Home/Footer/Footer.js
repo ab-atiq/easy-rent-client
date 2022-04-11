@@ -1,78 +1,75 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react'
+import './Footer.css'
+import { Container } from '@mui/material'
+import Grid from '@mui/material/Grid';
+import logo from '../../../images/easyrent.png'
+import lindin from '../../../images/linkdin-icon.png'
+import facebook from '../../../images/facebook-icon.png'
+import meta from '../../../images/meta-icon.png'
 
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer-distributed">
-        <div className="footer-left">
-          <h3>
-            Easy <span>Rent</span>
-          </h3>
+    <div className='footer-size'>
+      <Container>
+        <Grid container spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 12, sm: 12, md: 12, lg: 12 }}>         
+            <Grid item xs={12} sm={12} md={6} lg={3}>              
+              <div className='first-div'>
+                <img src={logo} alt="" />
+                <p>©2022 Sworkit® by Nexercise.
+                  Terms of Service I Privacy Policy</p>
+              </div>
+            </Grid>         
+            <Grid item xs={12} sm={12} md={6} lg={2}>              
+              <div className="sec-div">
+                <h4>Products</h4>
+                <p>Product</p>
+                <p>Pricing</p>
+                <p>Log In</p>
+                <p>Request acces</p>
+                <p>Partnerships</p>
+              </div>
+            </Grid>         
+            <Grid item xs={12} sm={12} md={6} lg={2}>              
+            
+            <div className="third-div">
+            <h4>About us</h4>
+              <p>About EasyRent</p>
+              <p>Contact us</p>
+              <p>Features</p>
+              <p>Careers</p>
+            </div>        
 
-          <p className="footer-links">
-            <a href="#">Home</a>
-
-            <a href="#">Blog</a>
-
-            <a href="#">Pricing</a>
-
-            <a href="#">About</a>
-
-            <a href="#">Faq</a>
-
-            <a href="#">Contact</a>
-          </p>
-
-          <p className="footer-company-name">Easy Rent &copy; 2022</p>
-        </div>
-
-        <div className="footer-center">
-          <div>
-            <i className="fa fa-map-marker"></i>
-            <p>
-              <span>200 Revolution Street Dhaka</span> Dhaka , Bangladesh
-            </p>
-          </div>
-
-          <div>
-            <i className="fa fa-phone"></i>
-            <p>+18834384933</p>
-          </div>
-
-          <div>
-            <i className="fa fa-envelope"></i>
-            <p>
-              <a href="mailto:support@company.com">teamdevager21@gmail.com </a>
-            </p>
-          </div>
-        </div>
-
-        <div className="footer-right">
-          <p className="footer-company-about">
-            <span>About the company</span>
-            We Provide New Generataion Car for Rent (Easy Rent) .
-          </p>
-
-          <div className="footer-icons">
-            <a href="#">
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-linkedin"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
+            </Grid>         
+            <Grid item xs={12} sm={12} md={6} lg={2}>   
+            <div className="fourth-div">           
+            <h4>Resources</h4>
+              <p>Help Center</p>
+              <p>Book a demo</p>
+              <p>Server status</p>
+              <p>Blog</p>
+              </div>
+            </Grid>         
+            <Grid item xs={12} sm={12} md={6} lg={3}>  
+            <div className="five-div">           
+            <h4>Get in touch</h4>
+              <p>Questions or feedback? <br />
+              we ‘d love to her from you
+              </p>
+              <div className='footer-icon'>
+                
+                <img src={meta} alt="" />
+                <img src={lindin} alt="" />
+                <img src={facebook} alt="" />
+                
+              </div>
+              </div>
+              
+            </Grid>         
+        </Grid>
+      </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

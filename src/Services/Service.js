@@ -1,17 +1,38 @@
-import { Button } from "@mui/material";
 import * as React from "react";
 import "./Services.css";
-const Service = ({ service }) => {
-  const { _id, name, price, image } = service;
+import { Link } from 'react-router-dom';
+import Grid from '@mui/material/Grid';
+const Service = ({ alldata }) => {
+  const {_id, name, price, image, year, type, fual, kilo } = alldata;
   return (
-    <div className="Singel_card">
-      <div >
-        <img className="image_Optimize" src={image} alt="" />
-        <h2>{name}</h2>
-        <h3>${price}</h3>
-        <Button variant="contained">Book Now</Button>
-      </div>
-    </div>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <div className="box">
+                <div>
+                        <div className="car-box">
+                            <img src={image} alt="" />
+                        </div>
+                    <div className="text">
+                            <p className="year-text">{year}</p>
+                            <h3 className="name-text">{name}</h3>
+                            <p className='price-text'><span className='span-text'>${price}</span>/month</p>
+                            <div className='details-box'>
+                              <small className='small_details' >{kilo}kilo</small>
+                              <small className='small_details' >{type}</small>
+                              <small className='small_details'>{fual}</small>
+                            </div>
+
+                            
+                          </div>
+                    </div>
+                        <div className=" my-3 d-flex             justify-content-between"> 
+                            <Link to={`/book/${_id}`}>
+                            <button className="button">Rent Now</button>
+                            </Link>                      
+                            
+                        </div>
+                </div>              
+              
+    </Grid>
   );
 };
 

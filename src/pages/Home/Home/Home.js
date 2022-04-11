@@ -22,7 +22,6 @@ const Home = () => {
       <AnimationCar></AnimationCar>
       <Facilities></Facilities>
       <HomeQuestion />
-
       <Footer></Footer>
     </div>
   );

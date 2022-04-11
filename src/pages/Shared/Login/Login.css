@@ -15,12 +15,12 @@
 }
 
 .login-img{
-    height: 50% !important;
+    height: 50%;
 }
 
 .login-input{
     width: 70%;
-    padding-bottom: 2rem !important;
+    padding-bottom: 2rem;
 }
 .login{
     font-size: 50px;
