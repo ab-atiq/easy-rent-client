@@ -3,24 +3,26 @@ import Services from "../../../Services/Services";
 import AnimationCar from "../../AnimationCar/AnimationCar";
 import Banner from "../../Banner/Banner";
 import SecBanner from "../../SecBanner/SecBanner";
-import Header from "../../Shared/Header/Header";
 import Facilities from "../Facilities/Facilities";
 import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
 import HomeQuestion from "../Question/HomeQuestion";
 import Porsche from '../porsche/Porsche';
+import CleanCar from "../CleanCar/CleanCar";
+
 
 const Home = () => {
   return (
     <div>
-      <Header />
       <SecBanner />
       <Porsche></Porsche>
       <Banner></Banner>
       <Services></Services>
       <AnimationCar></AnimationCar>
       <Facilities></Facilities>
+      <CleanCar></CleanCar>
       <HomeQuestion />
+      
       <Hero></Hero>
       <Footer></Footer>
     </div>
