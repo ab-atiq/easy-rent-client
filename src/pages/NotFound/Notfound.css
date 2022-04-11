@@ -1,3 +1,9 @@
-.notfound-header{
-    text-align: center;
+.notFound{
+    background-image: url(../../images//404.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 20px;
+}
+.button{
+    text-decoration: none;
 }
