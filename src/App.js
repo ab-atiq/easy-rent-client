@@ -5,7 +5,7 @@ import Login from './pages/Shared/Login/Login';
 import Register from './pages/Shared/Register/Register';
 import './App.css';
 import AllServices from './pages/Home/Services/AllServices';
-// import Header from './pages/Shared/Header/Header';
+
 
 
 
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-      {/* <Header></Header> */}
+      
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
