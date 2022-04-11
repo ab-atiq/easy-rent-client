@@ -1,14 +1,14 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import loginImage from '../../../img/login.jpg';
+import loginImage from '../../../images/login.jpg';
 import Typography from '@mui/material/Typography';
 import './Login.css';
 import { Button, TextField } from '@mui/material';
-import {AiOutlineMail} from 'react-icons/ai';
-import {Link} from 'react-router-dom';
+import { AiOutlineMail } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
-    
+
     return (
         <div className='login-container'>
             <Typography className='login-header' variant="h4" gutterBottom component="div">

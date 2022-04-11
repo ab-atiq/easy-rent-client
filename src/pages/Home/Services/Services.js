@@ -2,7 +2,7 @@ import { Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Service from "./Service";
-import'./Services.css';
+import "./Services.css";
 
 const data = [
   {
@@ -86,7 +86,6 @@ const data = [
     details:
       "\nAssociate Medical Director, Center for Bioengineering Innovation and Design, Department of Biomedical Engineering\nAssistant Professor of Medicine",
   },
-  
 ];
 
 const Services = () => {
@@ -100,15 +99,28 @@ const Services = () => {
 
   return (
     <div>
-      <Box sx={{ textAlign: "center", fontSize: "3.5rem", mb:'70px' }}> Our services</Box>
+      <Box
+        sx={{ textAlign: "center", fontSize: "3.5rem", mb: "70px", mt: "60px" }}
+      >
+        {" "}
+        Our services
+      </Box>
       <Container>
-      <Grid container  >
-        {data.map((serviceP) => (
-          <Grid item md={4} xs={6} className="Card"  container spacing={1}>
-            <Service key={serviceP._id} service={serviceP}></Service>
-          </Grid>
-        ))}
-      </Grid>
+        <Grid container>
+          {data.map((serviceP) => (
+            <Grid
+              item
+              sm={12}
+              md={4}
+              xs={12}
+              className="Card"
+              container
+              spacing={1}
+            >
+              <Service key={serviceP._id} service={serviceP}></Service>
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </div>
   );

@@ -53,10 +53,10 @@ const Question = () => {
 
     return (
         <Box
-            sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', width: "90%", margin: "10px auto" }}
+            sx={{ flexGrow: 1, bgcolor: 'background.paper', width: "90%", margin: "10px auto" }}
         >
             <Tabs
-                orientation="vertical"
+                // orientation="vertical"
                 variant="scrollable"
                 value={value}
                 onChange={handleChange}

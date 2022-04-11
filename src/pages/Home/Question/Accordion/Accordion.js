@@ -105,8 +105,8 @@ const CustomizedAccordions1 = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-                <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+            <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+                <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
                     <Typography>How do I get a smart driver's license?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
