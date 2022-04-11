@@ -41,7 +41,7 @@ const Hero = () => {
       <Grid container>
         <Grid item md={6} style={{ margin: "0 auto" }}>
           <Box sx={{ fontSize: 18 }}>
-         
+
             <Card className="background_color">
               <CardContent className="from_design">
                 <form className="from_control" onSubmit={handleSubmit(onSubmit)}>
@@ -93,7 +93,12 @@ const Hero = () => {
                       <span>This field is required</span>
                     )}
                     <Grid item xs={12}>
-                      <Button
+                      <Button style={{
+                        borderRadius: 35,
+                        backgroundColor: "#FDAF7E",
+                        padding: "18px 36px",
+                        fontSize: "18px"
+                      }}
                         type="submit"
                         variant="contained"
                         color="primary"
@@ -108,7 +113,7 @@ const Hero = () => {
             </Card>
           </Box>
         </Grid>
-        <Grid item md={12} style={{ margin: "0 auto"}}>
+        <Grid item md={12} style={{ margin: "0 auto" }}>
           <Typography
             style={{ margin: "0 0 30px 0" }}
             className="title"

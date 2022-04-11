@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="footer-distributed">
         <div className="footer-left">
           <h3>
-            Easy <span>Rent</span>
+            Easy<span>Rent</span>
           </h3>
 
           <p className="footer-links">
