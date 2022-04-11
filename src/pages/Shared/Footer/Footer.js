@@ -1,75 +1,78 @@
-import { Container, Grid, Typography } from '@mui/material';
-import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { Box } from '@mui/system';
+import React from "react";
+import "./Footer.css";
+
 
 const Footer = () => {
-    return (
-        <Box sx={{ backgroundColor: 'green' }}>
-            <Container>
-                <Grid container textAlign='left'>
-                    <Grid item xs={12} sm={6} md={3} >
-                        <Typography variant='h4'>
-                            EasyRent
-                        </Typography>
-                        <br />
-                        <Typography variant='body1' sx={{ width: '90%' }}>
-                            We are available for your low-cost best service. We hope you will satisfy with our service.
-                        </Typography>
-                        <br />
-                        <Typography variant='body1'>
-                            <FacebookIcon />
-                            <TwitterIcon />
-                            <InstagramIcon />
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={3} >
-                        <Typography variant='h6'>
-                            Info
-                        </Typography>
-                        <br />
-                        <Typography variant='body1'>
-                            {'>'} About Us
-                        </Typography>
-                        <Typography variant='body1'>
-                            {'>'} Ask Question
-                        </Typography>
-                        <Typography variant='body1'>
-                            {'>'} Contact Us
-                        </Typography>
-                        <Typography variant='body1'>
-                            {'>'} Something
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={3} >
-                        <Typography variant='h6'>
-                            Service
-                        </Typography>
-                        <br />
-                        <Typography variant='body1'>
-                            {'>'} Special Offers
-                        </Typography>
-                        <Typography variant='body1'>
-                            {'>'} Privacy and Policy
-                        </Typography>
-                        <Typography variant='body1'>
-                            {'>'} Customer Service
-                        </Typography>
-                        <Typography variant='body1'>
-                            {'>'} Customer Service
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={3} >
-                        <Typography variant='h6'>
-                            Another Info
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </Container>
-        </Box>
-    );
+  return (
+    <div>
+      <footer className="footer-distributed">
+        <div className="footer-left">
+          <h3>
+            Easy <span>Rent</span>
+          </h3>
+
+          <p className="footer-links">
+            <a href="#">Home</a>
+
+            <a href="#">Blog</a>
+
+            <a href="#">Pricing</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Faq</a>
+
+            <a href="#">Contact</a>
+          </p>
+
+          <p className="footer-company-name">Easy Rent &copy; 2022</p>
+        </div>
+
+        <div className="footer-center">
+          <div>
+            <i className="fa fa-map-marker"></i>
+            <p>
+              <span>200 Revolution Street Dhaka</span> Dhaka , Bangladesh
+            </p>
+          </div>
+
+          <div>
+            <i className="fa fa-phone"></i>
+            <p>+18834384933</p>
+          </div>
+
+          <div>
+            <i className="fa fa-envelope"></i>
+            <p>
+              <a href="mailto:support@company.com">teamdevager21@gmail.com </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="footer-right">
+          <p className="footer-company-about">
+            <span>About the company</span>
+            We Provide New Generataion Car for Rent (Easy Rent) .
+          </p>
+
+          <div className="footer-icons">
+            <a href="#">
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i className="fa fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i className="fa fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i className="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default Footer;

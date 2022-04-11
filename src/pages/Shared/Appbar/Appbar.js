@@ -1,44 +1,34 @@
-import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import { NavLink, Link } from "react-router-dom";
-
+import { Container } from '@mui/material'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import logo from '../../../images/easyrent.png'
+import './Appbar.css';
 
 const Appbar = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    setClick(!click)
+  }
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ bgcolor: "transparent", color: "black", boxShadow: 0 }} position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black" }}>
-            EasyRent
-          </Typography>
-          <NavLink
-            style={{ textDecoration: "none", color: "black" }}
-            to="/login"
-          >
-            <Link style={{ textDecoration: "none", color: "black" }} to='/login'>Login</Link>
-          </NavLink>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-};
+    <Container>
+      <nav className='all-items'>
+        <div className='logo-img'>
+          <img styel={{ width: '100px' }} src={logo} alt="" />
+        </div>
+        <div className={click ? 'nav-menu active' : 'nav-menu'}>
+          <Link className='single-link' to='/home'>Home</Link>
+          <Link className='single-link' to='/home'>Services</Link>
+          <Link className='single-link' to='/about'>About Us</Link>
+          <Link className='single-link' to='/login'>Login</Link>
+        </div>
+        <div onClick={handleClick} className='menu-icon'>
+          <i className={click ? 'bx bxs-message-square-x icon-style' : 'bx bx-menu icon-style'}></i>
+        </div>
+      </nav>
 
+    </Container>
+  )
+}
 
-
-export default Appbar;
-
-
+export default Appbar

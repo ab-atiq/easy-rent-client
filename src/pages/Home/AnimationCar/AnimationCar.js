@@ -1,5 +1,5 @@
 import { Box, Grid } from "@mui/material";
-import animationCar from "../../Asset/mobailApp.svg";
+import animationCar from "../../../Asset/mobailApp.svg";
 import "./AnimationCar.css";
 
 const AnimationCar = () => {
