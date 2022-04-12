@@ -1,10 +1,13 @@
 import React from "react";
 import Services from "../Services/Services";
+import NurServices from "../Services/NurServices";
 import AnimationCar from "../AnimationCar/AnimationCar";
 import Banner from "../Banner/Banner";
+import NurBanner from "../Banner/NurBanner";
 import SecBanner from "../../SecBanner/SecBanner";
 import Facilities from "../Facilities/Facilities";
 import Footer from "../../Shared/Footer/Footer";
+import NurFooter from "../../Shared/Footer/NurFooter";
 import Hero from "../Hero/Hero";
 import HomeQuestion from "../Question/HomeQuestion";
 import Porsche from '../porsche/Porsche';
@@ -18,9 +21,11 @@ const Home = () => {
     <div>
       <Appbar></Appbar>
       <SecBanner />
+      <NurBanner></NurBanner>
       <Porsche></Porsche>
       <Banner></Banner>
       <Services></Services>
+      <NurServices></NurServices>
       <AboutUs></AboutUs>
       <AnimationCar></AnimationCar>
       <HomeQuestion />
@@ -28,6 +33,7 @@ const Home = () => {
       <Hero></Hero>
       <Facilities></Facilities>
       <Footer></Footer>
+      <NurFooter></NurFooter>
     </div>
   );
 };
