@@ -11,6 +11,7 @@ import Porsche from '../porsche/Porsche';
 import Appbar from "../../Shared/Appbar/Appbar";
 import AboutUs from "../AboutUs/AboutUs";
 import CleanCar from "../CleanCar/CleanCar";
+import FindCar from "../FindCar/FindCar";
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
       <SecBanner />
       <Porsche></Porsche>
       <Banner></Banner>
+      <FindCar/>
       <Services></Services>
       <AboutUs></AboutUs>
       <AnimationCar></AnimationCar>
