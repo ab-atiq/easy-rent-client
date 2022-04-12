@@ -5,8 +5,9 @@ import Login from './pages/Shared/Login/Login';
 import Register from './pages/Shared/Register/Register';
 import './App.css';
 import NotFound from './pages/NotFound/Notfound';
-import ContactUs from './pages/ContactUs/ContactUs';
+
 import AllServices from './pages/Home/Services/AllServices';
+import ContactUs from './pages/ContactUs/ContactUs';
 
 
 function App() {
