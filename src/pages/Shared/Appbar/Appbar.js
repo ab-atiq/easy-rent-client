@@ -18,7 +18,7 @@ const Appbar = () => {
         </div>
         <div className={click ? 'nav-menu active' : 'nav-menu'}>
           <Link className='single-link' to='/home'>Home</Link>
-          <Link className='single-link' to='/home'>Services</Link>
+          <Link className='single-link' to='/Services'>Services</Link>
           <Link className='single-link' to='/about'>About Us</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
           <Link className='single-link' to='/login'>Login</Link>

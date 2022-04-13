@@ -19,7 +19,7 @@ import CleanCar from "../CleanCar/CleanCar";
 const Home = () => {
   return (
     <div>
-      <Appbar></Appbar>
+      
       <SecBanner />
       <NurBanner></NurBanner>
       <Porsche></Porsche>
