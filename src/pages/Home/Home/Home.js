@@ -32,7 +32,6 @@ const Home = () => {
       <CleanCar></CleanCar>
       <Hero></Hero>
       <Facilities></Facilities>
-      <Footer></Footer>
       <NurFooter></NurFooter>
     </div>
   );
