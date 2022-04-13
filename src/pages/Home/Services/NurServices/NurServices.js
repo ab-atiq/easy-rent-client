@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import React from "react";
 import NurService from "./NurService";
 import "./NurServices.css";
-import {data} from "./FakeData/FakeData"
+import {data} from "../FakeData/FakeData"
 
 const NurServices = () => {
   

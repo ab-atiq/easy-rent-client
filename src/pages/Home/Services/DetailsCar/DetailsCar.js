@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
-import NurServices from "../NurServices";
+import NurServices from "../NurServices/NurServices";
 import ButtonNavigation from "./ButtonNavigation";
 import "./DetailsCar.css";
 import RangeSlider from "./RangeSlider";
