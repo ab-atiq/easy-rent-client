@@ -9,6 +9,10 @@ import AllServices from './pages/Home/Services/HomeServices/AllServices';
 import ContactUs from './pages/ContactUs/ContactUs';
 import DetailsCar from './pages/Home/Services/DetailsCar/DetailsCar';
 import Appbar from './pages/Shared/Appbar/Appbar';
+import Small from './pages/Home/Services/CarType/Small';
+import Medium from './pages/Home/Services/CarType/Medium';
+import Large from './pages/Home/Services/CarType/Large';
+import MainService from './pages/Home/Services/DetailsCar/MainService';
 
 
 function App() {
@@ -21,7 +25,10 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/contactUs' element={<ContactUs />} />
           <Route path='/services' element={<AllServices />} />
-          <Route path='/details' element={<DetailsCar />} />
+          <Route path='/details' element={<MainService />} />
+          <Route path='/small' element={<Small />} />
+          <Route path='/medium' element={<Medium />} />
+          <Route path='/large' element={<Large />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='*' element={<NotFound />} />
