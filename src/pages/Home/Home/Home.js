@@ -23,7 +23,6 @@ const Home = () => {
       <Porsche></Porsche>
       <Banner></Banner>
       <Services></Services>
-      <NurServices></NurServices>
       <AboutUs></AboutUs>
       <AnimationCar></AnimationCar>
       <HomeQuestion />

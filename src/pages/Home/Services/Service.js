@@ -12,7 +12,7 @@ const Service = ({ service }) => {
         <p>{model}</p>
         <h4> Daily Rent $ ({price_daily}) </h4>
         <br />
-        <Link className="btn_design " to=""><Button className="btn_color" variant="contained">View Deal</Button></Link>
+        <Link className="btn_design " to="/details"><Button className="btn_color" variant="contained">View Deal</Button></Link>
       </div>
     </div>
   );

@@ -126,18 +126,12 @@ const data = [
 
 
 const Services = () => {
-  // const [services, setServices] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(All_data)
-  //     .then((res) => res.json())
-  //     .then((data) => setServices(data));
-  // }, [services]);
 
   return (
     <div>
       <Box
-        sx={{ textAlign: "center", fontSize: "3.5rem", mb: "70px", mt: "60px" }}
+        sx={{ textAlign: "center", fontWeight: 'bold', fontSize: "2.5rem", mb: "70px", mt: "60px" }}
       >
         {" "}
         Our services
