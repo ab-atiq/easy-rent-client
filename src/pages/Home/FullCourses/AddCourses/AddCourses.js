@@ -48,7 +48,6 @@ const AddCourses = () => {
                             { required: true })}
                         required
                         placeholder='enter img link'
-
                     />
 
                     <input className='submit' type="submit" />
