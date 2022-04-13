@@ -4,12 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
-import { Pagination, Navigation } from "swiper";
-
-// import cars from "./findCar.json";
+import { Navigation } from "swiper";
 import CarSlide from "./CarSlide";
 
 const FindCar = () => {
@@ -37,11 +34,8 @@ const FindCar = () => {
           slidesPerGroup={3}
           loop={true}
           loopFillGroupWithBlank={true}
-          pagination={{
-            clickable: true,
-          }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Navigation]}
           className="mySwiper"
         >
           {cars?.map((car) => (
