@@ -12,6 +12,8 @@ import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
 import Appbar from './pages/Shared/Appbar/Appbar';
 import Dashbord from './pages/Dashbord/Dashbord';
+import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
+import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
 
 
 function App() {
@@ -30,11 +32,13 @@ function App() {
           <Route path='/large' element={<Large />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          
+          <Route path='/CourseHome' element={<CourseHome />} />
+          <Route path='/GetCourses' element={<GetCourses />} />
+
           <Route path='/dashbord' element={<Dashbord />}>
 
           </Route>
-          
+
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
