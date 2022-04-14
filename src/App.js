@@ -10,7 +10,6 @@ import Small from './pages/Home/Services/CarType/Small';
 import MainService from './pages/Home/Services/DetailsCar/MainService';
 import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
-import Appbar from './pages/Shared/Appbar/Appbar';
 import Dashbord from './pages/Dashbord/Dashbord';
 
 
