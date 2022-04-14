@@ -14,9 +14,9 @@ const FindBasisBrand = () => {
     fetch("/FindBasisBrand.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         const filterCar = data.filter((data) => data.name.includes(carName));
-        console.log(filterCar);
+        // console.log(filterCar);
         setCars(filterCar);
       });
   }, []);
