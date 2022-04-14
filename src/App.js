@@ -7,7 +7,6 @@ import './App.css';
 import NotFound from './pages/NotFound/Notfound';
 import AllServices from './pages/Home/Services/HomeServices/AllServices';
 import ContactUs from './pages/ContactUs/ContactUs';
-import DetailsCar from './pages/Home/Services/DetailsCar/DetailsCar';
 import Appbar from './pages/Shared/Appbar/Appbar';
 import Small from './pages/Home/Services/CarType/Small';
 import Medium from './pages/Home/Services/CarType/Medium';
@@ -19,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Appbar></Appbar>
+        <Appbar></Appbar>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
