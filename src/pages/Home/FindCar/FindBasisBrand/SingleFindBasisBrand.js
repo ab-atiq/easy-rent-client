@@ -2,14 +2,14 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
-import StarIcon from "@mui/icons-material/Star";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import { AiFillStar } from "react-icons/ai";
+import { GiAchievement } from "react-icons/gi";
 
 const SingleFindBasisBrand = ({ car }) => {
   console.log(car);
-  const { imgUrl, name, rent, star } = car;
+  const { imgUrl, name, rent, star, available } = car;
   return (
-    <Grid item xs={4} sx={{ /*border: "2px solid orange",*/ padding: "10px" }}>
+    <Grid item xs={12} sm={6} lg={4} sx={{ /*border: "2px solid orange",*/ padding: "10px" }}>
       <Grid item xs={12} sx={{ padding: "10px" }}>
         <img
           src={imgUrl}
@@ -22,8 +22,8 @@ const SingleFindBasisBrand = ({ car }) => {
           {name}
         </Typography>
         <Typography py={1} variant="body1">
-          {star} <StarIcon />
-          (available trips) <EmojiEventsIcon /> All-Star Host
+          {star} <AiFillStar />({available} trips) <GiAchievement /> All-Star
+          Host
         </Typography>
       </Grid>
       <Divider />

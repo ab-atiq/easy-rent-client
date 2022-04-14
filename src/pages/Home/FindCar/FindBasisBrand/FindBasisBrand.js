@@ -52,10 +52,10 @@ const FindBasisBrand = () => {
         </Box>
         <Box>
           <Grid container spacing={3} alignItems="center" py={4} maxWidth="xl">
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <img src={data?.imgUrl1} alt="" />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <Typography variant="h3" py={2}>
                 {data?.title1}
               </Typography>
@@ -68,19 +68,19 @@ const FindBasisBrand = () => {
             Top {carName} Models
           </Typography>
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Typography variant="h4" py={2}>
                 {data?.topTitle1}
               </Typography>
               <Typography variant="body1">{data?.topDescription1}</Typography>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Typography variant="h4" py={2}>
                 {data?.topTitle2}
               </Typography>
               <Typography variant="body1">{data?.topDescription2}</Typography>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item  xs={12} sm={6} md={4}>
               <Typography variant="h4" py={2}>
                 {data?.topTitle3}
               </Typography>
