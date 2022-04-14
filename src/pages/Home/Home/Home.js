@@ -1,6 +1,5 @@
 import React from "react";
 import Services from "../Services/HomeServices/Services";
-import NurServices from "../Services/NurServices/NurServices";
 import AnimationCar from "../AnimationCar/AnimationCar";
 import Banner from "../Banner/Banner";
 import NurBanner from "../Banner/NurBanner";
@@ -12,22 +11,24 @@ import HomeQuestion from "../Question/HomeQuestion";
 import Porsche from '../porsche/Porsche';
 import AboutUs from "../AboutUs/AboutUs";
 import CleanCar from "../CleanCar/CleanCar";
+import Appbar from "../../Shared/Appbar/Appbar";
 
 
 const Home = () => {
   return (
     <div>
-      
+      <Appbar></Appbar>
       <SecBanner />
       <NurBanner></NurBanner>
+      <Hero></Hero>
       <Porsche></Porsche>
       <Banner></Banner>
       <Services></Services>
       <AboutUs></AboutUs>
       <AnimationCar></AnimationCar>
-      <HomeQuestion />
+
       <CleanCar></CleanCar>
-      <Hero></Hero>
+      <HomeQuestion />
       <Facilities></Facilities>
       <NurFooter></NurFooter>
     </div>

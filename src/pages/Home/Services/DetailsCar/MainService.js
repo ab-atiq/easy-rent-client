@@ -3,8 +3,10 @@ import React from "react";
 import NurServices from "../NurServices/NurServices";
 import DetailsCar from "./DetailsCar";
 
+
 const MainService = () => {
   return (
+
     <div>
       <DetailsCar></DetailsCar>
       <Container>
