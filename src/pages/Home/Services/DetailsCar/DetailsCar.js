@@ -8,11 +8,11 @@ import RangeSlider from "./RangeSlider";
 
 const DetailsCar = () => {
   return (
-    <div>
+    <div >
       <Container>
         <div>
           <Grid container spacing={2}>
-          <Grid item spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 10, sm: 5, md: 5, lg: 12 }}>
+          <Grid item spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 10, sm: 5, md: 5, lg: 5 }}>
               <Grid container spacing={2}>
                 <Grid item xs={6}>
                   <p>Car type</p>
@@ -72,7 +72,7 @@ const DetailsCar = () => {
                     <p sx={{ align: "center" }}>SUV</p>
                   </div>
                 </Grid>
-                <Grid item spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
+                <Grid item  columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
                   <div className="Range_slider ">
                     <RangeSlider></RangeSlider>
                   </div>
@@ -80,8 +80,8 @@ const DetailsCar = () => {
               </Grid>
             </Grid>
 
-            <Grid item spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 2, sm: 2, md: 2, lg: 2 }}></Grid>
-            <Grid item spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 10, sm: 5, md: 5, lg: 12 }}>
+            <Grid item spacing={{ xs: 2, md: 2, lg: 2}} columns={{ xs: 2, sm: 2, md: 2, lg: 2 }}></Grid>
+            <Grid item spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 10, sm: 5, md: 5, lg: 5 }}>
               <ButtonNavigation></ButtonNavigation>
             </Grid>
           </Grid>

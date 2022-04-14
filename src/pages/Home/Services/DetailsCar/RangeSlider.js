@@ -52,6 +52,7 @@ export default function RangeSlider() {
           <ArrowDropDownIcon />
         </Button>
       </ButtonGroup>
+      
       <Popper
         open={open}
         anchorEl={anchorRef.current}

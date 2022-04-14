@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Appbar></Appbar>
+        {/* <Appbar></Appbar> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -32,13 +32,8 @@ function App() {
           <Route path='/large' element={<Large />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/CourseHome' element={<CourseHome />} />
-          <Route path='/GetCourses' element={<GetCourses />} />
-
           <Route path='/dashbord' element={<Dashbord />}>
-
           </Route>
-
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
