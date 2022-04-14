@@ -6,6 +6,7 @@ const Service = ({ service }) => {
   const { model, car_name, price, image , price_daily} = service;
   return (
     <div className="Singel_card">
+      
       <div >
         <img className="image_Optimize" src={image} alt="" />
         <h2>{car_name}</h2>
