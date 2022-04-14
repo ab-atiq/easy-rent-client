@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import TextField from '@mui/material/TextField';
+import { Typography } from '@mui/material';
+import './AddCourses.css';
 
 const AddCourses = () => {
     const [Courses, setCourses] = useState([])
@@ -20,10 +22,10 @@ const AddCourses = () => {
     }
     return (
         <div>
-            <h2>Courses</h2>
 
             <div className='mx-auto'>
-                <h2>Give your review here</h2>
+
+                <Typography variant='h4' style={{ textAlign: "center", fontSize: '70px', fontStyle: 'italic', margin: '30px auto', color: "#E78E52" }}>Add Course Here</Typography>
 
                 <form onSubmit={handleSubmit(onSubmit)} className='input-area'>
                     <input
@@ -33,12 +35,11 @@ const AddCourses = () => {
                         placeholder='Enter your name'
                     />
 
-
                     <textarea
                         {...register("description",
                             { required: true })}
                         required
-                        placeholder='Write description '
+                        placeholder='Write description'
                         className='mx-auto'
 
                     />
@@ -50,7 +51,7 @@ const AddCourses = () => {
                         placeholder='enter img link'
                     />
 
-                    <input className='submit' type="submit" />
+                    <input type="submit" className="submit" />
                 </form>
             </div>
         </div>

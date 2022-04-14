@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Swal from 'sweetalert2'
 import Appbar from '../../../Shared/Appbar/Appbar';
 import Footer from '../../../Shared/Footer/Footer';
-// import './Services.css'
+import './GetCourses.css'
 
 const GetCourses = () => {
     const [allCourses, setAllCourses] = useState([])
@@ -26,16 +26,16 @@ const GetCourses = () => {
 
     return (
         <>
-        <Appbar />
+            <Appbar />
             <Container className=' my-5 '>
 
-                <div className='my-5 service-title'>
+                <div className='pricing-text'>
 
                     <h1>Become A Safer</h1>
-
-                    <h6>Professional Photography Services. If you need photographs for your company website or a new printed sales brochure, our professional photographers will..</h6>
-
+                    <p >Good ideas deserve good company, and as a certified B Corporation™ we strive to use our business as a force for good.mental health <br /> to donating 30% of our advertising space to support artists we admire and causes we care about</p>
                 </div>
+
+
 
                 <Grid container spacing={2} sx={{ my: "20px" }} >
 
@@ -50,7 +50,9 @@ const GetCourses = () => {
                             <Typography variant='h6' sx={{ fontWeight: 'bold' }}>{allCourse.title}</Typography>
 
                             <Typography>{allCourse.description}</Typography>
-                            <Button onClick={handleAlert} className="btn-color" variant="contained">Complete Course</Button>
+                            <Box className="btn-color">
+                                <Button sx={{ backgroundColor: "#f47e12" }} onClick={handleAlert} variant="contained">Complete Course</Button>
+                            </Box>
                         </Grid>)
                     }
                 </Grid>

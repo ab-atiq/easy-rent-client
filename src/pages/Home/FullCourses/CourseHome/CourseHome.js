@@ -11,8 +11,11 @@ const CourseHome = () => {
         <>
             <Appbar />
             <Container>
-                <Typography variant='h4' sx={{ textAlign: "center", margin: "25px auto", fontWeight: "bold", color: "#E78E52" }}>Hello Rider !!</Typography>
-                <Typography variant='h6' sx={{ textAlign: "left" }}>Course 1</Typography>
+
+                <Typography variant='h4' style={{ textAlign: "center", fontSize: '70px', fontStyle: 'italic', marginBottom: '80px', color: "#E78E52" }}>Rider Courses</Typography>
+
+
+                <Typography variant='h6' sx={{ textAlign: "left", fontSize: '20px', fontStyle: 'italic', }}>Course 1</Typography>
 
                 <Box >
                     <img className="image_Optimize" src={courseImg} alt="" />
@@ -22,6 +25,8 @@ const CourseHome = () => {
                     <Link className="btn_design " to="/GetCourses">
                         <Button className="btn_color" variant="contained">See Course</Button></Link>
                 </Box>
+
+                Upcoming Courses ... <br />
             </Container>
             <Footer />
         </>
