@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Box } from '@mui/system';
-import { Button, Container, Grid } from '@mui/material';
+import { Button, Container, Grid, Typography } from '@mui/material';
 import Swal from 'sweetalert2'
+import Appbar from '../../../Shared/Appbar/Appbar';
+import Footer from '../../../Shared/Footer/Footer';
 // import './Services.css'
 
 const GetCourses = () => {
@@ -25,6 +26,7 @@ const GetCourses = () => {
 
     return (
         <>
+        <Appbar />
             <Container className=' my-5 '>
 
                 <div className='my-5 service-title'>
@@ -35,24 +37,26 @@ const GetCourses = () => {
 
                 </div>
 
-                <Grid container spacing={2} sx={{ my: "20px" }}>
+                <Grid container spacing={2} sx={{ my: "20px" }} >
 
                     {
-                        allCourses.map(allCourse => <Grid xs={12} md={3}
+                        allCourses.map(allCourse => <Grid xs={12} md={3} sx={{ mx: '20px', my: '10px' }}
                             key={allCourse._id}
                             service={allCourse}
                         >
 
-                            <iframe width="300" height="200" src={allCourse.youtube_video_link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="300" height="200" src={allCourse.youtube_video_link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  ></iframe>
 
-                            <h2>{allCourse.title}</h2>
-                            <p>{allCourse.description}</p>
-                            <Button onClick={handleAlert} variant='contained'>Complete Course</Button>
+                            <Typography variant='h6' sx={{ fontWeight: 'bold' }}>{allCourse.title}</Typography>
+
+                            <Typography>{allCourse.description}</Typography>
+                            <Button onClick={handleAlert} className="btn-color" variant="contained">Complete Course</Button>
                         </Grid>)
                     }
                 </Grid>
 
             </Container >
+            <Footer />
         </>
     );
 };

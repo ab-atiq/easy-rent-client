@@ -24,7 +24,7 @@ const Appbar = () => {
           <Link className='single-link' to='/home'>Services</Link>
           <Link className='single-link' to='/CourseHome'>Courses</Link>
           <Link className='single-link' to='/about'>About Us</Link>
-          <Link className='single-link' to='/contactUs'>Contact Us</Link>
+          <Link className='single-link' to='/contactUs' >Contact Us</Link>
           <Link className='single-link' to='/login'>Login</Link>
         </div>
         <div onClick={handleClick} className='menu-icon'>

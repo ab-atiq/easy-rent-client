@@ -22,7 +22,6 @@ const CourseHome = () => {
                     <Link className="btn_design " to="/GetCourses">
                         <Button className="btn_color" variant="contained">See Course</Button></Link>
                 </Box>
-
             </Container>
             <Footer />
         </>
