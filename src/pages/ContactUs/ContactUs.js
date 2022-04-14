@@ -22,63 +22,21 @@ const ContactUs = () => {
     return (
         <div className="">
             <Appbar></Appbar>
-            <div className='main'>
-
+            <div className="contact">
                 <form onSubmit={sendEmail}>
-                    <div className="row pt-5 mx-auto">
-                        <div className="col-8 form-group mx-auto">
-                            <TextField style={{
-                                backgroundColor: "white"
-                            }}
-                                type="text" className="form-control" placeholder="Name" name="name"
-
-                                required
-                            />
-                        </div>
-                        <div className="col-8 pt-2 form-group mx-auto">
-                            <TextField style={{
-                                backgroundColor: "white"
-                            }}
-                                type="email" className="form-control" placeholder="Email Address" name="email"
-                                required
-                            />
-                        </div>
-                        <div className="col-8 pt-2 form-group mx-auto">
-                            <TextField style={{
-                                backgroundColor: "white"
-                            }}
-                                type="text" className="form-control" placeholder="Subject" name="subject"
-                                required
-                            />
-                        </div>
-                        <div className="col-8 pt-2 form-group mx-auto">
-                            <textarea className="form-control"
-                                cols="32"
-                                rows="8"
-                                placeholder="Your Message" name="message"
-                                required
-                            />
-                        </div>
-                        <div className="col-8 pt-3 mx-auto">
-                            <Button style={{
-                                borderRadius: 35,
-                                backgroundColor: "#FDAF7E",
-                                padding: "4px 8px",
-                                fontSize: "30px"
-                            }}
-                                type="submit"
-                                variant="contained"
-                                value="send message"
-                                fullWidth
-                            >
-                                Send
-                            </Button>
+                    <div className="contact-box">
+                        <div className="left"></div>
+                        <div className="right">
+                            <h2 className='toptext'>Contact Us</h2>
+                            <input type="text" className="field" placeholder="Your Name" name="name" required />
+                            <input type="email" className="field" placeholder="Your Email" name="email" required />
+                            <input type="text" className="field" placeholder="Subject" name="subject" required />
+                            <textarea placeholder="Your Message" name="message" className="field" required></textarea>
+                            <button className="btn1" type="submit" value="send message">Send</button>
                         </div>
                     </div>
                 </form>
-
             </div>
-            <Footer></Footer>
         </div>
     );
 };
