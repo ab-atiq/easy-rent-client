@@ -33,6 +33,8 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/dashbord' element={<Dashbord />}>
+            <Route path='/CourseHome' element={<CourseHome />} />
+            <Route path='/GetCourses' element={<GetCourses />} />
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>
