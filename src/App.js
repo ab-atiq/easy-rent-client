@@ -7,6 +7,7 @@ import './App.css';
 import NotFound from './pages/NotFound/Notfound';
 import ContactUs from './pages/ContactUs/ContactUs';
 import AllServices from './pages/Home/Services/AllServices';
+import Dashbord from './pages/Dashbord/Dashbord';
 
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
           <Route path='/services' element={<AllServices />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          
+          <Route path='/dashbord' element={<Dashbord />}>
+
+          </Route>
+          
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
