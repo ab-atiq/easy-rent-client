@@ -8,11 +8,13 @@ import {data} from "../FakeData/FakeDataHome"
 
 
 
+
 const Services = () => {
 
 
   return (
     <div>
+      
       <Box
         sx={{ textAlign: "center", fontWeight: 'bold', fontSize: "2.5rem", mb: "70px", mt: "60px" }}
       >

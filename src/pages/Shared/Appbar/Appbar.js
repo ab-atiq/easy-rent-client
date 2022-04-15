@@ -2,7 +2,7 @@ import { Container } from '@mui/material'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../../images/easyrent.png'
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 import './Appbar.css';
 
 const Appbar = () => {
@@ -21,10 +21,10 @@ const Appbar = () => {
         </div>
         <div className={click ? 'nav-menu active' : 'nav-menu'}>
           <Link className='single-link' to='/home'>Home</Link>
-          <Link className='single-link' to='/home'>Services</Link>
+          <Link className='single-link' to='/services'>Services</Link>
           <Link className='single-link' to='/CourseHome'>Courses</Link>
           <Link className='single-link' to='/about'>About Us</Link>
-          <Link className='single-link' to='/contactUs' >Contact Us</Link>
+          <Link className='single-link' to='/contactUs'>Contact Us</Link>
           <Link className='single-link' to='/login'>Login</Link>
         </div>
         <div onClick={handleClick} className='menu-icon'>
@@ -36,4 +36,4 @@ const Appbar = () => {
   )
 }
 
-export default Appbar
+export default Appbar;
