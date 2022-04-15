@@ -1204,6 +1204,11 @@
   dependencies:
     "@date-io/core" "^2.13.1"
 
+"@emailjs/browser@^3.6.2":
+  "integrity" "sha512-Swc8w+vwDX4XPy6tPegOFGSwHqNiEmEsIKbtAkqHo2WqnS0ORZUnnuZats2R3XqwfxNQD0F6RwnlVWHIMf6sCQ=="
+  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.6.2.tgz"
+  "version" "3.6.2"
+
 "@emotion/babel-plugin@^11.7.1":
   "integrity" "sha512-6mGSCWi9UzXut/ZAN6lGFu33wGR3SJisNl3c0tvlmb8XChH1b2SUvxvnOh7hvLpqyRdHHU9AiazV3Cwbk5SXKQ=="
   "resolved" "https://registry.npmjs.org/@emotion/babel-plugin/-/babel-plugin-11.7.2.tgz"
@@ -10113,6 +10118,11 @@
     "csso" "^4.2.0"
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
+
+"sweetalert2@^11.4.8":
+  "integrity" "sha512-BDS/+E8RwaekGSxCPUbPnsRAyQ439gtXkTF/s98vY2l9DaVEOMjGj1FaQSorfGREKsbbxGSP7UXboibL5vgTMA=="
+  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.4.8.tgz"
+  "version" "11.4.8"
 
 "swiper@^8.0.7":
   "integrity" "sha512-GHjDfxSZdupfU7LrSVOpaNaT7R1D2zxopPGBFz1UOXOtsYvVJLg0k6NvkTAD7qn0ASl5pTti82qoYwvYvIkg4g=="

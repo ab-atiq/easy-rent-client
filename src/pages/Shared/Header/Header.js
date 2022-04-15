@@ -1,7 +1,7 @@
-import { Container } from '@mui/material'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import logo from '../../../images/easyrent.png'
+import { Container } from "@mui/material";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../../../images/easyrent.png";
 // import './Header.css';
 
 const Header = () => {
@@ -26,6 +26,9 @@ const Header = () => {
           <Link className="single-link" to="/about">
             About Us
           </Link>
+          <Link className="single-link" to="/dashbord">
+            Dashbord
+          </Link>
           <Link className="single-link" to="/login">
             Login
           </Link>
@@ -44,4 +47,4 @@ const Header = () => {
   );
 };
 
-export default Header ;
+export default Header;
