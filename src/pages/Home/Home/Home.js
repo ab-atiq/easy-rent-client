@@ -12,12 +12,12 @@ import Porsche from "../porsche/Porsche";
 import AboutUs from "../AboutUs/AboutUs";
 import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
-import AppBar from "../../Shared/AppBar/AppBar";
+
 
 const Home = () => {
   return (
     <div>
-      <AppBar></AppBar>
+    
       <SecBanner />
       <NurBanner></NurBanner>
       <Hero></Hero>

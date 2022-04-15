@@ -3,12 +3,12 @@ import React from "react";
 import courseImg from "../../../../images/course.png";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/system";
-import AppBar from "../../../Shared/AppBar/AppBar";
+
 
 const CourseHome = () => {
   return (
     <>
-      <AppBar />
+      
       <Container>
         <Typography
           variant="h4"

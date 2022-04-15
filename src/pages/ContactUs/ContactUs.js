@@ -1,8 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { Button, TextField } from "@mui/material";
 import React from "react";
-import AppBar from "../Shared/AppBar/AppBar";
-import Footer from "../Shared/Footer/Footer";
 import "./ContactUs.css";
 
 const ContactUs = () => {
@@ -29,7 +26,7 @@ const ContactUs = () => {
 
   return (
     <div className="">
-      <AppBar></AppBar>
+     
       <div className="contact">
         <form onSubmit={sendEmail}>
           <div className="contact-box">
