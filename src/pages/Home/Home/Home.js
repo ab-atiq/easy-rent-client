@@ -8,23 +8,22 @@ import Facilities from "../Facilities/Facilities";
 import NurFooter from "../../Shared/Footer/NurFooter";
 import Hero from "../Hero/Hero";
 import HomeQuestion from "../Question/HomeQuestion";
-import Porsche from '../porsche/Porsche';
+import Porsche from "../porsche/Porsche";
 import AboutUs from "../AboutUs/AboutUs";
 import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
-import Appbar from "../../Shared/Appbar/Appbar";
-
+import AppBar from "../../Shared/AppBar/AppBar";
 
 const Home = () => {
   return (
     <div>
-      <Appbar></Appbar>
+      <AppBar></AppBar>
       <SecBanner />
       <NurBanner></NurBanner>
       <Hero></Hero>
       <Porsche></Porsche>
       <Banner></Banner>
-      <FindCar/>
+      <FindCar />
       <Services></Services>
       <AboutUs></AboutUs>
       <AnimationCar></AnimationCar>

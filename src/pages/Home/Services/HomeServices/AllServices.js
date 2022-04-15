@@ -3,9 +3,8 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Service from "./Service";
 import "./Services.css";
-import {data} from "../FakeData/FakeDataHome"
-import Appbar from "../../../Shared/Appbar/Appbar";
-
+import { data } from "../FakeData/FakeDataHome";
+import AppBar from "../../../Shared/AppBar/AppBar";
 
 const AllServices = () => {
   // const [services, setServices] = useState([]);
@@ -18,7 +17,7 @@ const AllServices = () => {
 
   return (
     <div>
-      <Appbar></Appbar>
+      <AppBar></AppBar>
       <Box
         sx={{ textAlign: "center", fontSize: "3.5rem", mb: "40px", mt: "40px" }}
       >

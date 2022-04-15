@@ -26,8 +26,8 @@ const Header = () => {
           <Link className="single-link" to="/about">
             About Us
           </Link>
-          <Link className="single-link" to="/dashbord">
-            Dashbord
+          <Link className="single-link" to="/Dashboard">
+            Dashboard
           </Link>
           <Link className="single-link" to="/login">
             Login
