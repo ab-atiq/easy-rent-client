@@ -17,7 +17,7 @@ const AllServices = () => {
 
   return (
     <div>
-      
+  
       <Box
         sx={{ textAlign: "center", fontSize: "3.5rem", mb: "40px", mt: "40px" }}
       >
