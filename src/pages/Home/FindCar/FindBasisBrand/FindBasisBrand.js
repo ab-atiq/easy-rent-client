@@ -11,7 +11,7 @@ const FindBasisBrand = () => {
   const { carName } = useParams();
 
   useEffect(() => {
-    fetch("/FindBasisBrand.json")
+    fetch("http://localhost:5000/api/find/findBrand")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -22,7 +22,7 @@ const FindBasisBrand = () => {
   }, []);
 
   useEffect(() => {
-    fetch("/FindDataBasisBrand.json")
+    fetch("http://localhost:5000/api/find/findDataBrand")
       .then((res) => res.json())
       .then((data) => {
         const filterData = data.filter((data) => data.brand.includes(carName));
@@ -80,7 +80,7 @@ const FindBasisBrand = () => {
               </Typography>
               <Typography variant="body1">{data?.topDescription2}</Typography>
             </Grid>
-            <Grid item  xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Typography variant="h4" py={2}>
                 {data?.topTitle3}
               </Typography>

@@ -12,7 +12,7 @@ import CarSlide from "./CarSlide";
 const FindCar = () => {
   const [cars, setCars] = useState();
   useEffect(() => {
-    fetch("./findCar.json")
+    fetch("http://localhost:5000/api/find/findCar")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);
