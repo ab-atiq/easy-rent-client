@@ -5,7 +5,7 @@ import logo from "../../../images/easyrent.png";
 // import { useDispatch, useSelector } from 'react-redux';
 import "./Appbar.css";
 
-const AppBar = () => {
+const Appbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => {
     setClick(!click);
@@ -51,4 +51,4 @@ const AppBar = () => {
   );
 };
 
-export default AppBar;
+export default Appbar;

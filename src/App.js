@@ -15,13 +15,13 @@ import GetCourses from "./pages/Home/FullCourses/GetCourse/GetCourses";
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import AboutUs from "./pages/Home/AboutUs/AboutUs";
-import AppBar from "./pages/Shared/Appbar/Appbar";
+import Appbar from "./pages/Shared/Appbar/Appbar";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <AppBar></AppBar>
+        <Appbar></Appbar>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
