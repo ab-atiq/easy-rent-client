@@ -11,7 +11,7 @@ const NurService = ({ alldata }) => {
                         <div className="car-box">
                             <img src={image} alt="" />
                         </div>
-                    <div className="text">
+                    <div className="cart-text">
                             <p className="year-text">{year}</p>
                             <h3 className="name-text">{name}</h3>
                             <p className='price-text'><span className='span-text'>${price}</span>/month</p>
