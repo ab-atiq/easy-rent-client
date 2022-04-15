@@ -3,10 +3,12 @@ import React from 'react';
 import courseImg from '../../../../images/course.png';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
+import Appbar from '../../../Shared/Appbar/Appbar';
 
 const CourseHome = () => {
     return (
         <>
+            <Appbar/>
             <Container>
 
                 <Typography variant='h4' style={{ textAlign: "center", fontSize: '70px', fontStyle: 'italic', marginBottom: '80px', color: "#E78E52" }}>Rider Courses</Typography>
