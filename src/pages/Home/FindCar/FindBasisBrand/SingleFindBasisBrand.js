@@ -9,11 +9,11 @@ const SingleFindBasisBrand = ({ car }) => {
   console.log(car);
   const { imgUrl, name, rent, star, available } = car;
   return (
-    <Grid item xs={12} sm={6} lg={4} sx={{ /*border: "2px solid orange",*/ padding: "10px" }}>
+    <Grid item xs={12} sm={6} lg={4} sx={{ padding: "10px" }}>
       <Grid item xs={12} sx={{ padding: "10px" }}>
         <img
           src={imgUrl}
-          style={{ height: "200px", borderRadius: "10px" }}
+          style={{ height: "200px", borderRadius: "10px", width: "100%" }}
           alt=""
         />
       </Grid>

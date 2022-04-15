@@ -53,7 +53,11 @@ const FindBasisBrand = () => {
         <Box>
           <Grid container spacing={3} alignItems="center" py={4} maxWidth="xl">
             <Grid item xs={12} md={6}>
-              <img src={data?.imgUrl1} alt="" />
+              <img
+                src={data?.imgUrl1}
+                style={{ width: "100%", padding: "10px" }}
+                alt="img"
+              />
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography variant="h3" py={2}>

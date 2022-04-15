@@ -14,6 +14,7 @@ import Appbar from './pages/Shared/Appbar/Appbar';
 import Dashbord from './pages/Dashbord/Dashbord';
 import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
 import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
+import FindBasisBrand from './pages/Home/FindCar/FindBasisBrand/FindBasisBrand';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
           <Route path='/dashbord' element={<Dashbord />} />
           <Route path='/CourseHome' element={<CourseHome />} />
           <Route path='/GetCourses' element={<GetCourses />} />
-          {/* <Route path="car/:carName" element={<FindBasisBrand />} /> */}
+          <Route path="car/:carName" element={<FindBasisBrand />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
