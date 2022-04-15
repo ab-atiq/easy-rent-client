@@ -11,21 +11,14 @@ import HomeQuestion from "../Question/HomeQuestion";
 import Porsche from "../porsche/Porsche";
 import AboutUs from "../AboutUs/AboutUs";
 import CleanCar from "../CleanCar/CleanCar";
-<<<<<<< HEAD
-import Appbar from "../../Shared/Appbar/Appbar";
-=======
 import FindCar from "../FindCar/FindCar";
->>>>>>> development
+import Appbar from "../../Shared/Appbar/Appbar";
 
 
 const Home = () => {
   return (
     <div>
-<<<<<<< HEAD
       <Appbar></Appbar>
-=======
-    
->>>>>>> development
       <SecBanner />
       <NurBanner></NurBanner>
       <Hero></Hero>
