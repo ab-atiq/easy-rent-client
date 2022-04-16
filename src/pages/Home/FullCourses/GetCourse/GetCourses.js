@@ -26,7 +26,6 @@ const GetCourses = () => {
     return (
         <>
             <Container className=' my-5 '>
-
                 <div className='pricing-text'>
 
                     <h1>Become A Safer</h1>
