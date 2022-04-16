@@ -1,4 +1,5 @@
-import React from "react";
+import axios from 'axios';
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Hero.css";
 import {
@@ -15,21 +16,23 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import TimePicker from "@mui/lab/TimePicker";
 import MobileDatePicker from "@mui/lab/MobileDatePicker";
 import { Box } from "@mui/system";
+import SearchedCar from './SearchedCar';
 
 const Hero = () => {
+  const [findCars, setFindCars] = useState([]);
   const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+    register, handleSubmit, reset, formState: { errors }, } = useForm();
   const [value, setValue] = React.useState(new Date());
 
   const handleChange = (newValue) => {
     setValue(newValue);
   };
   const onSubmit = (data) => {
-    console.log(data);
+    fetch(`http://localhost:5000/api/findcar?pickup=${data?.pickup}`)
+      .then(res => res.json())
+      .then(data => {
+        setFindCars(data)
+      });
     reset();
   };
 
@@ -132,8 +135,9 @@ const Hero = () => {
           </Typography>
         </Grid>
       </Grid>
-
-      <div className="form-container"></div>
+      {
+        findCars.map(car => <SearchedCar key={car?._id} car={car} findCars={findCars}></SearchedCar>)
+      }
     </div>
   );
 };

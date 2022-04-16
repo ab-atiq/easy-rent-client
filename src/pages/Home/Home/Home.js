@@ -10,6 +10,7 @@ import HomeQuestion from "../Question/HomeQuestion";
 import Porsche from '../porsche/Porsche';
 import Appbar from "../../Shared/Appbar/Appbar";
 import AboutUs from "../AboutUs/AboutUs";
+import SearchedCar from "../Hero/SearchedCar";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <AnimationCar></AnimationCar>
       <HomeQuestion />
       <Hero></Hero>
+      <SearchedCar></SearchedCar>
       <Facilities></Facilities>
       <Footer></Footer>
     </div>
