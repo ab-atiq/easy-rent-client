@@ -15,6 +15,7 @@ import GetCourses from "./pages/Home/FullCourses/GetCourse/GetCourses";
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import AboutUs from "./pages/Home/AboutUs/AboutUs";
+import Popup from "./pages/Home/Services/Popup/Popup";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/services" element={<AllServices />} />
           <Route path="/details" element={<MainService />} />
+          <Route path='/book/:BookingId' element={<Popup />} />
           <Route path="/small" element={<Small />} />
           <Route path="/medium" element={<Medium />} />
           <Route path="/large" element={<Large />} />
