@@ -12,6 +12,7 @@ import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
 import Appbar from './pages/Shared/Appbar/Appbar';
 import Dashbord from './pages/Dashbord/Dashbord';
+import Popup from './pages/Home/Services/Popup/Popup';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/contactUs' element={<ContactUs />} />
           <Route path='/services' element={<AllServices />} />
           <Route path='/details' element={<MainService />} />
+          <Route path='/book/:BookingId' element={<Popup />} />
           <Route path='/small' element={<Small />} />
           <Route path='/medium' element={<Medium />} />
           <Route path='/large' element={<Large />} />
