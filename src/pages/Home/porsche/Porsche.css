@@ -1,37 +1,48 @@
-.main{
+.main {
     display: flex;
     margin-top: 20px;
-    margin-left: 10px;
-}
-.car{
-    background-color: #D8D8D8;
-}
-.text{
-    margin-left: 100px;
-}
-.car img{
-margin-left: 320px !important;
 }
 
-@media screen and (max-width: 800px){
-    .car img{
-        width: 100%;      
+.car {
+    background-color: #D8D8D8;
+}
+
+.text {
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.car img {
+    /* margin-left: 320px !important; */
+}
+
+@media screen and (min-width: 1180px) {
+    .car img {
+        margin-left: -280px !important;
     }
-    .car{
-        background-color: #D8D8D8;
-    }
-    .main{
-        width: 100%;      
-        display: flex;
-        flex-direction: column;
+
+    .car {
         width: 50%;
     }
-    .text{
-        margin-top: 50px;
-        margin-bottom: 0; 
-        margin-left: 100px;      
+}
+
+@media screen and (max-width: 688px) {
+    .car img {
+        width: 100%;
     }
-    .img-box{
-        background-position-y: 200px;
+
+    .car {
+        background-color: #D8D8D8;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        margin-top: 50px;
+        margin-bottom: 30px;
     }
 }

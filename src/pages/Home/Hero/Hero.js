@@ -98,7 +98,7 @@ const Hero = () => {
                     <Grid item xs={12}>
                       <Button style={{
                         borderRadius: 35,
-                        backgroundColor: "#FDAF7E",
+                        backgroundColor: "rgb(251, 169, 16)",
                         padding: "18px 36px",
                         fontSize: "18px"
                       }}

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 
-
 const Footer = () => {
   return (
     <div>
@@ -44,7 +43,7 @@ const Footer = () => {
           <div>
             <i className="fa fa-envelope"></i>
             <p>
-              <a href="mailto:support@company.com">teamdevager21@gmail.com </a>
+              <a href="mailto:support@company.com">teamdebugger21@gmail.com </a>
             </p>
           </div>
         </div>

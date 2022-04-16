@@ -1,0 +1,12 @@
+.main-side-nav {
+  width: 300px;
+  height: 100vh;
+  background-color: blue;
+  display: block;
+}
+.Dashboard-link {
+  text-decoration: none;
+  margin-left: 50px;
+  font-weight: bold;
+  color: white;
+}
