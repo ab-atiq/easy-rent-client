@@ -17,6 +17,9 @@ import './App.css';
 import { useSelector } from 'react-redux';
 import AuthProvider from './contexts/AuthProvider';
 
+import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import AboutUs from "./pages/Home/AboutUs/AboutUs";
 
 function App() {
 
@@ -40,15 +43,19 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/dashbord' element={<Dashbord />} />
             <Route path='/CourseHome' element={<CourseHome />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+
             <Route path='/GetCourses' element={<GetCourses />} />
+            <Route path="car/:carName" element={<FindBasisBrand />} />
+
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
 
+     
     </div>
   );
 }
-
 
 export default App;
