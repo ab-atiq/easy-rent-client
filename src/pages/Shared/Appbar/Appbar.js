@@ -1,4 +1,4 @@
-import { Container, Box } from '@mui/material'
+import { Container } from '@mui/material'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../../images/easyrent.png'
@@ -32,21 +32,24 @@ const Appbar = () => {
           }
 
           {
-            user?.email &&
-            <Box>
-              <Link className='single-link' to='/Dashbord'>Dashboard</Link>
-              <Link as={Link} to="/login" className='single-link'>
+            user?.email &&           
+              <Link className='single-link' to='/Dashbord'>Dashboard</Link>                        
+          }
+          {
+            user?.email &&             
+              <Link to="/login" className='single-link'>
                 Hi {user?.displayName}
-              </Link>
-              <Link as={Link} to="/login" className='single-link'>
-                <button className='single-link' onClick={logOut}>Logout</button>
-              </Link>
-
-            </Box>
+              </Link>            
+          }
+          {
+            user?.email &&                       
+              <Link className='single-link' to="/login">
+                <button className='logout-btn' onClick={logOut}>Logout</button>
+              </Link>           
           }
 
-
         </div>
+
         <div onClick={handleClick} className='menu-icon'>
           <i className={click ? 'bx bxs-message-square-x icon-style' : 'bx bx-menu icon-style'}></i>
         </div>
