@@ -5,46 +5,74 @@ import { Box, Grid } from "@mui/material";
 import { useDispatch, useSelector } from 'react-redux';
 import './Register.css';
 import { register } from '../../../app/redux/callAPI';
+import useAuth from '../../../hooks/useAuth';
+import { useForm } from "react-hook-form";
 
 
 const Register = () => {
-    const [userName, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const { register, handleSubmit } = useForm();
+    const { registerUser, error, signInWithGoogle, } = useAuth()
+
+
     const dispatch = useDispatch();
-    const { isFetching, error } = useSelector((state) => state.user);
     const navigate = useNavigate()
 
-    console.log(error);
 
-    const handleClick = (e) => {
-        e.preventDefault();
-        register(dispatch, { userName, email, password });
+    const onSubmit = data => {
+        registerUser(data.email, data.password, data.name, navigate)
+
         navigate('/home')
-        console.log(userName, email, password);
 
+        console.log(data)
     };
+
+    // const handleClick = (e, data) => {
+    //     registerUser(data.email, data.password, data.name)
+
+
+    //     console.log(data)
+    //     e.preventDefault();
+    //     // register(dispatch, { userName, email, password });
+
+    // };
 
 
     return (
         <Box className="container">
             <Box className="forms-container">
                 <Box className="signup">
-                    <form action="#" className="sign-up-form">
+                    <form onSubmit={handleSubmit(onSubmit)} action="#" className="sign-up-form">
                         <h2 className="title">Please Register</h2>
                         <Box className="input-field">
                             <i className="fas fa-user"></i>
-                            <input type="text" placeholder="userName" onChange={(e) => setUsername(e.target.value)} />
+                            <input
+                                placeholder='Enter you name'
+                                type='text'
+                                name='text'
+                                {...register("name")}
+                                className='border-0 '
+
+                            />
                         </Box>
                         <Box className="input-field">
                             <i className="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                            <input
+                                type='email'
+                                name='email'
+                                placeholder='Enter your email'
+                                {...register("email")}
+                            />
                         </Box>
                         <Box className="input-field">
                             <i className="fas fa-lock"></i>
-                            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+                            <input
+                                placeholder='Enter your password'
+                                name='password'
+                                type="password"
+                                {...register("password")}
+                            />
                         </Box>
-                        <input type="submit" value="Register" className="btn solid" onClick={handleClick} disabled={isFetching} />
+                        <input type="submit" value="Register" className="btn solid" />
 
                         <p className="social-text">Or Sign up with social platforms</p>
 
@@ -55,7 +83,7 @@ const Register = () => {
                             <a href="#" className="social-icon">
                                 <i className="fab fa-twitter"></i>
                             </a>
-                            <a href="#" className="social-icon">
+                            <a href="#" className="social-icon" onClick={signInWithGoogle}>
                                 <i className="fab fa-google"></i>
                             </a>
                             <a href="#" className="social-icon">

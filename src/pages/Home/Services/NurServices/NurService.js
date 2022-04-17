@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 const NurService = ({ alldata }) => {
   const {_id, name, price, image, year, type, fual, kilo } = alldata;
+
+  
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <div className="box">
@@ -25,7 +27,7 @@ const NurService = ({ alldata }) => {
                           </div>
                     </div>
                         <div className=" my-3 d-flex             justify-content-between"> 
-                            <Link to={`/book/${_id}`}>
+                            <Link to={`/book/${_id}`} >
                             <button className="button">Rent Now</button>
                             </Link>                      
                             

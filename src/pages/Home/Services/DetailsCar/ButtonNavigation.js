@@ -24,6 +24,8 @@ export default function ButtonNavigation() {
           <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
           <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
           <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
           
         </BottomNavigation>
       </Box>

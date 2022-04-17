@@ -26,7 +26,7 @@ const Dashbord = (props) => {
             <Divider />
             <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to="/home"><Button color="inherit">Home</Button></Link>
             <br />
-             <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/addreview`}><Button color="inherit">Add Review</Button></Link>
+            <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/addreview`}><Button color="inherit">Add Review</Button></Link>
             <br />
             <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/myorder`}><Button color="inherit">My Order</Button></Link>
             <br />
