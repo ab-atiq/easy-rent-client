@@ -26,6 +26,7 @@ const Appbar = () => {
           <Link className='single-link' to='/about'>About Us</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
           <Link className='single-link' to='/login'>Login</Link>
+          <Link className='single-link' to='/mainLayout'>Practic</Link>
         </div>
         <div onClick={handleClick} className='menu-icon'>
           <i className={click ? 'bx bxs-message-square-x icon-style' : 'bx bx-menu icon-style'}></i>

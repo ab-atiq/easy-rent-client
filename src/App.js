@@ -11,6 +11,7 @@ import MainService from './pages/Home/Services/DetailsCar/MainService';
 import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
 import Dashbord from './pages/Dashbord/Dashbord';
+import MainLayout from './pages/Dashbord/MainLayout';
 
 
 function App() {
@@ -29,7 +30,9 @@ function App() {
           <Route path='/large' element={<Large />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/mainLayout' element={<MainLayout />}></Route>
           <Route path='/dashbord' element={<Dashbord />}>
+          
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>

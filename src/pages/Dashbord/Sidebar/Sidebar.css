@@ -1,12 +1,48 @@
 .main-side-nav{
     width: 300px;
     height: 100vh;
-    background-color: blue;
+    background-color: rgba(121, 121, 219, 0.644);
     display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .dashbord-link{
     text-decoration: none;
     margin-left: 50px;
     font-weight: bold;
     color: white;
+}
+.dash-link{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.dash-link i{
+    font-size: 20px;
+
+}
+.dash-link h3{
+    margin-left: 20px;
+}
+.dash-link-parents{
+    margin-top: 20px;
+}
+:root{
+    --body-Bg: #F3F4FA;
+    --main-Bg: #fff;
+    --main-Color: #8624DB;
+    --txt-Color: #4E4D4F;
+    --purple: #8624DB;
+    --orange: #FF9066;
+    --white: #fff;
+    --black: #000;
+    --green: #4CAF50;
+    --red: #DB190C;
+}
+
+:root{
+    --fontSize-Normal: 1.125rem;
+    --fontSize-Medium: 1.25rem;
+    --fontSize-Large: 1.5625rem;
 }
