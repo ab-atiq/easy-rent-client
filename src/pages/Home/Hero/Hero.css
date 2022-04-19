@@ -32,3 +32,10 @@
 .input_group type{
   color: rgba(86, 79, 79, 0.073);
 }
+
+.car-card{
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: tomato;
+    margin-bottom: 30px !important;
+}

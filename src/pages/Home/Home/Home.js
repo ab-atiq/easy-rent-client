@@ -10,6 +10,7 @@ import Hero from "../Hero/Hero";
 import HomeQuestion from "../Question/HomeQuestion";
 import Porsche from "../porsche/Porsche";
 import AboutUs from "../AboutUs/AboutUs";
+import SearchedCar from "../Hero/SearchedCar";
 import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
@@ -22,6 +23,7 @@ const Home = () => {
       <SecBanner />
       <NurBanner></NurBanner>
       <Hero></Hero>
+      <SearchedCar></SearchedCar>
       <Porsche></Porsche>
       <Banner></Banner>
       <FindCar />
