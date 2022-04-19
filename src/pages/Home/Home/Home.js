@@ -26,7 +26,6 @@ const Home = () => {
       <Banner></Banner>
       <FindCar />
       <Services></Services>
-      <AboutUs></AboutUs>
       <AnimationCar></AnimationCar>
       <CleanCar></CleanCar>
       <HomeQuestion />

@@ -10,7 +10,6 @@ import MainService from './pages/Home/Services/DetailsCar/MainService';
 import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
 import Appbar from './pages/Shared/Appbar/Appbar';
-import Dashbord from './pages/Dashbord/Dashbord';
 import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
 import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
 import './App.css';
@@ -41,9 +40,9 @@ function App() {
             <Route path='/large' element={<Large />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/dashbord' element={<Dashbord />} />
             <Route path='/CourseHome' element={<CourseHome />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
 
             <Route path='/GetCourses' element={<GetCourses />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
@@ -53,7 +52,7 @@ function App() {
         </BrowserRouter>
       </AuthProvider>
 
-     
+
     </div>
   );
 }
