@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Hero.css";
@@ -20,15 +19,14 @@ import SearchedCar from './SearchedCar';
 
 const Hero = () => {
   const [findCars, setFindCars] = useState([]);
-  const {
-    register, handleSubmit, reset, formState: { errors }, } = useForm();
+  const {register, handleSubmit, reset, formState: { errors }, } = useForm();
   const [value, setValue] = React.useState(new Date());
 
   const handleChange = (newValue) => {
     setValue(newValue);
   };
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/api/findcar?pickup=${data?.pickup}`)
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/findcar?pickup=${data?.pickup}`)
       .then(res => res.json())
       .then(data => {
         setFindCars(data)
@@ -37,6 +35,7 @@ const Hero = () => {
   };
 
   return (
+    <>
     <div className="hero">
       <Typography className="title" gutterBottom variant="h3">
         Car Rental - Search, Compare and Save
@@ -135,10 +134,11 @@ const Hero = () => {
           </Typography>
         </Grid>
       </Grid>
-      {
-        findCars.map(car => <SearchedCar key={car?._id} car={car} findCars={findCars}></SearchedCar>)
-      }
     </div>
+    {
+      findCars.map(car => <SearchedCar key={car?._id} car={car} findCars={findCars}></SearchedCar>)
+    }
+    </>
   );
 };
 

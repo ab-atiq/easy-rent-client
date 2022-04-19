@@ -1,20 +1,32 @@
 [
     {
-        "id":1,
-        "name": "Toyota",
+        "brandName": "Toyota",
+        "model":"corona",
+        "rating": 4,
+        "trips": 3,
+        "price": 45,
+        "pickup": "Dhaka",
         "status": "available",
-        "pickup": "Dhaka"
+        "imgUrl":"https://resources.turo.com/f/81934/767x420/690e344244/toyota.jpg"
     },
     {
-        "id":2,
-        "name": "Nissan",
+        "brandName": "Nissan",
+        "model":"vouge",
+        "rating": 5,
+        "trips": 6,
+        "price": 55,
+        "pickup": "Khulna",
         "status": "available",
-        "pickup": "Khulna"
+        "imgUrl":"https://resources.turo.com/f/81934/767x420/5d83e7eed9/jeep.jpg"
     },
     {
-        "id":3,
-        "name": "Haice",
+        "brandName": "Toyota",
+        "model":"Haice",
+        "rating": 4,
+        "trips": 5,
+        "price": 65,
+        "pickup": "Rangpur",
         "status": "available",
-        "pickup": "Rangpur"
+        "imgUrl":"https://resources.turo.com/f/81934/767x420/709bcf950f/us_mercedes_benz_car_rental.jpg"
     }
 ]
