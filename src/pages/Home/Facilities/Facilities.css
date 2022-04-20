@@ -1,4 +1,7 @@
 .facilities {
     color: white;
-    background-color: rgb(251, 169, 16);
+    background: url("../../../images/bgi3.jpg") no-repeat center;
+    background-size: cover;
+    height: 500px;
+    /* padding-top: 180px; */
 }
