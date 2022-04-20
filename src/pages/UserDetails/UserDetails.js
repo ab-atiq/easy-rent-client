@@ -11,7 +11,7 @@ const UserDetails = () => {
     const { id } = useParams();
     const [singleCar, setSingleCar] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/api/car/${id}`)
+        fetch(`https://guarded-taiga-13015.herokuapp.com/api/car/${id}`)
             .then(res => res.json())
             .then(data => setSingleCar(data))
     }, [id]);
@@ -19,7 +19,7 @@ const UserDetails = () => {
     const onSubmit = (data) => {
         if (singleCar) {
             data.carInfo = singleCar;
-            axios.post('http://localhost:5000/api/userdetails', data)
+            axios.post('https://guarded-taiga-13015.herokuapp.com/api/userdetails', data)
                 .then(data => {
                     if (data) {
                         Swal.fire({
