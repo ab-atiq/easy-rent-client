@@ -21,6 +21,7 @@ import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import AboutUs from "./pages/Home/AboutUs/AboutUs";
 import Popup from "./pages/Home/Services/Popup/Popup";
+import Profile from './pages/Profile/Profile';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/dashbord' element={<Dashbord />} />
+            <Route path='/profile' element={<Profile />} />
             <Route path='/CourseHome' element={<CourseHome />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path='/book/:BookingId' element={<Popup />} />
@@ -53,7 +55,7 @@ function App() {
         </BrowserRouter>
       </AuthProvider>
 
-     
+
     </div>
   );
 }
