@@ -16,6 +16,7 @@ import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/dashbord' element={<Dashbord />} />
+            <Route path='/newDashbord' element={<NewDashbord />} />
             <Route path='/CourseHome' element={<CourseHome />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path='/book/:BookingId' element={<Popup />} />
