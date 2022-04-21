@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import SingleFindBasisBrand from "./SingleFindBasisBrand";
 import { Box } from "@mui/system";
 import Footer from "../../../Shared/Footer/Footer";
-
+import Appbar from "../../../Shared/Appbar/Appbar";
 
 const FindBasisBrand = () => {
   const [cars, setCars] = useState();
@@ -35,7 +35,7 @@ const FindBasisBrand = () => {
 
   return (
     <>
-     
+      <Appbar />
       <Box>
         <Container>
           <Box>
