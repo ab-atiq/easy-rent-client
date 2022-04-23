@@ -36,7 +36,7 @@ const NewDashbord = () => {
                     <h3>Home</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/newDashbord'><i className='material-icons-sharp'>dashboard</i>
+                <Link className='dashboard-link' to='/newDashbord/'><i className='material-icons-sharp'>dashboard</i>
                     <h3>Dashboard</h3>
                 </Link>
 

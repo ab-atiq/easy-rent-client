@@ -26,6 +26,7 @@ const Appbar = () => {
           <Link className='single-link' to='/services'>Services</Link>
           <Link className='single-link' to='/CourseHome'>Courses</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
+          
 
           {!user.email &&
             <Link as={Link} to="/login" className='single-link'>Login</Link>
@@ -33,7 +34,7 @@ const Appbar = () => {
 
           {
             user?.email &&           
-              <Link className='single-link' to='/Dashbord'>Dashboard</Link>                        
+              <Link className='single-link' to='/newDashbord'>Dashboard</Link>                        
           }
           {
             user?.email &&             
