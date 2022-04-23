@@ -14,6 +14,7 @@ import SearchedCar from "../Hero/SearchedCar";
 import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
+import Footer from "../../Shared/Footer/Footer";
 
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
       <HomeQuestion />
       <Facilities></Facilities>
       <NurFooter></NurFooter>
+      {/* <Footer/> */}
     </div>
   );
 };
