@@ -3,8 +3,8 @@ import './NewDashbord.css'
 import { Link } from 'react-router-dom';
 import logo from '../../images/easyrent.png'
 import profile from '../../images/download.jpg'
-// import { Outlet } from 'react-router-dom'
-import DashboardHome from './DashbordHome/DashboardHome';
+import { Outlet } from 'react-router-dom'
+// import DashboardHome from './DashbordHome/DashboardHome';
 
 
 const NewDashbord = () => {
@@ -17,7 +17,7 @@ const NewDashbord = () => {
         <div className="dashboard-container">
         <div>
         <aside className={click ? 'display-block' : 'display-active' }>
-
+            
             <div className="top">
                 <div className="dashbord-logo">
                     <img src={logo} alt="" />
@@ -40,7 +40,7 @@ const NewDashbord = () => {
                     <h3>Dashboard</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>person_outline</i>
+                <Link className='dashboard-link' to='/newDashbord/user'><i className='material-icons-sharp'>person_outline</i>
                      <h3>Customers</h3>
                 </Link>
 
@@ -104,12 +104,10 @@ const NewDashbord = () => {
         {/* =================== nav bar =========== */}
          
         <div className='dashbord-outlet'>
-            {/* <Outlet /> */}
-            <DashboardHome />
+            <Outlet />
+            {/* <DashboardHome /> */}
         </div>
-        
-        {/* ================== End of main =============== */}
-        
+              
     </div>          
     </div>                   
   )

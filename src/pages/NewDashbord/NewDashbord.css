@@ -91,6 +91,8 @@
 aside {
     min-height: 100vh;
     background-color: white;
+    position: fixed; 
+    width: 224px; 
 }
 aside .top{
     display: flex;
@@ -164,7 +166,7 @@ aside .sidebar .dashboard-link:hover i{
 /* ================== main ========================== */
 
 main{
-    margin-top: 1.4rem;
+    margin: 1.4rem 2rem 0 0;
 }
 main .date input[type='date']{
     background: transparent;
@@ -371,16 +373,14 @@ main .table-single-link{
     margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1360px){
-    .dashboard-container{
-        width: 98%;       
-    }
-}
 
 @media screen and (max-width: 1200px){
     .dashboard-container{
         width: 94%;
         grid-template-columns: 7rem auto;       
+    }
+    aside {
+        width: 112px;
     }
     aside .dashbord-logo{
         display: none;
@@ -410,6 +410,8 @@ main .table-single-link{
         width: 83%;
     }
 }
+
+
 @media screen and (max-width: 768px){
     .dashboard-container{
         width: 100%;   
@@ -456,8 +458,9 @@ main .table-single-link{
         margin-left: 20px;
     }
     main{
-        margin-top: 8rem;
+        margin-top: 1rem;
         padding: 0 1rem;
+        margin: 1rem;
     }
     main .recent-order{
         position: relative;
