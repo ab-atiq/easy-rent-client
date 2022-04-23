@@ -19,6 +19,8 @@ import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
+import UserDetails from './pages/UserDetails/UserDetails'
+import AddReview from './pages/AddReview/AddReview';
 
 function App() {
 
@@ -49,6 +51,8 @@ function App() {
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='/GetCourses' element={<GetCourses />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
+            <Route path='/userdetails/:id' element={<UserDetails />} />
+            <Route path='/addreview' element={<AddReview></AddReview>}/>
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
