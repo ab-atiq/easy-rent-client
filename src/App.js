@@ -23,6 +23,7 @@ import AboutUs from "./pages/Home/AboutUs/AboutUs";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
+import AddReview from './pages/AddReview/AddReview';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             <Route path="car/:carName" element={<FindBasisBrand />} />
             <Route path="singleCar/:carName" element={<FindSingleCar />} />
             <Route path='/userdetails/:id' element={<UserDetails />} />
+            <Route path='/addreview' element={<AddReview></AddReview>}/>
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
