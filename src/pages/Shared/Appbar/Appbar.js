@@ -82,7 +82,7 @@ const Appbar = () => {
             >
               <MenuItem onClick={handleClose}><Link as={Link} to="/profile" className='single-link'>Profile</Link></MenuItem>
               <MenuItem onClick={handleClose}><Box>
-                <Link className='single-link' to='/Dashbord'>Dashboard</Link>
+                <Link className='single-link' to='/newDashbord'>Dashboard</Link>
               </Box></MenuItem>
               <MenuItem onClick={handleClose}><Link as={Link} to="/login" className='single-link'>
                 <button className='nav-btn' onClick={logOut}>Logout</button>
@@ -140,7 +140,7 @@ const Appbar = () => {
             </Menu>
           </div>
         } */}
-        {
+        {/* {
           user?.email &&
           <Link className='single-link' to='/newDashbord'>Dashboard</Link>
         }
@@ -155,7 +155,7 @@ const Appbar = () => {
           <Link className='single-link' to="/login">
             <button className='logout-btn' onClick={logOut}>Logout</button>
           </Link>
-        }
+        } */}
 
         {/* </div> */}
 
