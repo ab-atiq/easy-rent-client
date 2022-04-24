@@ -16,11 +16,11 @@ import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
-import Profile from './pages/UserProfile/Profile/Profile';
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
 import UserDetails from './pages/UserDetails/UserDetails'
 import AddReview from './pages/AddReview/AddReview';
+import Profile from './pages/UserProfile/Profile/Profile';
 
 function App() {
 
