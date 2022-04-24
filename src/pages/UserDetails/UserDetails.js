@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import Swal from 'sweetalert2';
+import useAuth from '../../hooks/useAuth';
 
 const UserDetails = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
@@ -11,29 +11,25 @@ const UserDetails = () => {
     const { id } = useParams();
     const [singleCar, setSingleCar] = useState({});
     useEffect(() => {
-        fetch(`https://guarded-taiga-13015.herokuapp.com/api/car/${id}`)
+        fetch(`http://localhost:5000/api/car/${id}`)
             .then(res => res.json())
             .then(data => setSingleCar(data))
     }, [id]);
+    const { user } = useAuth()
     const { brandName, model, imgUrl } = singleCar || {}
     const onSubmit = (data) => {
-        if (singleCar) {
-            data.carInfo = singleCar;
-            axios.post('https://guarded-taiga-13015.herokuapp.com/api/userdetails', data)
-                .then(data => {
-                    if (data) {
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'Car Rent Successfully',
-                            showConfirmButton: true,
-                            timer: 1500
-                        })
-                        navigate('/home')
-                        reset();
-                    }
-                })
-        }
+        data.carInfo = singleCar;
+        data.email = user?.email;
+        data.imgURL = user?.photoURL;
+        fetch('http://localhost:5000/init', {
+            method: 'POST',
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => window.location.replace(data))
         reset();
     };
     return (
@@ -56,7 +52,7 @@ const UserDetails = () => {
                             <input type="submit" className="btn solid" />
                         </form>
                     </Grid>
-                    <Button variant='contained' onClick={()=>navigate(-1)}>Go back</Button>
+                    <Button variant='contained' onClick={() => navigate(-1)}>Go back</Button>
                 </Grid>
             </div>
         </div>
