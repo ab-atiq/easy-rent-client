@@ -1,7 +1,8 @@
 .facilities {
     color: white;
-    background: url("../../../images/bgi3.jpg") no-repeat center;
+    background-color: orange;
+    /* background: url("../../../images/bgi3.jpg") no-repeat center;
     background-size: cover;
-    height: 500px;
+    height: 500px; */
     /* padding-top: 180px; */
 }

@@ -21,7 +21,7 @@ import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import AboutUs from "./pages/Home/AboutUs/AboutUs";
 import Popup from "./pages/Home/Services/Popup/Popup";
-import Profile from './pages/Profile/Profile';
+import Profile from './pages/UserProfile/Profile/Profile';
 
 function App() {
 

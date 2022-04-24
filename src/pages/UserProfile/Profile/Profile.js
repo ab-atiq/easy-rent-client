@@ -5,16 +5,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import image from '../../images/bgi2.jpg'
+import image from '../../../images/bgi2.jpg'
 import './Profile.css';
 import { Box } from '@mui/system';
-import useAuth from '../../hooks/useAuth';
+import useAuth from '../../../hooks/useAuth';
 
 const Profile = () => {
 
     const { user, logOut } = useAuth();
 
-    // console.log(user.photoURL);
+    console.log(user.photoURL);
 
     return (
         <div className='profile'>
@@ -33,8 +33,7 @@ const Profile = () => {
                                 {user?.displayName}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                Email: {user?.email}
                             </Typography>
                         </CardContent>
                         <CardActions>
