@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@date-io/date-fns": "^2.13.1",
@@ -30,6 +31,7 @@
     "firebase": "^9.6.11",
     "node-sass": "^7.0.1",
     "react": "^18.0.0",
+    "react-chat-engine": "^1.11.22",
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.29.0",
     "react-icons": "^4.3.1",

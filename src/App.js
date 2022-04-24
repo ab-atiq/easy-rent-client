@@ -17,6 +17,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import AboutUs from "./pages/Home/AboutUs/AboutUs";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import './App.css';
+import ChatApp from './ChatSection/ChatApp';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='AboutUs' element={<AboutUs />} />
             <Route path='/GetCourses' element={<GetCourses />} />
+            <Route path='/ChatApp' element={<ChatApp />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
