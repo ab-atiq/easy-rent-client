@@ -28,7 +28,7 @@ const NurService = ({ alldata }) => {
                     </div>
                         <div className=" my-3 d-flex             justify-content-between"> 
                             <Link to={`/book/${_id}`} >
-                            <button className="button">Rent Now</button>
+                            <button className="service-button">Rent Now</button>
                             </Link>                      
                             
                         </div>

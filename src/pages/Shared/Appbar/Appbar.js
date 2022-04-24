@@ -1,4 +1,4 @@
-import { Container, Box, IconButton, Menu, MenuItem } from '@mui/material'
+import { Box, Container, IconButton, Menu, MenuItem } from '@mui/material'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../../images/easyrent.png'
@@ -42,12 +42,8 @@ const Appbar = () => {
           <Link className='single-link' to='/services'>Services</Link>
           <Link className='single-link' to='/CourseHome'>Courses</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
-          {
-            user?.email &&
-            <Link as={Link} to="/login" className='single-link'>
-              Hi {user?.displayName}
-            </Link>
-          }
+
+
           {!user.email &&
             <Link as={Link} to="/login" className='single-link'>Login</Link>
           }
@@ -144,6 +140,25 @@ const Appbar = () => {
             </Menu>
           </div>
         } */}
+        {
+          user?.email &&
+          <Link className='single-link' to='/newDashbord'>Dashboard</Link>
+        }
+        {
+          user?.email &&
+          <Link to="/login" className='single-link'>
+            Hi {user?.displayName}
+          </Link>
+        }
+        {
+          user?.email &&
+          <Link className='single-link' to="/login">
+            <button className='logout-btn' onClick={logOut}>Logout</button>
+          </Link>
+        }
+
+        {/* </div> */}
+
         <div onClick={handleClick} className='menu-icon'>
           <i className={click ? 'bx bxs-message-square-x icon-style' : 'bx bx-menu icon-style'}></i>
         </div>
