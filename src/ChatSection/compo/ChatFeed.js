@@ -1,3 +1,4 @@
+
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
@@ -14,6 +15,7 @@ const ChatFeed = (props) => {
             style={{
                 float: isMyMessage ? 'right' : 'left',
                 backgroundImage: person.person.avatar && `url(${person.person.avatar})`,
+                color: 'black'
             }}
         />
     ));
@@ -53,9 +55,9 @@ const ChatFeed = (props) => {
             </div>
 
 
-            {renderMessages()}  
+            {renderMessages()}
             <div style={{ height: '100px' }} />
-            <div className="message-form-container"> 
+            <div className="message-form-container">
                 <MessageForm {...props} chatId={activeChat} />
             </div>
         </div>
@@ -63,3 +65,6 @@ const ChatFeed = (props) => {
 };
 
 export default ChatFeed;
+
+
+
