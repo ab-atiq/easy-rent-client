@@ -21,6 +21,7 @@ import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
 import UserDetails from './pages/UserDetails/UserDetails'
 import AddReview from './pages/AddReview/AddReview';
+import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/profileHome' element={<ProfileHome />} />
 
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
