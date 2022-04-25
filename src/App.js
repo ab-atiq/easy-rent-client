@@ -21,11 +21,8 @@ import User from './pages/NewDashbord/User/User';
 import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
-<<<<<<< HEAD
 import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
-=======
 import Profile from './pages/UserProfile/Profile/Profile';
->>>>>>> development
 
 function App() {
 
