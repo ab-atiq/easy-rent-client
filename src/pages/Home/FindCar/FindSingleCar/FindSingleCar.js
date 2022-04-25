@@ -9,7 +9,7 @@ import {
   TextField,
   Stack,
 } from "@mui/material";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AiFillStar, AiFillCar, FaGasPump } from "react-icons/ai";
 import { GiAchievement } from "react-icons/gi";
@@ -42,6 +42,7 @@ import Appbar from "../../../Shared/Appbar/Appbar";
 import ReviewSingleCar from "./ReviewSingleCar";
 import { LocalizationProvider, MobileDatePicker } from "@mui/lab";
 import ResponsiveDatePickers from "./DatePicker";
+import useAuth from "../../../../hooks/useAuth";
 // import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 
 const style = {
@@ -60,9 +61,51 @@ const FindSingleCar = () => {
   const { carName } = useParams();
   const [startValue, setStartValue] = useState(new Date());
   const [endValue, setEndValue] = useState(new Date());
+  const [rent, setRent] = useState(0);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const { user } = useAuth();
+  const startDate = startValue.toLocaleDateString();
+  const endDate = endValue.toLocaleDateString();
+  console.log(startDate, endDate);
+
+  useEffect(() => {
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findBrand")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        const filterCar = data.filter((data) => data.name.includes(carName));
+        console.log(filterCar[0]);
+        setRent(filterCar[0].rent);
+      });
+  }, []);
+
+  const initialInfo = {
+    name: user.displayName,
+    email: user.email,
+    startDate,
+    endDate,
+    rent: rent,
+  };
+  console.log(initialInfo);
+
+  const rentNow = () => {
+    const rentCar = { ...initialInfo };
+    fetch("http://localhost:5000/api/find/singleCarRent", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(rentCar),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data._id) {
+          alert("Information successfully submitted.!");
+        }
+      });
+  };
 
   return (
     <div>
@@ -360,7 +403,7 @@ const FindSingleCar = () => {
             <Typography variant="h6">Trip End</Typography>
             <ResponsiveDatePickers value={endValue} setValue={setEndValue} />
             <Typography textAlign="center" py={2}>
-              <Button>Rent Now</Button>
+              <Button onClick={() => rentNow()}>Rent Now</Button>
             </Typography>
           </Grid>
         </Grid>
