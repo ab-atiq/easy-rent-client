@@ -13,16 +13,16 @@ import Appbar from './pages/Shared/Appbar/Appbar';
 import Dashbord from './pages/Dashbord/Dashbord';
 import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
 import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
-import './App.css';
-import { useSelector } from 'react-redux';
 import AuthProvider from './contexts/AuthProvider';
-
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import AboutUs from "./pages/Home/AboutUs/AboutUs";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import UserDetails from './pages/UserDetails/UserDetails'
 import AddReview from './pages/AddReview/AddReview';
+import './App.css';
+
+
 
 function App() {
 
@@ -51,15 +51,17 @@ function App() {
             <Route path='/GetCourses' element={<GetCourses />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
             <Route path='/userdetails/:id' element={<UserDetails />} />
-            <Route path='/addreview' element={<AddReview></AddReview>}/>
+            <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
 
-     
+
     </div>
   );
 }
 
 export default App;
+
+
