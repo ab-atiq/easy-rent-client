@@ -21,12 +21,14 @@ const Appbar = () => {
         <div className='logo-img'>
           <img styel={{ width: '100px' }} src={logo} alt="" />
         </div>
+        
         <div className={click ? 'nav-menu active' : 'nav-menu'}>
           <Link className='single-link' to='/home'>Home</Link>
           <Link className='single-link' to='/services'>Services</Link>
           <Link className='single-link' to='/CourseHome'>Courses</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
           <Link className='single-link' to='/AboutUs'>About Us</Link>
+          <Link className='single-link' to='/ChatApp'>Live Chat</Link>
 
           {!user.email &&
             <Link as={Link} to="/login" className='single-link'>Login</Link>
