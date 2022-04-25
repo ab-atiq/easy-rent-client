@@ -28,7 +28,7 @@ const Hero = () => {
     setValue(newValue);
   };
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/api/findcar?pickup=${data?.pickup}`)
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/findcar?pickup=${data?.pickup}`)
       .then(res => res.json())
       .then(data => {
         setFindCars(data)

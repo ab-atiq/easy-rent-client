@@ -12,7 +12,7 @@ const FindBasisBrand = () => {
   const { carName } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/find/findBrand")
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findBrand")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -23,7 +23,7 @@ const FindBasisBrand = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/find/findDataBrand")
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findDataBrand")
       .then((res) => res.json())
       .then((data) => {
         const filterData = data.filter((data) => data.brand.includes(carName));
