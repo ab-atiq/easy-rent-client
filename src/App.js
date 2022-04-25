@@ -16,12 +16,16 @@ import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
-import Profile from './pages/UserProfile/Profile/Profile';
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
 import UserDetails from './pages/UserDetails/UserDetails'
+import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
+<<<<<<< HEAD
 import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
+=======
+import Profile from './pages/UserProfile/Profile/Profile';
+>>>>>>> development
 
 function App() {
 
@@ -55,6 +59,7 @@ function App() {
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='/GetCourses' element={<GetCourses />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
+            <Route path="singleCar/:carName" element={<FindSingleCar />} />
             <Route path='/userdetails/:id' element={<UserDetails />} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />
