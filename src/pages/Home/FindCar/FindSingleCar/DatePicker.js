@@ -5,9 +5,9 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import Stack from "@mui/material/Stack";
 
-export default function ResponsiveDatePickers() {
-  const [value, setValue] = useState(new Date());
-
+export default function ResponsiveDatePickers(props) {
+  const { value, setValue } = props;
+  console.log(value);
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
@@ -17,7 +17,8 @@ export default function ResponsiveDatePickers() {
             setValue(newValue);
           }}
           renderInput={(params) => <TextField {...params} />}
-        /></Stack>
+        />
+      </Stack>
     </LocalizationProvider>
   );
 }

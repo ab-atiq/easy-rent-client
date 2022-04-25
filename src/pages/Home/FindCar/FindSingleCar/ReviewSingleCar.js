@@ -6,7 +6,7 @@ const ReviewSingleCar = () => {
   const { user } = useAuth();
   const initialInfo = { name: user.displayName, image: user.photoURL };
   // const initialInfo = { buyerName: user.displayName };
-  console.log(initialInfo);
+  // console.log(initialInfo);
   const [review, setReview] = useState(initialInfo);
 
   const handleOnBlur = (e) => {
@@ -14,7 +14,7 @@ const ReviewSingleCar = () => {
     const value = e.target.value;
     const newInfo = { ...review };
     newInfo[field] = value;
-    console.log(newInfo);
+    // console.log(newInfo);
     setReview(newInfo);
   };
 
@@ -31,7 +31,8 @@ const ReviewSingleCar = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId) {
+        console.log(data);
+        if (data._id) {
           alert("Information successfully submitted.!");
           e.target.reset();
         }
@@ -51,7 +52,7 @@ const ReviewSingleCar = () => {
           defaultValue={user.displayName}
           onBlur={handleOnBlur}
           required
-          style={{width:"80%"}}
+          style={{ width: "80%" }}
         />
         <label>Image URL:</label>
         <input
@@ -61,7 +62,7 @@ const ReviewSingleCar = () => {
           defaultValue={user.photoURL}
           onBlur={handleOnBlur}
           required
-          style={{width:"80%"}}
+          style={{ width: "80%" }}
         />
         <label>Rating:</label>
         <input
@@ -71,7 +72,7 @@ const ReviewSingleCar = () => {
           onBlur={handleOnBlur}
           min="0"
           max="5"
-          style={{width:"80%"}}
+          style={{ width: "80%" }}
         />
         <label>Description About Product:</label>
         <textarea
@@ -81,7 +82,7 @@ const ReviewSingleCar = () => {
           placeholder="Description About Product"
           onBlur={handleOnBlur}
           required
-          style={{width:"80%"}}
+          style={{ width: "80%" }}
         />
         <input
           style={{ width: "110px" }}

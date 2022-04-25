@@ -58,7 +58,8 @@ const style = {
 
 const FindSingleCar = () => {
   const { carName } = useParams();
-  const [value, setValue] = useState(new Date());
+  const [startValue, setStartValue] = useState(new Date());
+  const [endValue, setEndValue] = useState(new Date());
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -352,9 +353,12 @@ const FindSingleCar = () => {
             <Typography variant="h6" pt={2}>
               Trip Start
             </Typography>
-            <ResponsiveDatePickers />
+            <ResponsiveDatePickers
+              value={startValue}
+              setValue={setStartValue}
+            />
             <Typography variant="h6">Trip End</Typography>
-            <ResponsiveDatePickers />
+            <ResponsiveDatePickers value={endValue} setValue={setEndValue} />
             <Typography textAlign="center" py={2}>
               <Button>Rent Now</Button>
             </Typography>
