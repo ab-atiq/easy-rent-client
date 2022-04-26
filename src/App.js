@@ -9,20 +9,19 @@ import Small from './pages/Home/Services/CarType/Small';
 import MainService from './pages/Home/Services/DetailsCar/MainService';
 import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
-import Appbar from './pages/Shared/Appbar/Appbar';
-import Dashbord from './pages/Dashbord/Dashbord';
 import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
 import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
 import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import AboutUs from "./pages/Home/AboutUs/AboutUs";
+import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
+import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
+import User from './pages/NewDashbord/User/User';
 import UserDetails from './pages/UserDetails/UserDetails'
+import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
+import Profile from './pages/UserProfile/Profile/Profile';
 import './App.css';
-
-
 
 function App() {
 
@@ -44,12 +43,18 @@ function App() {
             <Route path='/large' element={<Large />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/dashbord' element={<Dashbord />} />
+            <Route path='/profile' element={<Profile />} />
+
+            <Route path='/newDashbord' element={<NewDashbord />}>
+              <Route path='/newDashbord/' element={<DashboardHome />} />
+              <Route path='/newDashbord/user' element={<User />} />
+            </Route>
+
             <Route path='/CourseHome' element={<CourseHome />} />
-            <Route path="/dashboard" element={<Dashboard />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='/GetCourses' element={<GetCourses />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
+            <Route path="singleCar/:carName" element={<FindSingleCar />} />
             <Route path='/userdetails/:id' element={<UserDetails />} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />
