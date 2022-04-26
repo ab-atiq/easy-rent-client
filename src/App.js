@@ -18,6 +18,7 @@ import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
+import AllReview from './pages/NewDashbord/AllReview/AllReview';
 import UserDetails from './pages/UserDetails/UserDetails'
 import AddReview from './pages/AddReview/AddReview';
 
@@ -45,6 +46,7 @@ function App() {
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
               <Route path='/newDashbord/user' element={<User />} />
+              <Route path='/newDashbord/dashreview' element={<AllReview />} />
             </Route>
             
             <Route path='/CourseHome' element={<CourseHome />} />
