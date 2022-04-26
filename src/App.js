@@ -20,7 +20,10 @@ import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
 import AllReview from './pages/NewDashbord/AllReview/AllReview';
 import UserDetails from './pages/UserDetails/UserDetails'
+import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
+import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
+import Profile from './pages/UserProfile/Profile/Profile';
 
 function App() {
 
@@ -42,25 +45,28 @@ function App() {
             <Route path='/large' element={<Large />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/profileHome' element={<ProfileHome />} />
 
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
               <Route path='/newDashbord/user' element={<User />} />
               <Route path='/newDashbord/dashreview' element={<AllReview />} />
             </Route>
-            
+
             <Route path='/CourseHome' element={<CourseHome />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='/GetCourses' element={<GetCourses />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
+            <Route path="singleCar/:carName" element={<FindSingleCar />} />
             <Route path='/userdetails/:id' element={<UserDetails />} />
-            <Route path='/addreview' element={<AddReview></AddReview>}/>
+            <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
 
-     
+
     </div>
   );
 }
