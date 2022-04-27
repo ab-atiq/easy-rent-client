@@ -1,17 +1,16 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import TextField from '@mui/material/TextField';
 import { Typography } from '@mui/material';
 import './AddCourses.css';
 
 const AddCourses = () => {
     const [Courses, setCourses] = useState([])
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
         return (dispatch) => {
-            axios.post('http://localhost:5000/courseAdd', data)
+            axios.post('https://guarded-taiga-13015.herokuapp.com/courseAdd', data)
                 .then(res => {
                     dispatch(setCourses(res.data))
                 })

@@ -3,8 +3,8 @@ import { Container, Grid, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import SingleFindBasisBrand from "./SingleFindBasisBrand";
 import { Box } from "@mui/system";
-import Footer from "../../../Shared/Footer/Footer";
 import Appbar from "../../../Shared/Appbar/Appbar";
+import NurFooter from "../../../Shared/Footer/NurFooter";
 
 const FindBasisBrand = () => {
   const [cars, setCars] = useState();
@@ -12,26 +12,22 @@ const FindBasisBrand = () => {
   const { carName } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/find/findBrand")
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findBrand")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         const filterCar = data.filter((data) => data.name.includes(carName));
-        // console.log(filterCar);
         setCars(filterCar);
       });
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/find/findDataBrand")
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findDataBrand")
       .then((res) => res.json())
       .then((data) => {
         const filterData = data.filter((data) => data.brand.includes(carName));
         setData(filterData[0]);
       });
   }, []);
-
-  // console.log(data);
 
   return (
     <>
@@ -102,7 +98,7 @@ const FindBasisBrand = () => {
             </Grid>
           </Box>
         </Container>
-        <Footer />
+        <NurFooter />
       </Box>
     </>
   );
