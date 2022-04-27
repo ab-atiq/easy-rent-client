@@ -6,9 +6,6 @@ import 'stream-chat-react/dist/css/index.css';
 import './Chat.css';
 import ChannelListContainer from './ChannelListContainer';
 import ChannelContainer from './ChannelContainer';
-import { Container } from '@mui/material';
-import Register from '../Shared/Register/Register';
-import useAuth from '../../hooks/useAuth';
 import Auth from './Auth';
 // import Auth from './Auth';
 
@@ -23,7 +20,6 @@ const client = StreamChat.getInstance(apiKey);
 
 const ChatApp = () => {
 
-    const { user } = useAuth();
     const [createType, setCreateType] = useState('');
     const [isCreating, setIsCreating] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
@@ -46,12 +42,19 @@ const ChatApp = () => {
 
             <div className="app__wrapper">
                 <Chat client={client} theme="team light">
-                    <ChannelListContainer
-
-                    />
-                    <ChannelContainer
-
-                    />
+                <ChannelListContainer 
+                    isCreating={isCreating}
+                    setIsCreating={setIsCreating}
+                    setCreateType={setCreateType}
+                    setIsEditing={setIsEditing}
+                />
+                <ChannelContainer 
+                    isCreating={isCreating}
+                    setIsCreating={setIsCreating}
+                    isEditing={isEditing}
+                    setIsEditing={setIsEditing}
+                    createType={createType}
+                />
                 </Chat>
             </div>
         </div>
