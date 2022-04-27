@@ -42,6 +42,9 @@ export default function PickupLocation({ location, setLocation }) {
           <MenuItem value="Dhaka">Dhaka</MenuItem>
           <MenuItem value="Rajshahi">Rajshahi</MenuItem>
           <MenuItem value="Rangpur">Rangpur</MenuItem>
+          <MenuItem value="Chittagong">Chittagong</MenuItem>
+          <MenuItem value="Khulna">Khulna</MenuItem>
+          <MenuItem value="Sylhet">Sylhet</MenuItem>
         </Select>
       </FormControl>
     </div>
