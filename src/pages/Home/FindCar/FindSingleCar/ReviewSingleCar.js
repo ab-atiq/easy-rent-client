@@ -1,12 +1,16 @@
-import { Container } from "@mui/material";
+import { Container, Rating, Typography } from "@mui/material";
 import React, { useState } from "react";
 import useAuth from "../../../../hooks/useAuth";
 
-const ReviewSingleCar = () => {
+const ReviewSingleCar = ({ carName }) => {
   const { user } = useAuth();
-  const initialInfo = { name: user.displayName, image: user.photoURL };
-  // const initialInfo = { buyerName: user.displayName };
-  // console.log(initialInfo);
+  const [star, setStar] = React.useState(0);
+  const initialInfo = {
+    name: user.displayName,
+    image: user.photoURL,
+    carName: carName,
+    star,
+  };
   const [review, setReview] = useState(initialInfo);
 
   const handleOnBlur = (e) => {
@@ -14,14 +18,11 @@ const ReviewSingleCar = () => {
     const value = e.target.value;
     const newInfo = { ...review };
     newInfo[field] = value;
-    // console.log(newInfo);
     setReview(newInfo);
   };
 
   const handleReviewSubmit = (e) => {
-    const reviewAdd = { ...review };
-    // console.log(review);
-    // send to the server
+    const reviewAdd = { ...review, star: star };
     fetch("http://localhost:5000/api/find/carReview", {
       method: "POST",
       headers: {
@@ -31,7 +32,6 @@ const ReviewSingleCar = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data._id) {
           alert("Information successfully submitted.!");
           e.target.reset();
@@ -44,45 +44,24 @@ const ReviewSingleCar = () => {
   return (
     <Container>
       <form onSubmit={handleReviewSubmit}>
-        <label>Name:</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          defaultValue={user.displayName}
-          onBlur={handleOnBlur}
-          required
-          style={{ width: "80%" }}
+        <Typography variant="h6">Rating:</Typography>
+        <Rating
+          name="simple-controlled"
+          value={star}
+          onChange={(event, newValue) => {
+            setStar(newValue);
+          }}
+          sx={{ fontSize: "50px" }}
         />
-        <label>Image URL:</label>
-        <input
-          type="text"
-          name="image"
-          placeholder="Your Image URL"
-          defaultValue={user.photoURL}
-          onBlur={handleOnBlur}
-          required
-          style={{ width: "80%" }}
-        />
-        <label>Rating:</label>
-        <input
-          type="number"
-          name="star"
-          placeholder="Rating (Please give 0-5 number)"
-          onBlur={handleOnBlur}
-          min="0"
-          max="5"
-          style={{ width: "80%" }}
-        />
-        <label>Description About Product:</label>
+        <Typography variant="h6">Description about this car:</Typography>
         <textarea
           type="text"
           name="description"
           rows="10"
-          placeholder="Description About Product"
+          placeholder="Description About this Car"
           onBlur={handleOnBlur}
           required
-          style={{ width: "80%" }}
+          style={{ width: "100%" }}
         />
         <input
           style={{ width: "110px" }}

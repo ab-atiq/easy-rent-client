@@ -7,7 +7,6 @@ import { GiAchievement } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const SingleFindBasisBrand = ({ car }) => {
-  // console.log(car);
   const { imgUrl, name, rent, star, available } = car;
   return (
     <Grid item xs={12} sm={6} lg={4} sx={{ padding: "10px" }}>
