@@ -1,55 +1,47 @@
-import React from 'react'
-import profile from '../../../images/download.jpg'
+import React, { useEffect, useState } from 'react';
 import './User.css'
 
 
 const User = () => {
-  return (
-    <div className='customer'>
-        <h1>Customers</h1>
-        <div className="d-right">
+    const [allUsers, setAllUsers] = useState([]);
+    useEffect(() => {
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/users/findAll')
+        .then(res => res.json())
+        .then(data => setAllUsers(data));
 
-            <div className="recent-update">
-                <h2>Recent Updates</h2>
-                <div className="updates">
-                    <div className="update">
-                        <div className="profile-photo">
-                            <img src={profile} alt="" />
-                        </div>
-                        <div className="message">
-                            <p><b>Myke Tyson </b>receved his order of night light lion tech GPS drome.</p>
-                            <small className="text-muted">2 Mintes Ago</small>
-                        </div>
-                    </div>
-                    <div className="update">
-                        <div className="profile-photo">
-                            <img src={profile} alt="" />
-                        </div>
-                        <div className="message">
-                            <p><b>Myke Tyson </b>receved his order of night light lion tech GPS drome.</p>
-                            <small className="text-muted">2 Mintes Ago</small>
-                        </div>
-                    </div>
-                    <div className="update">
-                        <div className="profile-photo">
-                            <img src={profile} alt="" />
-                        </div>
-                        <div className="message">
-                            <p><b>Myke Tyson </b>receved his order of night light lion tech GPS drome.</p>
-                            <small className="text-muted">2 Mintes Ago</small>
-                        </div>
-                    </div>
-                </div>
-                {/* ===== sales-analitics ==== */}
-                <div className="sales-analytics">
-                    <h2>Sales Analytics</h2>
-                    <div className="d-item">
-                    <span class="material-icons-sharp">shopping_cart</span>
-                    </div>
-                </div>
+    }, []);
+    console.log(allUsers)
+  return (
+    <div className='all-users'>
+        <h1>All Users</h1>
+        
+            <table>
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>User Email</th>
+                            <th>User Id</th>
+                            <th className='th-none'>User Password</th>
+                        </tr>
+                    </thead>
+               
+       
+                {
+                allUsers.map((data) => <tbody className='alluser-cart-tbody'>
+                <tr>
+                    <td>{data.userName}</td>
+                    <td>{data.email}</td>
+                    <td className='warning'>{data._id}</td>
+                    <td className='primary th-none'>{data.password}</td>
+
+                </tr>
+                                                  
+            </tbody> 
+             )
+                }
                 
-            </div>
-            </div> 
+            </table>
+              
     </div>
   )
 }

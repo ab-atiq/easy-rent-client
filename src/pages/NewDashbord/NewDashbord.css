@@ -256,6 +256,7 @@ main .insights small{
     display: block;
 }
 
+/* ====== main recent orders ======= */
 
 main .recent-order{
     margin-top: 2rem;
@@ -455,8 +456,9 @@ main .table-single-link{
     aside .close{
         display: inline;
         cursor: pointer;
-        margin-top: 15px;
+        margin-top: 29px;
         margin-left: 20px;
+       
     }
     main{
         margin-top: 1rem;
