@@ -2,7 +2,6 @@ import { Button, Grid, Typography } from '@mui/material';
 import { useForm } from "react-hook-form";
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
 
 const UserDetails = () => {
@@ -11,7 +10,7 @@ const UserDetails = () => {
     const { id } = useParams();
     const [singleCar, setSingleCar] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/api/car/${id}`)
+        fetch(`https://guarded-taiga-13015.herokuapp.com/api/car/${id}`)
             .then(res => res.json())
             .then(data => setSingleCar(data))
     }, [id]);
@@ -21,7 +20,7 @@ const UserDetails = () => {
         data.carInfo = singleCar;
         data.email = user?.email;
         data.imgURL = user?.photoURL;
-        fetch('http://localhost:5000/init', {
+        fetch('https://guarded-taiga-13015.herokuapp.com/init', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
@@ -29,7 +28,9 @@ const UserDetails = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => window.location.replace(data))
+            .then(data =>(
+                window.location.replace(data)
+            ))
         reset();
     };
     return (

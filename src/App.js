@@ -23,6 +23,8 @@ import AboutUs from "./pages/Home/AboutUs/AboutUs";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import UserDetails from './pages/UserDetails/UserDetails'
 import AddReview from './pages/AddReview/AddReview';
+import Success from './pages/Payment/Success';
+import Cancel from './pages/Payment/Cancel';
 
 function App() {
 
@@ -52,6 +54,8 @@ function App() {
             <Route path="car/:carName" element={<FindBasisBrand />} />
             <Route path='/userdetails/:id' element={<UserDetails />} />
             <Route path='/addreview' element={<AddReview></AddReview>}/>
+            <Route path='/paymentsuccess/:tran_id' element={<Success></Success>}/>
+            <Route path='/paymentcancel' element={<Cancel></Cancel>}/>
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
