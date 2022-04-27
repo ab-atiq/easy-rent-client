@@ -1,12 +1,4 @@
-import {
-  Grid,
-  Typography,
-  Container,
-  Button,
-  Modal,
-  Box,
-  Divider,
-} from "@mui/material";
+import { Grid, Typography, Container, Button, Divider } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -25,6 +17,7 @@ import ViewSingleReview from "./ViewSingleReview";
 import PickupLocation from "./PickupLocation";
 import SliderBrandCar from "./SliderBrandCar";
 import SingleCarDetails from "./SingleCarDetails";
+import NurFooter from "../../../Shared/Footer/NurFooter";
 
 const FindSingleCar = () => {
   const { carName } = useParams();
@@ -33,11 +26,11 @@ const FindSingleCar = () => {
   const [rent, setRent] = useState(0);
   const [newRent, setNewRent] = useState(rent);
   const [days, setDays] = useState(0);
-
+  const [location, setLocation] = useState("");
   const { user } = useAuth();
   const startDate = startValue.toLocaleDateString();
   const endDate = endValue.toLocaleDateString();
-  // console.log(startDate, endDate);
+  // console.log(location);
 
   useEffect(() => {
     fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findBrand")
@@ -55,6 +48,7 @@ const FindSingleCar = () => {
     startDate,
     endDate,
     rent: newRent,
+    location: location,
   };
   // console.log(initialInfo);
 
@@ -84,6 +78,7 @@ const FindSingleCar = () => {
         setViewReview(singleReview);
       });
   }, []);
+  // console.log(viewReview.length);
 
   const [slider, setSlider] = useState();
   useEffect(() => {
@@ -118,20 +113,25 @@ const FindSingleCar = () => {
       </Typography>
       {/* slider use here */}
       {slider?.map((slide) => (
-        <SliderBrandCar slide={slide} />
+        <SliderBrandCar key={slide?._id} slide={slide} />
       ))}
 
       <Container>
         <Grid container>
           <Grid item xs={12} md={8}>
+            {/* hard code of this page   */}
             <SingleCarDetails />
 
             <Typography variant="h4" py={2} fontWeight="bold">
               Rating and Reviews
             </Typography>
-            {viewReview?.map((review) => (
-              <ViewSingleReview review={review} />
-            ))}
+            {viewReview?.length === 0 ? (
+              <Typography variant="h6" sx={{ color: "red" }}>
+                Sorry! This car has no review.
+              </Typography>
+            ) : (
+              viewReview?.map((review) => <ViewSingleReview review={review} />)
+            )}
             <Typography variant="h4" sx={{ py: 2, fontWeight: "bold" }}>
               Give Feedback
             </Typography>
@@ -154,17 +154,22 @@ const FindSingleCar = () => {
             <Typography variant="h6" pt={2}>
               Pickup and Return location
             </Typography>
-            <PickupLocation />
-            <Typography variant="h5">Total {days} days.</Typography>
-            <Typography variant="h5">Total cost: ${newRent}</Typography>
+            <PickupLocation location={location} setLocation={setLocation} />
+            <Typography variant="h5" py={1}>
+              Total {days} days.
+            </Typography>
+            <Typography variant="h5" pb={1}>
+              Total cost: ${newRent}
+            </Typography>
             <Typography textAlign="center" py={2}>
               <Button onClick={() => rentNow()} variant="contained">
-                Rent Now
+                Pay {newRent}$
               </Button>
             </Typography>
           </Grid>
         </Grid>
       </Container>
+      <NurFooter />
     </div>
   );
 };

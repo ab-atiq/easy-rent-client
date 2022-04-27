@@ -12,6 +12,7 @@ export default function ResponsiveDatePickers(props) {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Stack spacing={3}>
         <MobileDatePicker
+          disablePast
           value={value}
           onChange={(newValue) => {
             setValue(newValue);

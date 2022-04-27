@@ -22,8 +22,8 @@ const SingleFindBasisBrand = ({ car }) => {
           {name}
         </Typography>
         <Typography py={1} variant="body1">
-          {star} <AiFillStar />({available} trips) <GiAchievement /> All-Star
-          Host
+          {star} <AiFillStar style={{ color: "orange" }} />({available} trips){" "}
+          <GiAchievement /> All-Star Host
         </Typography>
       </Grid>
       <Divider />
@@ -32,7 +32,10 @@ const SingleFindBasisBrand = ({ car }) => {
       </Grid>
       <Typography textAlign="center" sx={{ margin: "0 auto" }}>
         <Link to={`/singleCar/${name}`} style={{ textDecoration: "none" }}>
-          <Button sx={{ backgroundColor: "orange", color: "white", my: 3 }}>
+          <Button
+            sx={{ backgroundColor: "orange", color: "white", my: 3 }}
+            variant="contained"
+          >
             View Details
           </Button>
         </Link>

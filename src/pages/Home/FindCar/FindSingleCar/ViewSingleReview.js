@@ -8,17 +8,20 @@ const ViewSingleReview = ({ review }) => {
       <Grid container alignItems="center">
         <Grid item>
           <img
-            style={{ borderRadius: "50%" }}
+            style={{ borderRadius: "50%", width: "100%" }}
             src={image}
             alt="user"
           />
         </Grid>
         <Grid item pl={3}>
-          <Typography variant="h4">{carName}</Typography>
+          <Typography variant="h6" sx={{ color: "orange" }}>
+            {carName}
+          </Typography>
           <Typography variant="h5">
-            {star} <AiFillStar /> {name} apr 12, 2022
+            {star} <AiFillStar style={{ color: "orange" }} /> <b>{name}</b>
           </Typography>
           <Typography variant="body1">{description}</Typography>
+          <Typography variant="body1">Date: apr 12, 2022</Typography>
         </Grid>
       </Grid>
     </div>

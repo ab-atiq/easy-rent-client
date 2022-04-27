@@ -32,8 +32,9 @@ const style = {
 
 const SingleCarDetails = () => {
   const [open, setOpen] = useState(false);
-  const handleOpen1 = () => setOpen(true);
-  const handleClose1 = () => setOpen(false);
+  const [open1, setOpen1] = useState(false);
+  const handleOpen1 = () => setOpen1(true);
+  const handleClose1 = () => setOpen1(false);
   const handleOpen2 = () => setOpen(true);
   const handleClose2 = () => setOpen(false);
 
@@ -42,24 +43,29 @@ const SingleCarDetails = () => {
       <Grid container sx={{ my: 2 }}>
         <Grid item>
           <Typography variant="h6">
-            5 <AiFillStar /> (50 trips)
+            5 <AiFillStar style={{ color: "orange" }} /> (50 trips)
           </Typography>
-          <Grid container>
+          <Grid container spacing={3}>
             <Grid item>
-              <AiFillCar /> 28MPG
-              <br />
-              <FaDoorOpen /> 4 Doors
+              <Typography variant="h6">
+                <AiFillCar /> 28MPG
+              </Typography>
+              <Typography variant="h6">
+                <FaDoorOpen /> 4 Doors
+              </Typography>
             </Grid>
             <Grid item>
-              <BiGasPump /> Gas(Premium)
-              <br />
-              <MdEventSeat /> 4 seats
+              <Typography variant="h6">
+                <BiGasPump /> Gas(Premium)
+              </Typography>
+              <Typography variant="h6">
+                <MdEventSeat /> 4 seats
+              </Typography>
             </Grid>
-            <Grid item></Grid>
           </Grid>
         </Grid>
       </Grid>
-      <Grid container alignItems="center">
+      <Grid container alignItems="center" spacing={3}>
         <Grid item>
           <Typography variant="h4" fontWeight="bold">
             Hosted By
@@ -79,9 +85,9 @@ const SingleCarDetails = () => {
           <Typography variant="body1">
             <GiAchievement /> All-Star Hosts All-Star Hosts are the most
             experienced and responsive hosts on Turo.
-            <Button onClick={handleOpen1}>See more...</Button>
+            <Button onClick={() => handleOpen1()}>See more...</Button>
             <Modal
-              open={open}
+              open={open1}
               onClose={handleClose1}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
@@ -107,7 +113,7 @@ const SingleCarDetails = () => {
           <Typography variant="body1">
             <GiAchievement /> Terah has completed training on enhanced cleaning
             and disinfection practices.
-            <Button onClick={handleOpen2}>See more...</Button>
+            <Button onClick={() => handleOpen2()}>See more...</Button>
             <Modal
               open={open}
               onClose={handleClose2}
