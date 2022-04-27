@@ -21,7 +21,7 @@ const useFirebase = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                
+
             })
             .catch((error) => {
                 setError(error.massage)
@@ -52,7 +52,8 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
     }
 
-    const logInUser = (email, password, navigate) => {
+
+    const logInUser = (email, password) => {
         setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
@@ -65,6 +66,7 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false))
     }
+
 
 
     // setAdmin

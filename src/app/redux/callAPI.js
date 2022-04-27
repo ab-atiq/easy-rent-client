@@ -7,7 +7,7 @@ export const register = async (dispatch, user) => {
     dispatch(registerStart());
 
     try {
-        const response = await axios.post('https://guarded-taiga-13015.herokuapp.com/api/auth/register', user);
+        const response = await axios.post('http://localhost:5000/api/auth/register', user);
         dispatch(registerSuccess(response.data));
 
     }
@@ -15,6 +15,7 @@ export const register = async (dispatch, user) => {
         dispatch(registerFailure());
     }
 }
+
 
 export const login = async (dispatch, login) => {
     dispatch(loginStart());
