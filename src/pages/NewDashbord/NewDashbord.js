@@ -52,8 +52,8 @@ const NewDashbord = () => {
                     <h3>Analytics</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>mail_outline</i>
-                    <h3>Messages</h3>
+                <Link className='dashboard-link' to='/newDashbord/dashreview'><i className='material-icons-sharp'>mail_outline</i>
+                    <h3>Review</h3>
                 </Link>
 
                 <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>inventory</i>

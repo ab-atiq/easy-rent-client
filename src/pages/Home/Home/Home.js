@@ -14,7 +14,6 @@ import SearchedCar from "../Hero/SearchedCar";
 import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
-import Footer from "../../Shared/Footer/Footer";
 import Reviews from "../Reviews/Reviews";
 
 
