@@ -48,12 +48,9 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
-<<<<<<< HEAD
             <Route path='/addService' element={<AddService />} />
             <Route path='/pay' element={<PayNow />} />
-=======
             <Route path='/profileHome' element={<ProfileHome />} />
->>>>>>> 812fab83a226b9419461f2642de2c03b734c5618
 
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
