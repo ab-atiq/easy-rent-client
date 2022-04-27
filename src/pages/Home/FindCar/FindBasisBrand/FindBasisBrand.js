@@ -15,9 +15,7 @@ const FindBasisBrand = () => {
     fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findBrand")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         const filterCar = data.filter((data) => data.name.includes(carName));
-        // console.log(filterCar);
         setCars(filterCar);
       });
   }, []);
@@ -30,8 +28,6 @@ const FindBasisBrand = () => {
         setData(filterData[0]);
       });
   }, []);
-
-  // console.log(data);
 
   return (
     <>
