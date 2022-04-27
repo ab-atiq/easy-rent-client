@@ -11,14 +11,17 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { data } from "../FakeData/FakeData";
 import "./Popup.css";
+import { Link } from "react-router-dom";
+
 const Popup = () => {
   const { BookingId } = useParams();
+  const [service, setService] = useState({});
 
   useEffect(() => {
-    fetch(`${BookingId}`).then((res) => res.json());
-    //   .then((data) => setService(data));
+    fetch(`http://localhost:5000/api/service/${BookingId}`)
+      .then((res) => res.json())
+      .then((data) => setService(data));
   }, [BookingId]);
 
   const [age, setAge] = React.useState("");
@@ -30,7 +33,22 @@ const Popup = () => {
   return (
     <div className="design_popup">
       <Container>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ mt: 8 }}>
+          <Grid className="text_center" item sx={12} sm={6} md={6} lg={6}>
+            <img width="60%" src={service.image} alt="" />
+            <br />
+            <div className="designCard">
+              <h1>Car Name:- {service.name}</h1>
+              <h3>Model:- {service.year}</h3>
+              <h3>Price Per Day :- $ {service.price}</h3>
+              <h3>Kilo :- {service.kilo}</h3>
+              <h3>Fual :- {service.fual}</h3>
+              <p>
+                Details :- <p> {service.details}</p>{" "}
+              </p>
+            </div>
+          </Grid>
+
           <Grid className="text_center" item sx={12} sm={6} md={6} lg={6}>
             <Box
               component="form"
@@ -46,12 +64,14 @@ const Popup = () => {
                   label="FirstName"
                   defaultValue=""
                   variant="filled"
+                  required
                 />
                 <TextField
                   id="filled-error-helper-text"
                   label="LastName"
                   defaultValue=""
                   variant="filled"
+                  required
                 />
               </div>
               <div>
@@ -60,12 +80,14 @@ const Popup = () => {
                   label="Address"
                   defaultValue=""
                   variant="filled"
+                  required
                 />
                 <TextField
                   id="filled-error-helper-text"
-                  label="LastName"
+                  label="division"
                   defaultValue=""
                   variant="filled"
+                  required
                 />
               </div>
               <Box sx={{ width: 500 }}>
@@ -77,19 +99,51 @@ const Popup = () => {
                     value={age}
                     label="Age"
                     onChange={handleChange}
+                    required
                   >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>2000</MenuItem>
+                    <MenuItem value={20}>2001</MenuItem>
+                    <MenuItem value={30}>2002</MenuItem>
+                    <MenuItem value={30}>2003</MenuItem>
+                    <MenuItem value={30}>2004</MenuItem>
+                    <MenuItem value={30}>2005</MenuItem>
+                    <MenuItem value={30}>2006</MenuItem>
+                    <MenuItem value={30}>2007</MenuItem>
+                    <MenuItem value={30}>2008</MenuItem>
+                    <MenuItem value={30}>2009</MenuItem>
+                    <MenuItem value={30}>2010</MenuItem>
+                    <MenuItem value={30}>2011</MenuItem>
+                    <MenuItem value={30}>2012</MenuItem>
+                    <MenuItem value={30}>2013</MenuItem>
+                    <MenuItem value={30}>2014</MenuItem>
+                    <MenuItem value={30}>2015</MenuItem>
+                    <MenuItem value={30}>2016</MenuItem>
+                    <MenuItem value={30}>2017</MenuItem>
+                    <MenuItem value={30}>2018</MenuItem>
+                    <MenuItem value={30}>2019</MenuItem>
+                    <MenuItem value={30}>2020</MenuItem>
+                    <MenuItem value={30}>2021</MenuItem>
+                    <MenuItem value={30}>2022</MenuItem>
+                    <MenuItem value={30}>2023</MenuItem>
+                    <MenuItem value={30}>2024</MenuItem>
                   </Select>
                 </FormControl>
-                <Button className="button_design" variant="contained">Continew With Pay</Button>
+
+                <Link to="/pay">
+                  <Button
+                    required
+                    type="submit"
+                    className="button_design"
+                    variant="contained"
+                  >
+                    Continew With Pay
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Grid>
         </Grid>
       </Container>
-     
     </div>
   );
 };
