@@ -54,7 +54,7 @@ const FindSingleCar = () => {
 
   const rentNow = () => {
     const rentCar = { ...initialInfo };
-    fetch("http://localhost:5000/api/find/singleCarRent", {
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/singleCarRent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -71,7 +71,7 @@ const FindSingleCar = () => {
 
   const [viewReview, setViewReview] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/api/find/carReview")
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/carReview")
       .then((res) => res.json())
       .then((data) => {
         const singleReview = data.filter((review) => review.carName == carName);
@@ -82,7 +82,7 @@ const FindSingleCar = () => {
 
   const [slider, setSlider] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/api/find/sliderSingleCar")
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/sliderSingleCar")
       .then((res) => res.json())
       .then((data) => {
         const singleSlide = data.filter((slide) => slide.name == carName);
