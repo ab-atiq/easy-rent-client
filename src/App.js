@@ -17,11 +17,18 @@ import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
+import AllReview from './pages/NewDashbord/AllReview/AllReview';
 import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
+import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
 import Profile from './pages/UserProfile/Profile/Profile';
+<<<<<<< HEAD
 import './App.css';
+=======
+import AddService from './pages/Home/Services/AddService/AddService';
+import PayNow from './pages/Home/Services/PayNow/PayNow';
+>>>>>>> acc65c163a20971beab5e1643403c642eb360a97
 
 function App() {
 
@@ -44,10 +51,17 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
+<<<<<<< HEAD
+            <Route path='/addService' element={<AddService />} />
+            <Route path='/pay' element={<PayNow />} />
+=======
+            <Route path='/profileHome' element={<ProfileHome />} />
+>>>>>>> 812fab83a226b9419461f2642de2c03b734c5618
 
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
               <Route path='/newDashbord/user' element={<User />} />
+              <Route path='/newDashbord/dashreview' element={<AllReview />} />
             </Route>
 
             <Route path='/CourseHome' element={<CourseHome />} />

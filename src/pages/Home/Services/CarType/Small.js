@@ -1,13 +1,22 @@
 import { Container, Grid } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DetailsCar from '../DetailsCar/DetailsCar';
-import { data } from "../FakeData/FakeData"
+// import { data } from "../FakeData/FakeData"
 import NurService from '../NurServices/NurService';
 
 const Small = () => {
 
+  const [services, setServices] = useState([]);
 
-  const filterService = data?.filter(service => service.price === "35");
+  useEffect(() => {
+    fetch('http://localhost:5000/api/service')
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, [services]);
+
+ 
+
+  const filterService = services.filter(data => data.price == "35");
 
   return (
     <div>
