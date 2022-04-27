@@ -1,5 +1,5 @@
 import React from 'react';
-import { AddChannel } from '../chatassets';
+import { AddChannel } from '../assets';
 
 
 const TeamChannelList = ({ setToggleContainer, children, error = false, loading, type, isCreating, setIsCreating, setCreateType, setIsEditing }) => {

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   height: 100%;
+
   --primary-color: #005fff;
   --primary-color-alpha: #005fff1a;
 }
@@ -162,7 +163,7 @@
     box-shadow: none;
 
 
-    
+
   }
 
   .auth__form-container_image img {
@@ -1699,7 +1700,7 @@ div.rta__autocomplete.str-chat__emojisearch {
   display: none;
   height: 50px;
   width: 50px;
-  background: #005fff;
+  background: #cf9936;
   position: absolute;
   right: -2%;
   top: 50%;

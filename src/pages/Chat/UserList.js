@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar, useChatContext } from 'stream-chat-react';
 
-import { InviteIcon } from '../chatassets';
+import { InviteIcon } from '../assets';
 
 const ListContainer = ({ children }) => {
     return (
         <div className="user-list__container">
             <div className="user-list__header">
-                <p>User</p>
-                <p>Invite</p>
+                <p>Users</p>
             </div>
             {children}
         </div>
@@ -106,5 +105,6 @@ const UserList = ({ setSelectedUsers }) => {
         </ListContainer>
     )
 }
+
 
 export default UserList;

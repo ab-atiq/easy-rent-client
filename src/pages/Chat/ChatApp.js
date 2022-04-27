@@ -26,7 +26,7 @@ const ChatApp = () => {
 
     if (!authToken) return <Auth />
 
-    if(authToken) {
+    if (authToken) {
         client.connectUser({
             id: cookies.get('userId'),
             name: cookies.get('username'),
@@ -38,23 +38,23 @@ const ChatApp = () => {
     }
 
     return (
-        <div className='chat_container' >
+        <div className='chat__container' >
 
             <div className="app__wrapper">
-                <Chat client={client} theme="team light">
-                <ChannelListContainer 
-                    isCreating={isCreating}
-                    setIsCreating={setIsCreating}
-                    setCreateType={setCreateType}
-                    setIsEditing={setIsEditing}
-                />
-                <ChannelContainer 
-                    isCreating={isCreating}
-                    setIsCreating={setIsCreating}
-                    isEditing={isEditing}
-                    setIsEditing={setIsEditing}
-                    createType={createType}
-                />
+                <Chat client={client} theme="team blue">
+                    <ChannelListContainer
+                        isCreating={isCreating}
+                        setIsCreating={setIsCreating}
+                        setCreateType={setCreateType}
+                        setIsEditing={setIsEditing}
+                    />
+                    <ChannelContainer
+                        isCreating={isCreating}
+                        setIsCreating={setIsCreating}
+                        isEditing={isEditing}
+                        setIsEditing={setIsEditing}
+                        createType={createType}
+                    />
                 </Chat>
             </div>
         </div>
