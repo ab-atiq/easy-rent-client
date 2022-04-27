@@ -3,7 +3,6 @@ import { AddChannel } from '../chatassets';
 
 
 const TeamChannelList = ({ setToggleContainer, children, error = false, loading, type, isCreating, setIsCreating, setCreateType, setIsEditing }) => {
-
     if (error) {
         return type === 'team' ? (
             <div className="team-channel-list">
@@ -24,8 +23,6 @@ const TeamChannelList = ({ setToggleContainer, children, error = false, loading,
         )
     }
 
-
-
     return (
         <div className="team-channel-list">
             <div className="team-channel-list__header">
@@ -43,7 +40,7 @@ const TeamChannelList = ({ setToggleContainer, children, error = false, loading,
             </div>
             {children}
         </div>
-    );
-};
+    )
+}
 
 export default TeamChannelList;

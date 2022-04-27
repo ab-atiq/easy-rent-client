@@ -20,6 +20,7 @@ const authToken = cookies.get("token");
 const client = StreamChat.getInstance(apiKey);
 
 
+
 const ChatApp = () => {
 
     const { user } = useAuth();
@@ -29,6 +30,16 @@ const ChatApp = () => {
 
     if (!authToken) return <Auth />
 
+    if(authToken) {
+        client.connectUser({
+            id: cookies.get('userId'),
+            name: cookies.get('username'),
+            fullName: cookies.get('fullName'),
+            image: cookies.get('avatarURL'),
+            hashedPassword: cookies.get('hashedPassword'),
+            phoneNumber: cookies.get('phoneNumber'),
+        }, authToken)
+    }
 
     return (
         <div className='chat_container' >
