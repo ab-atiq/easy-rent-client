@@ -19,7 +19,7 @@ const Facilities = () => {
         <div className='facilities'>
             <Box sx={{ mx: "auto" }}>
                 <Grid container spacing={2}>
-                    <Grid item xs={6} sm={12} md={3}>
+                    <Grid item xs={12} sm={12} md={3}>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h3">
                             {Car}
                         </Typography>
@@ -30,7 +30,7 @@ const Facilities = () => {
                             Car Available
                         </Typography>
                     </Grid>
-                    <Grid item xs={6} sm={12} md={3}>
+                    <Grid item xs={12} sm={12} md={3}>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h3">
                             {user}
                         </Typography>
@@ -41,7 +41,7 @@ const Facilities = () => {
                             Happy Client
                         </Typography>
                     </Grid>
-                    <Grid item xs={6} sm={12} md={3}>
+                    <Grid item xs={12} sm={12} md={3}>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h3">
                             {info}
                         </Typography>
@@ -52,7 +52,7 @@ const Facilities = () => {
                             When you sign up
                         </Typography>
                     </Grid>
-                    <Grid item xs={6} sm={12} md={3}>
+                    <Grid item xs={12} sm={12} md={3}>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h3">
                             {support}
                         </Typography>
