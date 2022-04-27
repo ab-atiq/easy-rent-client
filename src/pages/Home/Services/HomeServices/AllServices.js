@@ -3,17 +3,17 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Service from "./Service";
 import "./Services.css";
-import { data } from "../FakeData/FakeDataHome";
+// import { data } from "../FakeData/FakeDataHome";
 
 
 const AllServices = () => {
-  // const [services, setServices] = useState([]);
+  const [services, setServices] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(All_data)
-  //     .then((res) => res.json())
-  //     .then((data) => setServices(data));
-  // }, [services]);
+  useEffect(() => {
+    fetch('http://localhost:5000/api/service_main')
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, [services]);
 
   return (
     <div>
@@ -26,7 +26,7 @@ const AllServices = () => {
       </Box>
       <Container>
         <Grid container>
-          {data.map((serviceP) => (
+          {services.map((serviceP) => (
             <Grid
               item
               sx={12}
