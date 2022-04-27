@@ -5,19 +5,17 @@ import Service from "./Service";
 import "./Services.css";
 // import { data } from "../FakeData/FakeDataHome";
 
-
 const AllServices = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/service_main')
+    fetch("http://localhost:5000/api/service_main")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [services]);
 
   return (
     <div>
-  
       <Box
         sx={{ textAlign: "center", fontSize: "3.5rem", mb: "40px", mt: "40px" }}
       >
