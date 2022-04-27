@@ -14,6 +14,7 @@ import SearchedCar from "../Hero/SearchedCar";
 import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
+import Reviews from "../Reviews/Reviews";
 
 
 const Home = () => {
@@ -32,7 +33,9 @@ const Home = () => {
       <CleanCar></CleanCar>
       <HomeQuestion />
       <Facilities></Facilities>
+      <Reviews></Reviews>
       <NurFooter></NurFooter>
+      {/* <Footer/> */}
     </div>
   );
 };

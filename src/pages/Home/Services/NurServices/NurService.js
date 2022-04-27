@@ -16,7 +16,7 @@ const NurService = ({ alldata }) => {
                     <div className="cart-text">
                             <p className="year-text">{year}</p>
                             <h3 className="name-text">{name}</h3>
-                            <p className='price-text'><span className='span-text'>${price}</span>/month</p>
+                            <p className='price-text'><span className='span-text'>${price}</span>/Day</p>
                             <div className='details-box'>
                               <small className='small_details' >{kilo}kilo</small>
                               <small className='small_details' >{type}</small>
@@ -28,7 +28,7 @@ const NurService = ({ alldata }) => {
                     </div>
                         <div className=" my-3 d-flex             justify-content-between"> 
                             <Link to={`/book/${_id}`} >
-                            <button className="button">Rent Now</button>
+                            <button className="service-button">Rent Now</button>
                             </Link>                      
                             
                         </div>

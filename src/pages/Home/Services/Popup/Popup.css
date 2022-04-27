@@ -1,7 +1,12 @@
-.text_center{
+/* .text_center{
     display: block !important;
     margin:auto !important;
 }
 .design_popup{
     margin-top: 100px;
+} */
+
+.designCard{
+    justify-content: center !important;
+
 }
