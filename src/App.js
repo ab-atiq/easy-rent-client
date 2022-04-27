@@ -15,11 +15,8 @@ import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import NewDashbord from "./pages/NewDashbord/NewDashbord";
 import Popup from "./pages/Home/Services/Popup/Popup";
-<<<<<<< HEAD
 import ChatApp from './pages/Chat/ChatApp';
 import './App.css';
-
-=======
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
 import AllReview from './pages/NewDashbord/AllReview/AllReview';
@@ -28,10 +25,9 @@ import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
 import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
 import Profile from './pages/UserProfile/Profile/Profile';
-import './App.css';
 import AddService from './pages/Home/Services/AddService/AddService';
 import PayNow from './pages/Home/Services/PayNow/PayNow';
->>>>>>> development
+import AboutUs from './pages/Home/AboutUs/AboutUs';
 
 function App() {
 
@@ -53,8 +49,6 @@ function App() {
             <Route path='/large' element={<Large />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-<<<<<<< HEAD
-=======
             <Route path='/profile' element={<Profile />} />
             <Route path='/addService' element={<AddService />} />
             <Route path='/pay' element={<PayNow />} />
@@ -66,7 +60,6 @@ function App() {
               <Route path='/newDashbord/dashreview' element={<AllReview />} />
             </Route>
 
->>>>>>> development
             <Route path='/CourseHome' element={<CourseHome />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='AboutUs' element={<AboutUs />} />

@@ -29,10 +29,7 @@ const Hero = () => {
     setValue(newValue);
   };
   const onSubmit = (data) => {
-<<<<<<< HEAD
-=======
     setIsLoading(true)
->>>>>>> development
     fetch(`https://guarded-taiga-13015.herokuapp.com/api/findcar?pickup=${data?.pickup}`)
       .then(res => res.json())
       .then(data => {

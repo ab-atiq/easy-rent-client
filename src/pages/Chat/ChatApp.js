@@ -9,6 +9,7 @@ import ChannelContainer from './ChannelContainer';
 import { Container } from '@mui/material';
 import Register from '../Shared/Register/Register';
 import useAuth from '../../hooks/useAuth';
+import Auth from './Auth';
 // import Auth from './Auth';
 
 const cookies = new Cookies();
@@ -20,12 +21,14 @@ const client = StreamChat.getInstance(apiKey);
 
 
 const ChatApp = () => {
-    const { user } = useAuth()
+
+    const { user } = useAuth();
     const [createType, setCreateType] = useState('');
     const [isCreating, setIsCreating] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
 
-    if (!user) return < Register />
+    if (!authToken) return <Auth />
+
 
     return (
         <div className='chat_container' >

@@ -4,13 +4,10 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AppBar from '../../Shared/Appbar/Appbar';
 import Grid from '@mui/material/Grid';
-<<<<<<< HEAD
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './AboutUs.css';
 import Footer from '../../Shared/Footer/Footer';
-=======
->>>>>>> development
 
 const AboutUs = () => {
   const background = {
