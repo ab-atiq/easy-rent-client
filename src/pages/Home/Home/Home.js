@@ -36,6 +36,7 @@ const Home = () => {
       <Facilities></Facilities>
       <Reviews></Reviews>
       <NurFooter></NurFooter>
+      {/* <Footer/> */}
     </div>
   );
 };
