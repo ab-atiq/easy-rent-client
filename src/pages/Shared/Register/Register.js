@@ -25,15 +25,13 @@ const Register = () => {
 
         console.log(data)
     };
+    
 
     // const handleClick = (e, data) => {
     //     registerUser(data.email, data.password, data.name)
-
-
     //     console.log(data)
     //     e.preventDefault();
     //     // register(dispatch, { userName, email, password });
-
     // };
 
 
