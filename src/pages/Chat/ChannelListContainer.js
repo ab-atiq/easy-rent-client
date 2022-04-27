@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ChannelList, useChatContext } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
-import HospitalIcon from '../chatassets/hospital.png'
+import { Link } from 'react-router-dom'
+import logo from '../../images/easyrent.png'
 import LogoutIcon from '../chatassets/logout.png'
 import ChannelSearch from './ChannelSearch';
 import TeamChannelList from './TeamChannelList';
@@ -14,12 +15,17 @@ const SideBar = ({ logout }) => (
     <div className="channel-list__sidebar">
         <div className="channel-list__sidebar__icon1">
             <div className="icon1__inner">
-                <img src={HospitalIcon} alt="Ride" width="30" />
+                <Link to='/home'>
+                    <img src={logo} alt="Ride" width="30" />
+                </Link>
             </div>
         </div>
         <div className="channel-list__sidebar__icon2">
             <div className="icon1__inner" onClick={logout}>
-                <img src={LogoutIcon} alt="Logout" width="30" />
+
+                <Link to='/home'>
+                    <img src={LogoutIcon} alt="Logout" width="30" />
+                </Link>
             </div>
         </div>
     </div>
