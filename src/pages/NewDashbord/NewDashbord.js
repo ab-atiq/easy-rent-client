@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/easyrent.png'
 import profile from '../../images/download.jpg'
 import { Outlet } from 'react-router-dom'
+import useAuth from '../../hooks/useAuth';
 // import DashboardHome from './DashbordHome/DashboardHome';
 
 
 const NewDashbord = () => {
+    const { user, logOut } = useAuth()
     const [click, setClick] = useState(false);
+    console.log(user)
     const handleClick = () => {
     setClick(!click)
   }
@@ -41,10 +44,10 @@ const NewDashbord = () => {
                 </Link>
 
                 <Link className='dashboard-link' to='/newDashbord/user'><i className='material-icons-sharp'>person_outline</i>
-                     <h3>Customers</h3>
+                     <h3>All Users</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>receipt_long</i>
+                <Link className='dashboard-link' to='/newDashbord/userOrder'><i className='material-icons-sharp'>receipt_long</i>
                     <h3>Orders</h3>
                 </Link>
 
@@ -72,7 +75,7 @@ const NewDashbord = () => {
                     <h3>AddProduct</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>logout</i>
+                <Link className='dashboard-link' onClick={logOut} to='/home'><i className='material-icons-sharp'>logout</i>
                     <h3>Logout</h3>
                 </Link>
         
@@ -91,7 +94,7 @@ const NewDashbord = () => {
                 </div> */}
                 <div className="profile">
                     <div className="info">
-                        <p>Hey, <b>Nur</b></p>
+                        <p>Hey, <b>{user.displayName}</b></p>
                         <small className='text-muted'>Admin</small>
                     </div>
                     <div className="profile-photo">

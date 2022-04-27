@@ -16,7 +16,7 @@ const Small = () => {
 
  
 
-  const filterService = services.filter(data => data.price == "35");
+  const filterService = services.filter(data => data.price === "35");
 
   return (
     <div>

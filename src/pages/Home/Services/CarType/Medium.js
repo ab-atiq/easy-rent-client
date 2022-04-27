@@ -15,7 +15,7 @@ const Medium = () => {
 
  
 
-  const filterService = services?.filter(data => data.price == "40");
+  const filterService = services?.filter(data => data.price === "40");
   return (
     <div>
       <DetailsCar></DetailsCar>

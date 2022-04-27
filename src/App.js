@@ -19,6 +19,7 @@ import ChatApp from './pages/Chat/ChatApp';
 import './App.css';
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
+import UserOrder from './pages/NewDashbord/UserOrder/UserOrder';
 import AllReview from './pages/NewDashbord/AllReview/AllReview';
 import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
@@ -56,6 +57,7 @@ function App() {
 
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
+              <Route path='/newDashbord/userOrder' element={<UserOrder />} />
               <Route path='/newDashbord/user' element={<User />} />
               <Route path='/newDashbord/dashreview' element={<AllReview />} />
             </Route>

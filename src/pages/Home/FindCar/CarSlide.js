@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 const CarSlide = ({ car }) => {
   return (
-    <Box sx={{ backgroundColor: "rgb(244, 126, 18)", borderRadius: "10px" }}>
+    <Box
+      sx={{ backgroundColor: "rgb(244, 126, 18)", borderRadius: "10px", py: 1 }}
+    >
       <Link to={`/car/${car.brandName}`} style={{ textDecoration: "none" }}>
         <Grid container spacing={1} sx={{ borderRadius: "20px" }}>
           <Grid item xs="12">
