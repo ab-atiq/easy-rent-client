@@ -3,8 +3,8 @@ import { Container, Grid, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import SingleFindBasisBrand from "./SingleFindBasisBrand";
 import { Box } from "@mui/system";
-import Footer from "../../../Shared/Footer/Footer";
 import Appbar from "../../../Shared/Appbar/Appbar";
+import NurFooter from "../../../Shared/Footer/NurFooter";
 
 const FindBasisBrand = () => {
   const [cars, setCars] = useState();
@@ -102,7 +102,7 @@ const FindBasisBrand = () => {
             </Grid>
           </Box>
         </Container>
-        <Footer />
+        <NurFooter />
       </Box>
     </>
   );
