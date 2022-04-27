@@ -80,11 +80,11 @@ const Appbar = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}><Link as={Link} to="/profile" className='single-link'>Profile</Link></MenuItem>
-              <MenuItem onClick={handleClose}><Box>
-                <Link className='single-link' to='/newDashbord'>Dashboard</Link>
-              </Box></MenuItem>
-              <MenuItem onClick={handleClose}><Link as={Link} to="/login" className='single-link'>
+              <MenuItem onClick={handleClose}><Link as={Link} to="/profile" className='single-link-btn'>Profile</Link></MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link className='single-link-btn' to='/newDashbord'>Dashboard</Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}><Link as={Link} to="/login" className='single-link-btn'>
                 <button className='nav-btn' onClick={logOut}>Logout</button>
               </Link></MenuItem>
             </Menu>

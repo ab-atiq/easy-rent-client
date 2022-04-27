@@ -26,6 +26,13 @@
     color: black;
 }
 
+.single-link-btn {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    color: black;
+}
+
 .logout-btn {
     background-color: black;
     color: #fff;
@@ -69,6 +76,13 @@
     }
 
     .single-link {
+        text-align: center;
+        padding: 2rem;
+        margin-left: 0;
+        color: white;
+    }
+
+    .single-link-btn {
         text-align: center;
         padding: 2rem;
         margin-left: 0;
