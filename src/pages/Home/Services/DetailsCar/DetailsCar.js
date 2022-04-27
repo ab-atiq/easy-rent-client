@@ -62,6 +62,7 @@ const DetailsCar = () => {
                   </Link>
                 </Grid>
                 <Grid item spacing={{ xs: 2, md: 3, lg: 5}} columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
+                <Link className="_btn" to="/details">
                   <div className="small_box">
                     <img
                       width="50px"
@@ -69,8 +70,9 @@ const DetailsCar = () => {
                       src="https://freepngimg.com/thumb/mercedes/49-mercedes-car-png-image.png"
                       alt=""
                     />
-                    <p sx={{ align: "center" }}>SUV</p>
+                    <p sx={{ align: "center" }}>ALL</p>
                   </div>
+                  </Link>
                 </Grid>
                 <Grid item  columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
                   <div className="Range_slider ">

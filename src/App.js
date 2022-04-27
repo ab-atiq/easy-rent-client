@@ -22,6 +22,8 @@ import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
 import Profile from './pages/UserProfile/Profile/Profile';
+import AddService from './pages/Home/Services/AddService/AddService';
+import PayNow from './pages/Home/Services/PayNow/PayNow';
 
 function App() {
 
@@ -44,6 +46,8 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/addService' element={<AddService />} />
+            <Route path='/pay' element={<PayNow />} />
 
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
