@@ -26,7 +26,7 @@ const DetailsCar = () => {
                     <div className="small_box">
                       <img
                         width="50px"
-                        height="30px"
+                        height="25px"
                         src="https://i.ibb.co/gjz0t4s/2018-Toyota-Noah-X-facelift-removebg-preview.png"
                         alt=""
                       />
@@ -39,7 +39,7 @@ const DetailsCar = () => {
                     <div className="small_box">
                       <img
                         width="50px"
-                        height="30px"
+                        height="25px"
                         src="https://th.bing.com/th/id/R.8b54fce0c51f09af18e1ee3d2889287a?rik=Qa4fEblOI8zO7w&riu=http%3a%2f%2fpluspng.com%2fimg-png%2ffree-png-hd-of-cars-car-png-file-png-image-1312.png&ehk=h4Z6LY0yG3Qx7rvd%2fHmMB6F5UTTb%2fwEWkkzu8Pvcmkg%3d&risl=&pid=ImgRaw&r=0"
                         alt=""
                       />
@@ -52,7 +52,7 @@ const DetailsCar = () => {
                     <div className="small_box">
                       <img
                         width="50px"
-                        height="30px"
+                        height="25px"
                         src="https://pngimg.com/uploads/mercedes/mercedes_PNG1898.png"
                         alt=""
                       />
@@ -65,7 +65,7 @@ const DetailsCar = () => {
                     <div className="small_box">
                       <img
                         width="50px"
-                        height="30px"
+                        height="25px"
                         src="https://freepngimg.com/thumb/mercedes/49-mercedes-car-png-image.png"
                         alt=""
                       />
