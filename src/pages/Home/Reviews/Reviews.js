@@ -11,7 +11,7 @@ import { Navigation } from "swiper";
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-taiga-13015.herokuapp.com/api/addreview')
+        fetch('http://localhost:5000/api/addreview')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
