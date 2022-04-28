@@ -23,7 +23,7 @@ const ReviewSingleCar = ({ carName }) => {
 
   const handleReviewSubmit = (e) => {
     const reviewAdd = { ...review, star: star };
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/carReview", {
+    fetch("http://localhost:5000/api/find/carReview", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -63,9 +63,10 @@ const ReviewSingleCar = ({ carName }) => {
           required
           style={{ width: "100%" }}
         />
+        <br />
         <input
           style={{ width: "110px" }}
-          className="btn btn-primary"
+          className="btn btn-danger"
           type="submit"
           value="Add Review"
         />
