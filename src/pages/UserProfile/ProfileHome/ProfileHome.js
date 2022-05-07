@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const ProfileHome = () => {
     const { user, logOut } = useAuth();
-    console.log(user.photoURL);
+    console.log(user?.photoURL);
 
     return (
         <div>
