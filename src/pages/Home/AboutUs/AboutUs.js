@@ -9,7 +9,10 @@ import 'aos/dist/aos.css';
 import './AboutUs.css';
 import Footer from '../../Shared/Footer/Footer';
 
+
 const AboutUs = () => {
+
+
   const background = {
     background: `url(${'https://s5.favim.com/orig/71/boy-car-guy-landscape-Favim.com-668156.jpg'})`,
     backgroundColor: 'rgba(45, 58, 74, 0.5)',
@@ -18,6 +21,17 @@ const AboutUs = () => {
     marginTop: 50,
     height: "900px"
   }
+
+  const background2 = {
+    background: `url(${'https://demo.kitthemes.com/html/rentnow/assets/images/about-bg-1.jpg'})`,
+    backgroundColor: 'rgba(45, 58, 74, 0.5)',
+    backgroundBlendMode: 'darken,luminosity',
+    backgroundSize: 'cover',
+    marginTop: 50,
+    height: "900px"
+  }
+
+
 
   useEffect(() => {
     AOS.init()
@@ -34,6 +48,31 @@ const AboutUs = () => {
         <p>
           Cras eros lorem, rhoncus ac risus sit amet, fringilla ultrices purus.
         </p> */}
+      </div>
+
+      <Typography>Our Vission</Typography>
+      <Typography>Inbecilloque elegans errorem concedo etsi electram.
+      </Typography>
+
+      <div style={background2}>
+
+        <Container>
+
+
+
+          <Grid container spacing={2} sx={{ position: 'relative', top: '10px' }}>
+            <Grid item xs={4}>
+              <img src="https://demo.kitthemes.com/html/rentnow/assets/images/about-img.jpg" alt="" />
+            </Grid>
+
+            <Grid item xs={7}>
+              <Typography sx={{ color: '#00D231', fontWeight: '500', fontSize: '1.5rem' }}>Make Beauty Things</Typography>
+              <Typography sx={{ fontWeight: '800', fontSize: '2.85714rem', color: '#fff' }}>With Passion</Typography>
+              <p style={{ lineHeight: '1.8', color: '#fff' }}>Proin euismod mollis mi in finibus. Duis vitae elementum ligula. Cras suscipit feugiat arcu, eu venenatis odio. Vivamus non venenatis urna. Curabitur quis elit ut lorem condimentum dignissim. Nunc ornare massa vel fringilla efficitur. Cras elementum ligula et metus tempor, sit amet convallis neque venenatis. Morbi nisi eros, finibus sit amet ipsum ac, venenatis dignissim leo.</p>
+            </Grid>
+          </Grid>
+
+        </Container>
       </div>
 
 
