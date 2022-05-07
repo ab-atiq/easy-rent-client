@@ -1,9 +1,23 @@
 .about-banner img {
     width: 10%;
-    height: 70%;
     object-fit: cover;
+    background-size: contain;
+}
+
+.about-title h1,
+p {
+    margin-top: 100%;
+    margin-left: 50%;
+    margin: 20px;
 }
 
 .about-section {
-    margin-bottom: 50px;
+    position: relative;
+}
+
+.about-img img {
+    width: 100%;
+    margin-top: -80px;
+
+
 }
