@@ -6,6 +6,7 @@ const Footer = () => {
     <div>
       <footer className="footer-distributed">
         <div className="footer-left">
+
           <h3>
             Easy<span>Rent</span>
           </h3>

@@ -3,10 +3,7 @@
   border-radius: 5px;
   text-align: center;
   width: 100%;
-  font-weight: 300;
   color: black !important;
-  margin-top: 5px;
-  padding: 5px;
   text-decoration: none !important;
 }
 .small_box:hover {
@@ -25,7 +22,7 @@
   text-align: right;
 }
 .navigation_btn{
-    margin-top: 40px;
+    margin-top: 80px !important;
 }
 .Range_slider{
     margin-top: 25px;

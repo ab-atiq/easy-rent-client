@@ -12,7 +12,7 @@ const AllReview = () => {
         .then(data => setReview(data));
 
     }, []);
-    console.log(review)
+    
   return (
     <div className='dashbord-review'>
         {/* <Container> */}

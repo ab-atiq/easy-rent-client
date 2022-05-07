@@ -3,27 +3,34 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Service from "./Service";
 import "./Services.css";
-import {data} from "../FakeData/FakeDataHome"
-
-
-
-
+// import {data} from "../FakeData/FakeDataHome"
 
 const Services = () => {
+  const [services, setServices] = useState([]);
 
+  useEffect(() => {
+    fetch("http://localhost:5000/api/service_main")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, [services]);
 
   return (
     <div>
-      
       <Box
-        sx={{ textAlign: "center", fontWeight: 'bold', fontSize: "2.5rem", mb: "70px", mt: "60px" }}
+        sx={{
+          textAlign: "center",
+          fontWeight: "bold",
+          fontSize: "2.5rem",
+          mb: "70px",
+          mt: "60px",
+        }}
       >
         {" "}
         Our services
       </Box>
       <Container>
         <Grid container>
-          {data.slice(0, 4).map((serviceP) => (
+          {services?.slice(0, 4).map((serviceP) => (
             <Grid
               item
               sx={12}
