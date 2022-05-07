@@ -18,6 +18,30 @@ p {
 .about-img img {
     width: 100%;
     margin-top: -80px;
+}
+
+.bullet-point {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+    color: #fd9902;
+    margin: 35px auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .bullet-point {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .img-hide img {
+        visibility: hidden;
+    }
+
+    .about-img img {
+        visibility: hidden;
+    }
 
 
 }

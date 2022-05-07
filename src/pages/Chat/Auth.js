@@ -52,6 +52,7 @@ const Auth = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);
     }
 
+    
     return (
         <div className="auth__form-container">
             <div className="auth__form-container_fields">

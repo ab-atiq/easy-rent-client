@@ -8,6 +8,7 @@ const userSlice = createSlice({
         isFetching: false,
         error: false,
     },
+    
     reducers: {
         registerStart: (state) => {
             state.isFetching = true;
