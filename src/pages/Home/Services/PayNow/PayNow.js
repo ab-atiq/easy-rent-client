@@ -8,14 +8,14 @@ const PayNow = () => {
     <div>
       <h1 className="text_center">Payment Coming soon</h1>
 
-      <Link to="/order">
+      <Link to="/home">
         <Button
           required
           type="submit"
           className="button_design  btn_center"
           variant="contained"
         >
-          Manage Order
+          Go Back
         </Button>
       </Link>
     </div>
