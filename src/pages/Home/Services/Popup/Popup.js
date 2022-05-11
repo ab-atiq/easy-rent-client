@@ -10,13 +10,18 @@ import {
   TextField,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Popup.css";
 import { Link } from "react-router-dom";
 
 const Popup = () => {
   const { BookingId } = useParams();
   const [service, setService] = useState({});
+  const navigate = useNavigate();
+
+  // const handelButton = () => {
+  //   window.location.replace("http://localhost:5000/init");
+  // };
 
   useEffect(() => {
     fetch(`http://localhost:5000/api/service/${BookingId}`)
@@ -130,14 +135,15 @@ const Popup = () => {
                 </FormControl>
 
                 <Link to="/pay">
-                  <Button
-                    required
-                    type="submit"
-                    className="button_design"
-                    variant="contained"
-                  >
-                    Continew With Pay
-                  </Button>
+                <Button
+                  // onClick={handelButton}
+                  required
+                  type="submit"
+                  className="button_design"
+                  variant="contained"
+                >
+                  Continew With Pay
+                </Button>
                 </Link>
               </Box>
             </Box>
