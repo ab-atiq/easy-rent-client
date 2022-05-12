@@ -33,7 +33,7 @@ const FindSingleCar = () => {
   // console.log(location);
 
   useEffect(() => {
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findBrand")
+    fetch("http://localhost:5000/api/find/findBrand")
       .then((res) => res.json())
       .then((data) => {
         const filterCar = data.filter((data) => data.name.includes(carName));
