@@ -32,6 +32,7 @@ import AddService from './pages/Home/Services/AddService/AddService';
 import PayNow from './pages/Home/Services/PayNow/PayNow';
 import AboutUs from './pages/Home/AboutUs/AboutUs';
 import MyOrders from './pages/UserProfile/MyOrders/MyOrders';
+import CarRent from './pages/Home/FindCar/FindSingleCar/rent/CarRent';
 
 function App() {
 
@@ -73,6 +74,8 @@ function App() {
             <Route path='/ChatApp' element={<ChatApp />} />
             <Route path="car/:carName" element={<FindBasisBrand />} />
             <Route path="singleCar/:carName" element={<FindSingleCar />} />
+            <Route path="/rent/:tranId" element={<CarRent />} />
+            {/* <Route path="singleCar/:carName" element={<FindSingleCar />} /> */}
             <Route path='/userdetails/:id' element={<UserDetails />} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='/paymentsuccess/:tran_id' element={<Success></Success>} />
