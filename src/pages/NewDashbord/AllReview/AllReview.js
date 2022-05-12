@@ -7,7 +7,7 @@ import './AllReview.css';
 const AllReview = () => {
     const [review, setReview] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-taiga-13015.herokuapp.com/api/addreview')
+        fetch('http://localhost:5000/api/addreview')
         .then(res => res.json())
         .then(data => setReview(data));
 
