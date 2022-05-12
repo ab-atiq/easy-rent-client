@@ -28,7 +28,7 @@ const Auth = () => {
 
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'https://guarded-taiga-13015.herokuapp.com/auth';
+        const URL = 'http://localhost:5000/auth';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'chatLogin'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
@@ -52,7 +52,7 @@ const Auth = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);
     }
 
-    
+
     return (
         <div className="auth__form-container">
             <div className="auth__form-container_fields">

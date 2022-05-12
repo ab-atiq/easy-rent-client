@@ -10,7 +10,7 @@ const AddCourses = () => {
 
     const onSubmit = (data) => {
         return (dispatch) => {
-            axios.post('https://guarded-taiga-13015.herokuapp.com/courseAdd', data)
+            axios.post('http://localhost:5000/courseAdd', data)
                 .then(res => {
                     dispatch(setCourses(res.data))
                 })
