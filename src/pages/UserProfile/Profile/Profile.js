@@ -4,6 +4,7 @@ import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import ProfileHome from '../ProfileHome/ProfileHome';
 import AddReview from '../../AddReview/AddReview';
+import MyOrders from '../MyOrders/MyOrders';
 
 const Profile = () => {
     const [control, setControl] = useState("adminDashboard");
@@ -32,6 +33,7 @@ const Profile = () => {
                     <Grid item xs={10}>
                         {control === "profile" && <ProfileHome></ProfileHome>}
                         {control === "profileHome" && <ProfileHome></ProfileHome>}
+                        {control === "myOrders" && <MyOrders></MyOrders>}
                         {control === "addreview" && <AddReview></AddReview>}
                     </Grid>
                 </Grid>

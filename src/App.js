@@ -24,11 +24,14 @@ import AllReview from './pages/NewDashbord/AllReview/AllReview';
 import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
+import Success from './pages/Payment/Success';
+import Cancel from './pages/Payment/Cancel';
 import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
 import Profile from './pages/UserProfile/Profile/Profile';
 import AddService from './pages/Home/Services/AddService/AddService';
 import PayNow from './pages/Home/Services/PayNow/PayNow';
 import AboutUs from './pages/Home/AboutUs/AboutUs';
+import MyOrders from './pages/UserProfile/MyOrders/MyOrders';
 
 function App() {
 
@@ -51,6 +54,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/myOrders' element={<MyOrders />} />
             <Route path='/addService' element={<AddService />} />
             <Route path='/pay' element={<PayNow />} />
             <Route path='/profileHome' element={<ProfileHome />} />
@@ -70,6 +74,9 @@ function App() {
             <Route path="car/:carName" element={<FindBasisBrand />} />
             <Route path="singleCar/:carName" element={<FindSingleCar />} />
             <Route path='/userdetails/:id' element={<UserDetails />} />
+            <Route path='/addreview' element={<AddReview></AddReview>} />
+            <Route path='/paymentsuccess/:tran_id' element={<Success></Success>} />
+            <Route path='/paymentcancel' element={<Cancel></Cancel>} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />
           </Routes>
