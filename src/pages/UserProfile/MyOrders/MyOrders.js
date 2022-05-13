@@ -13,7 +13,7 @@ const MyOrders = () => {
             .then((data) => setOrders(data));
     }, []);
 
-    // console.log(myOrder);
+    // console.log(Orders);
 
     return (
         <Container>
