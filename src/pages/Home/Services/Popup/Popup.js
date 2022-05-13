@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Container,
-  FormControl,
   Grid,
   InputLabel,
   MenuItem,
@@ -10,13 +9,18 @@ import {
   TextField,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Popup.css";
 import { Link } from "react-router-dom";
 
 const Popup = () => {
   const { BookingId } = useParams();
   const [service, setService] = useState({});
+  const navigate = useNavigate();
+
+  // const handelButton = () => {
+  //   window.location.replace("http://localhost:5000/init");
+  // };
 
   useEffect(() => {
     fetch(`http://localhost:5000/api/service/${BookingId}`)
@@ -28,6 +32,10 @@ const Popup = () => {
 
   const handleChange = (event) => {
     setAge(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    navigate("/pay");
   };
 
   return (
@@ -52,6 +60,7 @@ const Popup = () => {
           <Grid className="text_center" item sx={12} sm={6} md={6} lg={6}>
             <Box
               component="form"
+              onSubmit={handleSubmit}
               sx={{
                 "& .MuiTextField-root": { m: 1, width: "50ch" },
               }}
@@ -90,55 +99,17 @@ const Popup = () => {
                   required
                 />
               </div>
-              <Box sx={{ width: 500 }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={age}
-                    label="Age"
-                    onChange={handleChange}
-                    required
-                  >
-                    <MenuItem value={10}>2000</MenuItem>
-                    <MenuItem value={20}>2001</MenuItem>
-                    <MenuItem value={30}>2002</MenuItem>
-                    <MenuItem value={30}>2003</MenuItem>
-                    <MenuItem value={30}>2004</MenuItem>
-                    <MenuItem value={30}>2005</MenuItem>
-                    <MenuItem value={30}>2006</MenuItem>
-                    <MenuItem value={30}>2007</MenuItem>
-                    <MenuItem value={30}>2008</MenuItem>
-                    <MenuItem value={30}>2009</MenuItem>
-                    <MenuItem value={30}>2010</MenuItem>
-                    <MenuItem value={30}>2011</MenuItem>
-                    <MenuItem value={30}>2012</MenuItem>
-                    <MenuItem value={30}>2013</MenuItem>
-                    <MenuItem value={30}>2014</MenuItem>
-                    <MenuItem value={30}>2015</MenuItem>
-                    <MenuItem value={30}>2016</MenuItem>
-                    <MenuItem value={30}>2017</MenuItem>
-                    <MenuItem value={30}>2018</MenuItem>
-                    <MenuItem value={30}>2019</MenuItem>
-                    <MenuItem value={30}>2020</MenuItem>
-                    <MenuItem value={30}>2021</MenuItem>
-                    <MenuItem value={30}>2022</MenuItem>
-                    <MenuItem value={30}>2023</MenuItem>
-                    <MenuItem value={30}>2024</MenuItem>
-                  </Select>
-                </FormControl>
 
-                <Link to="/pay">
-                  <Button
-                    required
-                    type="submit"
-                    className="button_design"
-                    variant="contained"
-                  >
-                    Continew With Pay
-                  </Button>
-                </Link>
+              <Box sx={{ width: 500 }}>
+                <Button
+                  // onClick={handelButton}
+                  required
+                  type="submit"
+                  className="button_design"
+                  variant="contained"
+                >
+                  Continue With Pay
+                </Button>
               </Box>
             </Box>
           </Grid>
