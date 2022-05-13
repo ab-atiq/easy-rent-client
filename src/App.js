@@ -32,6 +32,7 @@ import AddService from './pages/Home/Services/AddService/AddService';
 import PayNow from './pages/Home/Services/PayNow/PayNow';
 import AboutUs from './pages/Home/AboutUs/AboutUs';
 import MyOrders from './pages/UserProfile/MyOrders/MyOrders';
+import ManageOrder from './pages/Home/Services/HomeServices/ManageOrder/ManageOrder';
 
 function App() {
 
@@ -58,6 +59,8 @@ function App() {
             <Route path='/addService' element={<AddService />} />
             <Route path='/pay' element={<PayNow />} />
             <Route path='/profileHome' element={<ProfileHome />} />
+            <Route path='/manageOrder' element={<ManageOrder />} />
+
 
             <Route path='/newDashbord' element={<NewDashbord />}>
               <Route path='/newDashbord/' element={<DashboardHome />} />
