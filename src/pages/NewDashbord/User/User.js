@@ -5,7 +5,7 @@ import './User.css'
 const User = () => {
     const [allUsers, setAllUsers] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-taiga-13015.herokuapp.com/api/users/findAll')
+        fetch('http://localhost:5000/api/users/findAll')
         .then(res => res.json())
         .then(data => setAllUsers(data));
 
