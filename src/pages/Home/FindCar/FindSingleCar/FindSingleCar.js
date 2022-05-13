@@ -58,19 +58,6 @@ const FindSingleCar = () => {
 
   const rentNow = () => {
     const rentCar = { ...initialInfo };
-    // fetch("http://localhost:5000/api/find/singleCarRent", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(rentCar),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (data._id) {
-    //       alert("Information successfully submitted.!");
-    //     }
-    //   });
     fetch(`http://localhost:5000/api/find/init`, {
       method: "POST",
       headers: {
