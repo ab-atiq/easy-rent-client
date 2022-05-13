@@ -39,7 +39,7 @@ const FindSingleCar = () => {
         const filterCar = data.filter((data) => data.name.includes(carName));
         setImage(filterCar[0].imgUrl);
         setRent(filterCar[0].rent);
-      });
+      }); 
   }, []);
 
   const initialInfo = {
