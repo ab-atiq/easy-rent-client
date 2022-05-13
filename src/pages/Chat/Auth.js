@@ -28,7 +28,9 @@ const Auth = () => {
 
         const { username, password, phoneNumber, avatarURL } = form;
 
+        
         const URL = 'https://guarded-taiga-13015.herokuapp.com/auth';
+
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'chatLogin'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
