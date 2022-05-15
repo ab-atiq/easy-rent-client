@@ -11,16 +11,15 @@ import {
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Popup.css";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import useAuth from "../../../../hooks/useAuth";
 
 const Popup = () => {
   const { BookingId } = useParams();
   const [service, setService] = useState({});
   const navigate = useNavigate();
-
-  // const handelButton = () => {
-  //   window.location.replace("http://localhost:5000/init");
-  // };
+  const [orderData, setOrderData] = useState({});
+  const { user, logOut } = useAuth();
 
   useEffect(() => {
     fetch(`http://localhost:5000/api/service/${BookingId}`)
@@ -30,12 +29,33 @@ const Popup = () => {
 
   const [age, setAge] = React.useState("");
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const handleChange = (e) => {
+    setOrderData({ ...orderData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    navigate("/pay");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = { ...orderData, serviceId: BookingId, userId: user?.email };
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/createOrder",
+        data
+      );
+
+      console.log("api res => ", res);
+
+      //Ekohn tmi client side run kore ekta order create koro r console e dkeho ki ashe
+
+      if (res.data) {
+        alert("Order Created");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+    // navigate("/pay");
   };
 
   return (
@@ -58,60 +78,69 @@ const Popup = () => {
           </Grid>
 
           <Grid className="text_center" item sx={12} sm={6} md={6} lg={6}>
-            <Box
-              component="form"
-              onSubmit={handleSubmit}
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "50ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <div>
-                <TextField
-                  id="filled-error"
-                  label="FirstName"
-                  defaultValue=""
-                  variant="filled"
-                  required
-                />
-                <TextField
-                  id="filled-error-helper-text"
-                  label="LastName"
-                  defaultValue=""
-                  variant="filled"
-                  required
-                />
-              </div>
-              <div>
-                <TextField
-                  id="filled-error"
-                  label="Address"
-                  defaultValue=""
-                  variant="filled"
-                  required
-                />
-                <TextField
-                  id="filled-error-helper-text"
-                  label="division"
-                  defaultValue=""
-                  variant="filled"
-                  required
-                />
-              </div>
+            <form onSubmit={handleSubmit}>
+              <Box
+                onSubmit={handleSubmit}
+                sx={{
+                  "& .MuiTextField-root": { m: 1, width: "50ch" },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <div>
+                  <TextField
+                    id="filled-error"
+                    label="FullName"
+                    defaultValue=""
+                    variant="filled"
+                    name="fullName"
+                    required
+                    onBlur={handleChange}
+                  />
+                </div>
+                <div>
+                  <TextField
+                    id="filled-error"
+                    label="Address"
+                    defaultValue=""
+                    variant="filled"
+                    name="address"
+                    required
+                    onBlur={handleChange}
+                  />
+                  <TextField
+                    id="filled-error-helper-text"
+                    label="division"
+                    defaultValue=""
+                    variant="filled"
+                    name="division"
+                    required
+                    onBlur={handleChange}
+                  />
+                  <TextField
+                    id="filled-error-helper-text"
+                    label="Year"
+                    defaultValue=""
+                    variant="filled"
+                    name="year"
+                    type="number"
+                    required
+                    onBlur={handleChange}
+                  />
+                </div>
 
-              <Box sx={{ width: 500 }}>
-                <Button
-                  // onClick={handelButton}
-                  required
-                  type="submit"
-                  className="button_design"
-                  variant="contained"
-                >
-                  Continue With Pay
-                </Button>
+                <Box sx={{ width: 500 }}>
+                  <input
+                    // onClick={handelButton}
+                    required
+                    type="submit"
+                    className="button_design"
+                    variant="contained"
+                    value="Continew with pay"
+                  />
+                </Box>
               </Box>
-            </Box>
+            </form>
           </Grid>
         </Grid>
       </Container>
