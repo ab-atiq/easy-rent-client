@@ -55,7 +55,7 @@ const Popup = () => {
       console.log(err);
     }
 
-    // navigate("/pay");
+    navigate("/pay");
   };
 
   return (

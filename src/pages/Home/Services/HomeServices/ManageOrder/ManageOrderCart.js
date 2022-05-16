@@ -1,10 +1,22 @@
 import { Box, Button, Grid } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 
 const ManageOrderCart = ({ alldata }) => {
-    const { _id, name, price, image, year, type, fual, kilo } = alldata;
+   
+    const {  name, price, image, year, type, fual, kilo } = alldata ;
+
+
+const deleteOrder = async () => {
+       
+    // const res = await axios.delete(`http://locahost:5000/api/orders/delete/${_id}`);
+
+    // setServices(res.data);
+}
+
+
     return (
         <Grid item xs={12} sm={6} md={4} lg={3}>
         <div className="box">
@@ -28,7 +40,7 @@ const ManageOrderCart = ({ alldata }) => {
           <div className=" my-3 d-flex             justify-content-between">
               <Box component="button" sx={{ width: 1 , display: 'block', my:0.5}}>Update Order</Box>
 
-              <Box component="button" sx={{ width: 1 , display: 'block',my:0.5}}>Delete Order</Box>
+              <Box onClick={deleteOrder} component="button" sx={{ width: 1 , display: 'block',my:0.5}}>Delete Order</Box>
             
           </div>
         </div>
