@@ -49,7 +49,7 @@ const Popup = () => {
       
     }
 
-    // navigate("/pay");
+    navigate("/pay");
   };
 
   return (
