@@ -1,4 +1,3 @@
-import { Container } from '@mui/material'
 import Car from "../../../images/car.png";
 import './Porsche.css';
 import React from 'react';
@@ -6,7 +5,6 @@ import React from 'react';
 const Porsche = () => {
 
     return (
-        <Container>     
         <div className="main">
             <div className="text">
                 <h1>Long-Journey experience with
@@ -19,7 +17,6 @@ const Porsche = () => {
                 <img src={Car} alt="" />
             </div>
         </div>
-        </Container>  
     );
 };
 
