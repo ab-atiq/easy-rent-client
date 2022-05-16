@@ -3,7 +3,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import "./Services.css";
 const Service = ({ service }) => {
-  const { model, car_name, price, image, price_daily } = service;
+  const { model, car_name, image, price_daily } = service;
   return (
     <div className="Singel_card">
 
