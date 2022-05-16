@@ -1,15 +1,11 @@
 import {
   Box,
-  Button,
   Container,
   Grid,
-  InputLabel,
-  MenuItem,
-  Select,
   TextField,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Popup.css";
 import axios from "axios";
 import useAuth from "../../../../hooks/useAuth";
@@ -17,9 +13,8 @@ import useAuth from "../../../../hooks/useAuth";
 const Popup = () => {
   const { BookingId } = useParams();
   const [service, setService] = useState({});
-  const navigate = useNavigate();
   const [orderData, setOrderData] = useState({});
-  const { user, logOut } = useAuth();
+  const { user } = useAuth();
 
   useEffect(() => {
     fetch(`http://localhost:5000/api/service/${BookingId}`)
@@ -27,7 +22,6 @@ const Popup = () => {
       .then((data) => setService(data));
   }, [BookingId]);
 
-  const [age, setAge] = React.useState("");
 
   const handleChange = (e) => {
     setOrderData({ ...orderData, [e.target.name]: e.target.value });
@@ -52,7 +46,7 @@ const Popup = () => {
         alert("Order Created");
       }
     } catch (err) {
-      console.log(err);
+      
     }
 
     // navigate("/pay");

@@ -1,10 +1,9 @@
-import { Box, Button, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
 const ManageOrderCart = ({ alldata }) => {
-    const { _id, name, price, image, year, type, fual, kilo } = alldata;
+    const { name, price, image, year, type, fual, kilo } = alldata;
     return (
         <Grid item xs={12} sm={6} md={4} lg={3}>
         <div className="box">
