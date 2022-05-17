@@ -1,9 +1,9 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import {  Card, CardContent, Grid, Typography } from '@mui/material';
 import React from 'react';
 
 const MyOrder = (props) => {
 
-    const { _id, name, email, carName, startDate, endDate, rent } = props.order || {}
+    const { name, email, carName, startDate, endDate, rent } = props.order || {}
 
     return (
         <>
