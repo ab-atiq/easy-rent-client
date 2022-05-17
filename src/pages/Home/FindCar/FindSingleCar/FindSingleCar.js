@@ -1,6 +1,6 @@
 import { Grid, Typography, Container, Button, Divider } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";

@@ -1,4 +1,4 @@
-import { Box, Container, IconButton, Menu, MenuItem } from '@mui/material'
+import { Container, IconButton, Menu, MenuItem } from '@mui/material'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../../images/easyrent.png'
