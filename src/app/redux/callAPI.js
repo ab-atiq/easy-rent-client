@@ -1,5 +1,4 @@
 import axios from "axios";
-import { commonRequest } from "../../requestMethods";
 import { registerFailure, registerStart, registerSuccess } from "./userReducer";
 import { loginFailure, loginStart, loginSuccess } from "./loginReducer";
 

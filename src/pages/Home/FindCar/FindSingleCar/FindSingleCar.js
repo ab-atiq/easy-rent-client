@@ -1,7 +1,6 @@
 import { Grid, Typography, Container, Button, Divider } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -24,6 +23,7 @@ const FindSingleCar = () => {
   const [startValue, setStartValue] = useState(new Date());
   const [endValue, setEndValue] = useState(new Date());
   const [rent, setRent] = useState(0);
+  const [image, setImage] = useState("");
   const [newRent, setNewRent] = useState(rent);
   const [days, setDays] = useState(0);
   const [location, setLocation] = useState("");
@@ -37,6 +37,7 @@ const FindSingleCar = () => {
       .then((res) => res.json())
       .then((data) => {
         const filterCar = data.filter((data) => data.name.includes(carName));
+        setImage(filterCar[0].imgUrl);
         setRent(filterCar[0].rent);
       });
   }, []);
@@ -44,17 +45,33 @@ const FindSingleCar = () => {
   const initialInfo = {
     name: user.displayName,
     email: user.email,
+    photoURL: user.photoURL,
     carName: carName,
     startDate,
     endDate,
     rent: newRent,
     location: location,
+    imgUrl: image,
+    rentStatus: "pending",
   };
   // console.log(initialInfo);
 
   const rentNow = () => {
     const rentCar = { ...initialInfo };
-    fetch("http://localhost:5000/api/find/singleCarRent", {
+    // fetch("http://localhost:5000/api/find/singleCarRent", {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(rentCar),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data._id) {
+    //       alert("Information successfully submitted.!");
+    //     }
+    //   });
+    fetch(`http://localhost:5000/api/find/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -63,9 +80,8 @@ const FindSingleCar = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data._id) {
-          alert("Information successfully submitted.!");
-        }
+        console.log(data);
+        window.location.replace(data);
       });
   };
 
@@ -162,9 +178,11 @@ const FindSingleCar = () => {
               Total cost: ${newRent}
             </Typography>
             <Typography textAlign="center" py={2}>
+              {/* <Link to={`/rent/${carName}`} style={{ textDecoration: "none" }}> */}
               <Button onClick={() => rentNow()} variant="contained">
                 Pay {newRent}$
               </Button>
+              {/* </Link> */}
             </Typography>
           </Grid>
         </Grid>

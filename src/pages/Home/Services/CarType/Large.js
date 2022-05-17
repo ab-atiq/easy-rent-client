@@ -17,6 +17,8 @@ const Large = () => {
 
   
   const filterService = services?.filter(data => data.price == "45");
+
+  
   return (
     <div>
       <DetailsCar></DetailsCar>

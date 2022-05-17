@@ -14,6 +14,7 @@ const UserDetails = () => {
             .then(res => res.json())
             .then(data => setSingleCar(data))
     }, [id]);
+    
     const { user } = useAuth()
     const { brandName, model, imgUrl } = singleCar || {}
     const onSubmit = (data) => {

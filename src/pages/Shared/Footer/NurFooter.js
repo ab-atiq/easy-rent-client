@@ -27,7 +27,6 @@ const NurFooter = () => {
                 <p>Pricing</p>
                 <p>Log In</p>
                 <p>Request acces</p>
-                <p>Partnerships</p>
               </div>
             </Grid>         
             <Grid item xs={12} sm={12} md={6} lg={2}>              
