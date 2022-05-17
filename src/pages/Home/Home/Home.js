@@ -14,13 +14,17 @@ import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
 import Reviews from "../Reviews/Reviews";
-
+import { AiFillWechat } from "react-icons/ai";
 
 const Home = () => {
   return (
     <div>
+
       <Appbar></Appbar>
       <SecBanner />
+      <div>
+        < AiFillWechat />
+      </div>
       <NurBanner></NurBanner>
       <Hero></Hero>
       <SearchedCar></SearchedCar>
@@ -34,7 +38,7 @@ const Home = () => {
       <Facilities></Facilities>
       <Reviews></Reviews>
       <NurFooter></NurFooter>
-      {/* <Footer/> */}
+
     </div>
   );
 };
