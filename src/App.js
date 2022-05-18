@@ -36,6 +36,7 @@ import CarRent from './pages/Home/FindCar/FindSingleCar/rent/CarRent';
 import ManageOrder from './pages/Home/Services/HomeServices/ManageOrder/ManageOrder';
 import Courses from './pages/Courses/Courses';
 import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
+import Drivers from './pages/Home/Drivers/Drivers';
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/myOrders' element={<MyOrders />} />
+            <Route path='/drivers' element={<Drivers />} />
             <Route path='/addService' element={<AddService />} />
             <Route path='/pay' element={<PayNow />} />
             <Route path='/profileHome' element={<ProfileHome />} />

@@ -9,7 +9,7 @@ const Porsche = () => {
                 <h1>Long-Journey experience with
                     <br /> short commute convenience.</h1>
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita ver</p>
+                {/* <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita ver</p>
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita</p>
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem exped</p>
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exerc</p>
@@ -18,7 +18,7 @@ const Porsche = () => {
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro</p>
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro</p>
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero</p>
+                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero</p> */}
                 {/* <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero cumque
                     <br /> cumque veritatis nisi qui voluptatem, deleniti tempora modi alias iure, a amet beatae repudiandae
                     <br /> repudiandae neque officiis. Dolore culpa reiciendis sequi ullam, quibusdam, voluptatibus a itaque
