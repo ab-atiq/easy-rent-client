@@ -36,7 +36,16 @@
 .alluser-cart-tbody .warning{   
     color: var(--color-warningn);
 }
-
+.user-delete-btn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-primar);
+    margin-bottom: 10px; 
+}
+.user-delete-btn:hover{
+    color: red;
+}
 
 /* .alluser-cart-tbody tr:last-child td {
     border: none;

@@ -34,6 +34,8 @@ import AboutUs from './pages/Home/AboutUs/AboutUs';
 import MyOrders from './pages/UserProfile/MyOrders/MyOrders';
 import CarRent from './pages/Home/FindCar/FindSingleCar/rent/CarRent';
 import ManageOrder from './pages/Home/Services/HomeServices/ManageOrder/ManageOrder';
+import Courses from './pages/Courses/Courses';
+import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
 
 function App() {
 
@@ -70,7 +72,8 @@ function App() {
               <Route path='/newDashbord/dashreview' element={<AllReview />} />
             </Route>
 
-            <Route path='/CourseHome' element={<CourseHome />} />
+            <Route path='/course' element={<Courses />} />
+            <Route path='/course/:id' element={<SingleCourse />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='AboutUs' element={<AboutUs />} />
             <Route path='/GetCourses' element={<GetCourses />} />
@@ -81,7 +84,7 @@ function App() {
             {/* <Route path="singleCar/:carName" element={<FindSingleCar />} /> */}
             <Route path='/userdetails/:id' element={<UserDetails />} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
-            <Route path='/paymentsuccess/:tran_id' element={<Success></Success>} />
+            {/* <Route path='/paymentsuccess/:tran_id' element={<Success></Success>} /> */}
             <Route path='/paymentcancel' element={<Cancel></Cancel>} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />

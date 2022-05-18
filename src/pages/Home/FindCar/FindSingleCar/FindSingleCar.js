@@ -1,6 +1,6 @@
 import { Grid, Typography, Container, Button, Divider } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -39,7 +39,7 @@ const FindSingleCar = () => {
         const filterCar = data.filter((data) => data.name.includes(carName));
         setImage(filterCar[0].imgUrl);
         setRent(filterCar[0].rent);
-      });
+      }); 
   }, []);
 
   const initialInfo = {
@@ -58,19 +58,6 @@ const FindSingleCar = () => {
 
   const rentNow = () => {
     const rentCar = { ...initialInfo };
-    // fetch("http://localhost:5000/api/find/singleCarRent", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(rentCar),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (data._id) {
-    //       alert("Information successfully submitted.!");
-    //     }
-    //   });
     fetch(`http://localhost:5000/api/find/init`, {
       method: "POST",
       headers: {

@@ -33,6 +33,22 @@
     color: rgb(75, 73, 73);
     font-size: 1.2rem;    
 }
+.btn-body{
+    position: relative;
+    margin-top: 30px;
+}
+.red-btn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: rgb(75, 73, 73);
+    position: absolute;
+    top: -25px;
+    left: 110px;
+}
+.red-btn:hover{
+    color: red;
+}
 @media screen and (max-width: 1200px){
     .dashbord-review-cart{        
         grid-template-columns: repeat(2, 1fr);       
