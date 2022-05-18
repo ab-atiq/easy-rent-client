@@ -5,7 +5,7 @@ import {
   TextField,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Popup.css";
 import axios from "axios";
 import useAuth from "../../../../hooks/useAuth";
@@ -22,6 +22,7 @@ const Popup = () => {
       .then((data) => setService(data));
   }, [BookingId]);
 
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setOrderData({ ...orderData, [e.target.name]: e.target.value });
