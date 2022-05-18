@@ -5,7 +5,7 @@ import {
   TextField,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import "./Popup.css";
 import axios from "axios";
 import useAuth from "../../../../hooks/useAuth";
@@ -15,6 +15,7 @@ const Popup = () => {
   const [service, setService] = useState({});
   const [orderData, setOrderData] = useState({});
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:5000/api/service/${BookingId}`)
