@@ -3,6 +3,11 @@ import React from "react";
 import "./CleanCar.css";
 
 const CleanCar = () => {
+
+  const handelOnclick = () =>{
+    alert("Email send")
+  }
+
   return (
     <div className="main_card">
       <Container maxWidth="sx">
@@ -44,14 +49,16 @@ const CleanCar = () => {
                 <h2>Subscribe for exclusive offers and deals!</h2>
             
                 <TextField
-                 className="margin_top"
-                  label="Email Address"
+                 
+                  label="Email Me "
                   id="outlined-size-small"
                   variant="outlined"
+                  
                   size="small"
+                  required
                 />
-                <Button className="margin_top" variant="contained">
-                Sign me up!
+                <Button onclick={handelOnclick} className="margin_top" variant="contained">
+                 Send
                 </Button>
               </Grid>
             </Grid>

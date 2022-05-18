@@ -11,13 +11,19 @@
     transform: rotateZ(0deg);
   }
 }
-
-.Box_design {
-  margin-left: 40px !important;
-  margin-top: 50px;
+.title_model{
+  padding-left: 80px;
+  margin-top: 80px;
 }
-.hyperlink {
-  text-decoration: none;
+.Box_design {
+  padding-left: 80px;
+  margin-top: 40px;
+  
+}
+.ride_design{
+  margin-top: 40px;
+  border: 1 px solid yellow;
+  color: #FF4F5A;
 }
 .button_design {
   margin-top: 20px !important;
