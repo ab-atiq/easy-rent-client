@@ -14,6 +14,7 @@ const Courses = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+  
   return (
     <div>
       <Appbar />

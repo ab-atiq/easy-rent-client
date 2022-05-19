@@ -12,8 +12,19 @@ export default function CourseCard({ course }) {
     course;
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Card>
-        <CardMedia component="img" alt="Teeth Dentistry" image={bannerImg} height="250px"/>
+      <Card
+        sx={{
+          border: "2px solid gray",
+          p: 1,
+          boxShadow: "0px 5px 5px 1px gray",
+        }}
+      >
+        <CardMedia
+          component="img"
+          alt="Teeth Dentistry"
+          image={bannerImg}
+          height="250px"
+        />
         <CardContent textAlign="center">
           <Typography gutterBottom variant="h6" component="div">
             Course: {courseTitle}
@@ -25,9 +36,11 @@ export default function CourseCard({ course }) {
             {description}
           </Typography>
         </CardContent>
-        <Typography sx={{ textAlign: "center",pb:2 }}>
+        <Typography sx={{ textAlign: "center", pb: 2 }}>
           <Link to={`/course/${courseId}`}>
-            <Button variant="contained">Continue</Button>
+            <Button sx={{ backgroundColor: "orange" }} variant="contained">
+              Continue
+            </Button>
           </Link>
         </Typography>
       </Card>
