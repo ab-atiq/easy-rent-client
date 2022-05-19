@@ -49,10 +49,6 @@
   letter-spacing: 0.5px;
 }
 
-.service-button :hover {
-  background-color: black;
-}
-
 .year-text {
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.397);
