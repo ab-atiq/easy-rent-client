@@ -7,11 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
-import { useParams, useNavigate } from "react-router-dom";
-=======
 import { useNavigate, useParams } from "react-router-dom";
->>>>>>> development
 import "./Popup.css";
 import axios from "axios";
 import useAuth from "../../../../hooks/useAuth";
@@ -29,11 +25,6 @@ const Popup = () => {
       .then((data) => setService(data));
   }, [BookingId]);
 
-<<<<<<< HEAD
-  const navigate = useNavigate();
-
-=======
->>>>>>> development
   const handleChange = (e) => {
     setOrderData({ ...orderData, [e.target.name]: e.target.value });
   };
