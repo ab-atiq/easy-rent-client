@@ -10,7 +10,7 @@ const Drivers = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        fetch('/drivers.json')
+        fetch('http://localhost:5000/api/singleDriver')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

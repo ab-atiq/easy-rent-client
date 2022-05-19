@@ -1,9 +1,40 @@
 import { Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import useAuth from '../../../hooks/useAuth';
 import React from 'react';
 
 const OurDriver = (props) => {
 
+    const { user } = useAuth()
+
     const { name, email, experience, phone, address, picture, price } = props.item || {}
+    const initialInfo = {
+        name: user.displayName,
+        email: user.email,
+        photoURL: user.photoURL,
+        carName: name,
+        startDate: "1",
+        endDate: "2",
+        rent: price,
+        location: address,
+        imgUrl: picture,
+        rentStatus: "pending",
+    };
+    // console.log(initialInfo);
+    const rentNow = () => {
+        const rentCar = { ...initialInfo };
+        fetch(`http://localhost:5000/api/find/init`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(rentCar),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                window.location.replace(data);
+            });
+    };
 
     return (
         <>
@@ -12,7 +43,7 @@ const OurDriver = (props) => {
                     <CardMedia
                         component="img"
                         width="100%"
-                        height="100%"
+                        height="350px"
                         image={picture}
                         alt="green iguana"
                     />
@@ -37,7 +68,7 @@ const OurDriver = (props) => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <button className="service-button">Rent Now</button>
+                        <button onClick={rentNow} className="service-button">Rent Now</button>
                     </CardActions>
                 </Card>
             </Grid>
