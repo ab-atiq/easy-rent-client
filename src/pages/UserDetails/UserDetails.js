@@ -1,8 +1,8 @@
 import { Button, Grid, TextField, Typography } from '@mui/material';
 import { useForm } from "react-hook-form";
-import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const UserDetails = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
