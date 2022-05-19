@@ -1,6 +1,7 @@
 import { Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
 import React from 'react';
+import './OurDriver.css';
 
 const OurDriver = (props) => {
 
@@ -68,7 +69,7 @@ const OurDriver = (props) => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <button onClick={rentNow} className="service-button">Rent Now</button>
+                        <button onClick={rentNow} className="rent-button">Rent Now</button>
                     </CardActions>
                 </Card>
             </Grid>
