@@ -14,7 +14,7 @@ import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
 import Reviews from "../Reviews/Reviews";
-import { AiFillWechat } from "react-icons/ai";
+import { WechatOutlined } from "@ant-design/icons";
 
 const Home = () => {
   return (
@@ -23,7 +23,7 @@ const Home = () => {
       <Appbar></Appbar>
       <SecBanner />
       <div>
-        < AiFillWechat />
+      <WechatOutlined />
       </div>
       <NurBanner></NurBanner>
       <Hero></Hero>
