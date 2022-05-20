@@ -27,7 +27,7 @@ const Profile = () => {
                             <h3>My Orders</h3>
                         </Link>
                         <Link onClick={() => setControl("addreview")} className='dashboard-link' to='/profile'><i className='material-icons-sharp'>insights</i>
-                            <h3>Review</h3>
+                            <h3>Add Review</h3>
                         </Link>
                     </Grid>
                     <Grid item xs={10}>

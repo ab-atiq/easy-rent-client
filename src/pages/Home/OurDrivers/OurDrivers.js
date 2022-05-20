@@ -8,7 +8,7 @@ const OurDrivers = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        fetch('/drivers.json')
+        fetch('http://localhost:5000/api/singleDriver')
             .then(res => res.json())
             .then(data => setItems(data.slice(0, 4)))
     }, [])
@@ -27,7 +27,9 @@ const OurDrivers = () => {
                         ></OurDriver>)
                 }
             </Grid>
-            <Link to="/drivers">More...</Link>
+            <Typography sx={{ textAlign: "center", marginTop: "50px" }} gutterBottom variant="h4" component="div">
+                <Link to="/drivers">More...</Link>
+            </Typography>
         </Container>
     );
 };
