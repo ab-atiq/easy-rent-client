@@ -31,12 +31,32 @@ const User = () => {
                 {
                     allUsers.map((data) => <tbody className='alluser-cart-tbody'>
                         <tr>
+<<<<<<< HEAD
                             <td>{data.userName}</td>
                             <td>{data.email}</td>
                             <td className='warning'>{data._id}</td>
                             <td className='primary th-none'>{data.password}</td>
 
                         </tr>
+=======
+                            <th>User Name</th>
+                            <th>User Email</th>
+                            <th className='hide-id'>User Id</th>
+                            <th>Delete User</th>
+                        </tr>
+                    </thead>
+               
+       
+                {
+                allUsers.map((data) => <tbody className='alluser-cart-tbody'>
+                <tr>
+                    <td>{data.userName}</td>
+                    <td>{data.email}</td>
+                    <td className='warning hide-id'>{data._id}</td>
+                    <div className="btn-body">
+                    <button onClick={() => handleAllDelete(data._id)} className='user-delete-btn' ><DeleteIcon></DeleteIcon></button>
+                    </div>
+>>>>>>> development
 
                     </tbody>
                     )
