@@ -97,24 +97,7 @@ const AboutUs = () => {
 
       <Container>
 
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <div className='about-text'>
-              <Typography data-aos="fade-right">
-
-                ABOUT US <br /> EASY RENT CAR
-
-              </Typography>
-            </div>
-
-
-          </Grid>
-          <Grid item xs={7} sx={{ marginTop: 10, ms: 4 }} data-aos="fade-down">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
-          </Grid>
-
-
-        </Grid>
+ 
         <Box sx={{ my: 5 }}>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
         </Box>
