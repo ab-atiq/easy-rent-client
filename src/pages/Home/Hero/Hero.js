@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 import { useForm } from "react-hook-form";
 import "./Hero.css";
 import {
@@ -55,15 +59,15 @@ const Hero = () => {
                   <form className="from_control" onSubmit={handleSubmit(onSubmit)}>
                     <Grid container spacing={1}>
                       <Grid item xs={12} className="input_group">
-                        <TextField
-                          {...register("pickup")}
-                          type="text"
-                          placeholder="Enter Pickup Location"
-                          label="Pickup Location"
-                          variant="outlined"
-                          fullWidth
-                          required
-                        />
+                      <FormControl variant="filled" sx={{ m: 1, minWidth: '100%' }}>
+                                <InputLabel id="demo-simple-select-filled-label">Pickup</InputLabel>
+                                <Select {...register("pickup")}>
+                                    <MenuItem value={'Dhaka'}>Dhaka</MenuItem>
+                                    <MenuItem value={'Rajshahi'}>Rajshahi</MenuItem>
+                                    <MenuItem value={'Khulna'}>Khulna</MenuItem>
+                                    <MenuItem value={'Rangpur'}>Rangpur</MenuItem>
+                                </Select>
+                            </FormControl>
                       </Grid>
                       <Grid item xs={12}>
                         <TextField
@@ -146,7 +150,11 @@ const Hero = () => {
           <Box sx={{ display: 'flex' }}>
             <CircularProgress />
           </Box> :
-          findCars.map(car => <SearchedCar key={car?._id} car={car} findCars={findCars} buttonSubmitted={buttonSubmitted}></SearchedCar>)
+          <Grid container spacing={4}>
+            {
+              findCars.map(car => <SearchedCar key={car?._id} car={car} findCars={findCars} buttonSubmitted={buttonSubmitted}></SearchedCar>)
+            }
+          </Grid>
       }
     </>
   );
