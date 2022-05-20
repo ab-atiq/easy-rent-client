@@ -37,6 +37,10 @@ const Register = () => {
         register(dispatch, { userName, userEmail, password });
         e.preventDefault();
     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> development
 
 
 
@@ -123,3 +127,4 @@ const Register = () => {
 };
 
 export default Register;
+

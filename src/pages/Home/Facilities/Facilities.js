@@ -24,10 +24,10 @@ const Facilities = () => {
                             {Car}
                         </Typography>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h5">
-                            50
+                            500
                         </Typography>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h6">
-                            Car Available
+                            Transport Available
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={3}>
@@ -35,7 +35,7 @@ const Facilities = () => {
                             {user}
                         </Typography>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h5">
-                            15+
+                            1500+
                         </Typography>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h6">
                             Happy Client
@@ -46,7 +46,7 @@ const Facilities = () => {
                             {info}
                         </Typography>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h5">
-                            Get 10% off 1 Item
+                            Get 10% off for first Raid
                         </Typography>
                         <Typography sx={{ fontWeight: 500, textAlign: "center", m: 2, color: 'white.main' }} variant="h6">
                             When you sign up

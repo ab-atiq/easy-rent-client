@@ -1,10 +1,10 @@
-import { Box,  Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import React from "react";
 import axios from "axios";
- 
+
 const ManageOrderCart = ({ alldata, services, setServices }) => {
   const { _id, name, price, image, year, type, fual, kilo } = alldata;
- 
+
   const deleteOrder = async () => {
     try {
       const res = await axios.delete(
@@ -19,7 +19,7 @@ const ManageOrderCart = ({ alldata, services, setServices }) => {
       console.log(error);
     }
   };
- 
+
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <div className="box">
@@ -41,21 +41,17 @@ const ManageOrderCart = ({ alldata, services, setServices }) => {
           </div>
         </div>
         <div className=" my-3 d-flex             justify-content-between">
-          <Box component="button" sx={{ width: 1, display: "block", my: 0.5 }}>
-            Update Order
-          </Box>
- 
           <Box
             onClick={() => deleteOrder()}
             component="button"
             sx={{ width: 1, display: "block", my: 0.5 }}
           >
-            Delete Order
+            Cancel Order
           </Box>
         </div>
       </div>
     </Grid>
   );
 };
- 
+
 export default ManageOrderCart;

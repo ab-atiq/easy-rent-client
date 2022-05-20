@@ -14,7 +14,9 @@ import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
 import Reviews from "../Reviews/Reviews";
-import { WechatOutlined } from "@ant-design/icons";
+import Footer from "../../Shared/Footer/Footer";
+import OurDrivers from "../OurDrivers/OurDrivers";
+
 
 const Home = () => {
   return (
@@ -28,7 +30,8 @@ const Home = () => {
       <NurBanner></NurBanner>
       <Hero></Hero>
       <SearchedCar></SearchedCar>
-      <Porsche></Porsche>
+      {/* <Porsche></Porsche> */}
+      <OurDrivers></OurDrivers>
       <Banner></Banner>
       <FindCar />
       <Services></Services>
@@ -38,7 +41,7 @@ const Home = () => {
       <Facilities></Facilities>
       <Reviews></Reviews>
       <NurFooter></NurFooter>
-
+      {/* <Footer /> */}
     </div>
   );
 };
