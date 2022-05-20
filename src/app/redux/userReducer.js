@@ -8,6 +8,7 @@ const userSlice = createSlice({
         isFetching: false,
         error: false,
     },
+
     reducers: {
         registerStart: (state) => {
             state.isFetching = true;
@@ -22,6 +23,7 @@ const userSlice = createSlice({
         },
     },
 });
+
 
 export const { registerStart, registerSuccess, registerFailure } = userSlice.actions;
 export default userSlice.reducer;
