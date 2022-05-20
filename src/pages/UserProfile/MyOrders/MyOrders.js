@@ -10,12 +10,12 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/find/singleCarRentemail/${user.email}`)
+        fetch("https://guarded-taiga-13015.herokuapp.com/api/find/rentAllCars")
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);
 
-    // console.log(Orders);
+    console.log(orders);
 
     return (
         <Container>

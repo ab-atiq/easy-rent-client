@@ -65,7 +65,7 @@ const OurDriver = (props) => {
                             Phone: {phone}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            Price: {price}
+                            Price per Day: ${price}
                         </Typography>
                     </CardContent>
                     <CardActions>
