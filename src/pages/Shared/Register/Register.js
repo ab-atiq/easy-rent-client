@@ -19,7 +19,7 @@ const Register = () => {
 
 
     const onSubmit = data => {
-        registerUser(data.email, data.password, data.name, navigate)
+        registerUser(data.email, data.password, data.name)
 
         navigate('/home')
 

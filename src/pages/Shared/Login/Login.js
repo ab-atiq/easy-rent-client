@@ -28,12 +28,11 @@ const Login = () => {
         navigate('/home')
     };
 
+
     const handleGoogleSignIn = () => {
         signInWithGoogle(navigate)
         navigate('/home')
 
-
-        
 
     }
 
