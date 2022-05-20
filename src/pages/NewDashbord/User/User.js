@@ -43,8 +43,8 @@ const User = () => {
                         <tr>
                             <th>User Name</th>
                             <th>User Email</th>
-                            <th>User Id</th>
-                            <th className='th-none'>Delete User</th>
+                            <th className='hide-id'>User Id</th>
+                            <th>Delete User</th>
                         </tr>
                     </thead>
                
@@ -54,7 +54,7 @@ const User = () => {
                 <tr>
                     <td>{data.userName}</td>
                     <td>{data.email}</td>
-                    <td className='warning'>{data._id}</td>
+                    <td className='warning hide-id'>{data._id}</td>
                     <div className="btn-body">
                     <button onClick={() => handleAllDelete(data._id)} className='user-delete-btn' ><DeleteIcon></DeleteIcon></button>
                     </div>

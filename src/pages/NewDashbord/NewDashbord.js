@@ -47,32 +47,33 @@ const NewDashbord = () => {
                      <h3>All Users</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/newDashbord/userOrder'><i className='material-icons-sharp'>receipt_long</i>
-                    <h3>Orders</h3>
+                <Link className='dashboard-link' to='/newDashbord/manageallorder'><i className='material-icons-sharp'>receipt_long</i>
+                    <h3>All Orders</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>insights</i>
-                    <h3>Analytics</h3>
-                </Link>
 
                 <Link className='dashboard-link' to='/newDashbord/dashreview'><i className='material-icons-sharp'>mail_outline</i>
                     <h3>Review</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>inventory</i>
+                <Link className='dashboard-link' to='/newDashbord/products'><i className='material-icons-sharp'>inventory</i>
                     <h3>Products</h3>
                 </Link>
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>report_gmailerrorred</i>
+                {/* <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>report_gmailerrorred</i>
                     <h3>Report</h3>
-                </Link>
+                </Link> */}
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>settings</i>
+                {/* <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>settings</i>
                     <h3>Setting</h3>
-                </Link>
+                </Link> */}
 
-                <Link className='dashboard-link' to='/home'><i className='material-icons-sharp'>add</i>
+                <Link className='dashboard-link' to='/newDashbord/addproduct'><i className='material-icons-sharp'>add</i>
                     <h3>AddProduct</h3>
+                </Link>
+                
+                <Link className='dashboard-link' to='/newDashbord/addblog'><i className='material-icons-sharp'>post_add</i>
+                    <h3>Add Blog</h3>
                 </Link>
 
                 <Link className='dashboard-link' onClick={logOut} to='/home'><i className='material-icons-sharp'>logout</i>
