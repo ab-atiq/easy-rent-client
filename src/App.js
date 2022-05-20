@@ -37,6 +37,7 @@ import ManageOrder from './pages/Home/Services/HomeServices/ManageOrder/ManageOr
 import Courses from './pages/Courses/Courses';
 import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
 import Drivers from './pages/Home/Drivers/Drivers';
+import Clock from "../Clock/Clock";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
 
         <BrowserRouter>
           {/* <Appbar></Appbar> */}
+          <Clock />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />

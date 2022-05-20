@@ -44,7 +44,7 @@ const Appbar = () => {
           <Link className='single-link' to='/course'>Courses</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
           <Link className='single-link' to='/AboutUs'>About Us</Link>
-          <Link className='single-link' to='/ChatApp'>Live Chat</Link>
+          {/* <Link className='single-link' to='/ChatApp'>Live Chat</Link> */}
 
 
           {!user.email &&

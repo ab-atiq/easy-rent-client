@@ -16,17 +16,15 @@ import Appbar from "../../Shared/Appbar/Appbar";
 import Reviews from "../Reviews/Reviews";
 import Footer from "../../Shared/Footer/Footer";
 import OurDrivers from "../OurDrivers/OurDrivers";
-
+import './Home.css'
 
 const Home = () => {
   return (
     <div>
 
+      
       <Appbar></Appbar>
       <SecBanner />
-      <div>
-      <WechatOutlined />
-      </div>
       <NurBanner></NurBanner>
       <Hero></Hero>
       <SearchedCar></SearchedCar>

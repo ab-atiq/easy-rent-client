@@ -6,49 +6,40 @@ import { useDispatch, useSelector } from 'react-redux';
 import './Register.css';
 import { register } from '../../../app/redux/callAPI';
 import useAuth from '../../../hooks/useAuth';
-
-
-// import { useForm } from "react-hook-form";
-
-
+import { useForm } from "react-hook-form";
 
 
 const Register = () => {
-    // const { register, handleSubmit } = useForm();
-    const { registerUser, signInWithGoogle } = useAuth()
-
-    const { currentUser } = useSelector((state) => state.user);
-
-    const [userName, setUsername] = useState("");
-    const [userEmail, setUserEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const { register, handleSubmit } = useForm();
+    const { registerUser, error, signInWithGoogle, } = useAuth()
 
 
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
 
+    const onSubmit = data => {
+        registerUser(data.email, data.password, data.name, navigate)
 
+        navigate('/home')
 
-
-    const handleClick = (e) => {
-        // register(data.email, data.password, data.name)
-        // console.log(data)
-        register(dispatch, { userName, userEmail, password });
-        e.preventDefault();
+        console.log(data)
     };
-<<<<<<< HEAD
-=======
 
->>>>>>> development
 
+    // const handleClick = (e, data) => {
+    //     registerUser(data.email, data.password, data.name)
+    //     console.log(data)
+    //     e.preventDefault();
+    //     // register(dispatch, { userName, email, password });
+    // };
 
 
     return (
         <Box className="container">
             <Box className="forms-container">
                 <Box className="signup">
-                    <form className="sign-up-form">
+                    <form onSubmit={handleSubmit(onSubmit)} action="#" className="sign-up-form">
                         <h2 className="title">Please Register</h2>
                         <Box className="input-field">
                             <i className="fas fa-user"></i>
@@ -56,7 +47,7 @@ const Register = () => {
                                 placeholder='Enter you name'
                                 type='text'
                                 name='text'
-                                onChange={(e) => setUsername(e.target.value)}
+                                {...register("name")}
                                 className='border-0 '
 
                             />
@@ -67,20 +58,19 @@ const Register = () => {
                                 type='email'
                                 name='email'
                                 placeholder='Enter your email'
-                                onChange={(e) => setUserEmail(e.target.value)}
+                                {...register("email")}
                             />
                         </Box>
-
                         <Box className="input-field">
                             <i className="fas fa-lock"></i>
                             <input
                                 placeholder='Enter your password'
                                 name='password'
                                 type="password"
-                                onChange={(e) => setPassword(e.target.value)}
+                                {...register("password")}
                             />
                         </Box>
-                        <input onClick={handleClick} type="submit" value="Register" className="btn solid" />
+                        <input type="submit" value="Register" className="btn solid" />
 
                         <p className="social-text">Or Sign up with social platforms</p>
 
@@ -101,7 +91,6 @@ const Register = () => {
                     </form>
                 </Box>
             </Box>
-
 
             <Box className="panels-container">
                 <Box className="panel left-panel">
@@ -127,4 +116,3 @@ const Register = () => {
 };
 
 export default Register;
-
