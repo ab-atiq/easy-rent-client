@@ -8,7 +8,7 @@ const GetCourses = () => {
     const [allCourses, setAllCourses] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/course/allCourse')
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/course/allCourse')
             .then(res => res.json())
             .then(data => setAllCourses(data))
     }, [])

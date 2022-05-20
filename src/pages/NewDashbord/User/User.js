@@ -7,14 +7,14 @@ import './User.css'
 const User = () => {
     const [allUsers, setAllUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/users/findAll')
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/users/findAll')
         .then(res => res.json())
         .then(data => setAllUsers(data));
 
     }, []);
 
     const handleAllDelete = id => {
-        fetch(`http://localhost:5000/api/users/deleteUser/${id}`, {
+        fetch(`https://guarded-taiga-13015.herokuapp.com/api/users/deleteUser/${id}`, {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'}
         })

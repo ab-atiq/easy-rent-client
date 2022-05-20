@@ -10,7 +10,7 @@ const Success = () => {
     const [order, setOrder] = useState({})
     const {product_name,product_imgUrl, cus_name, cus_email, val_id} = order || {};
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders/${tran_id}`)
+        fetch(`https://guarded-taiga-13015.herokuapp.com/orders/${tran_id}`)
         .then(res=> res.json())
         .then(data => setOrder(data))
     },[tran_id]);
@@ -20,7 +20,7 @@ const Success = () => {
             tran_id: tran_id,
             val_id: val_id
         }
-        axios.post(`http://localhost:5000/validate`, data)
+        axios.post(`https://guarded-taiga-13015.herokuapp.com/validate`, data)
         .then(res=> {
             if(res.data === 'Successful'){
                 Swal.fire({

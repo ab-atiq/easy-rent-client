@@ -20,7 +20,7 @@ const Popup = () => {
   const navigate = useNavigate();
   // console.log(orderData);
   useEffect(() => {
-    fetch(`http://localhost:5000/api/service/${BookingId}`)
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/service/${BookingId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [BookingId]);
@@ -68,7 +68,7 @@ const Popup = () => {
 
   const rentNow = () => {
     const rentCar = { ...initialInfo };
-    fetch(`http://localhost:5000/api/find/init`, {
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -15,7 +15,7 @@ const UserDetails = () => {
   const { id } = useParams();
   const [singleCar, setSingleCar] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/api/car/${id}`)
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/car/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleCar(data));
   }, [id]);
@@ -39,7 +39,7 @@ const UserDetails = () => {
     // data.email = user?.email;
     // data.imgURL = user?.photoURL;
     const rentCar = { ...initialInfo };
-    fetch("http://localhost:5000/api/find/init", {
+    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/init", {
       method: "POST",
       headers: {
         "content-type": "application/json",

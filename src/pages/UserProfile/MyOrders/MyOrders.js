@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/find/singleCarRent')
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/find/singleCarRent')
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);

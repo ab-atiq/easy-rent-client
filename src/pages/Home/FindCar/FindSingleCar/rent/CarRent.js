@@ -20,7 +20,7 @@ const CarRent = () => {
     val_id,
   } = order;
   useEffect(() => {
-    fetch(`http://localhost:5000/api/find/orderCar/${tranId}`)
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/orderCar/${tranId}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [tranId]);
@@ -30,7 +30,7 @@ const CarRent = () => {
       tran_id: tranId,
       val_id: val_id,
     };
-    axios.post(`http://localhost:5000/api/find/confirm`, data).then((res) => {
+    axios.post(`https://guarded-taiga-13015.herokuapp.com/api/find/confirm`, data).then((res) => {
       if (res.data === "Successful") {
         Swal.fire({
           position: "center",

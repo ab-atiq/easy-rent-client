@@ -18,7 +18,7 @@ const AddReview = () => {
     const onSubmit = (data) => {
         data.name = user?.displayName;
         data.imgUrl = user?.photoURL;
-        axios.post('http://localhost:5000/api/addreview', data)
+        axios.post('https://guarded-taiga-13015.herokuapp.com/api/addreview', data)
             .then(data => {
                 if (data?.statusText==='Created') {
                     Swal.fire({

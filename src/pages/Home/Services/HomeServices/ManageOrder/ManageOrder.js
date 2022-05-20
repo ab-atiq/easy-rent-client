@@ -9,7 +9,7 @@ const ManageOrder = () => {
   const { user } = useAuth();
  
   useEffect(() => {
-    fetch(`http://localhost:5000/api/orders/${user?.email}`)
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/orders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [user?.email]);

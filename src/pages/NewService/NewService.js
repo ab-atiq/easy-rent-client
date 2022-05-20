@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const NewService = () => {
     const [newService, setNewService] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/getnewService')
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/getnewService')
         .then(res => res.json())
         .then(data => setNewService(data));
 

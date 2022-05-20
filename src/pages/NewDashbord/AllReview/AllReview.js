@@ -8,14 +8,14 @@ import './AllReview.css';
 const AllReview = () => {
     const [review, setReview] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/addreview')
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/addreview')
         .then(res => res.json())
         .then(data => setReview(data));
 
     }, []);
 
     const handleAllDelete = id => {
-      fetch(`http://localhost:5000/api/delete/${id}`, {
+      fetch(`https://guarded-taiga-13015.herokuapp.com/api/delete/${id}`, {
           method: 'DELETE',
           headers: {'Content-Type': 'application/json'}
       })
