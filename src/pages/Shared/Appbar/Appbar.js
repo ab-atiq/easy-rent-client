@@ -41,7 +41,7 @@ const Appbar = () => {
         <div className={click ? 'nav-menu active' : 'nav-menu'}>
           <Link className='single-link' to='/home'>Home</Link>
           <Link className='single-link' to='/services'>Services</Link>
-          <Link className='single-link' to='/CourseHome'>Courses</Link>
+          <Link className='single-link' to='/course'>Courses</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
           <Link className='single-link' to='/AboutUs'>About Us</Link>
           <Link className='single-link' to='/ChatApp'>Live Chat</Link>
@@ -66,7 +66,8 @@ const Appbar = () => {
               onClick={handleMenu}
               color="inherit"
             >
-              <AccountCircle />
+              <img className='photosize' src={user?.photoURL} alt="" />
+              {/* <AccountCircle /> */}
             </IconButton>
             <Menu
               id="menu-appbar"

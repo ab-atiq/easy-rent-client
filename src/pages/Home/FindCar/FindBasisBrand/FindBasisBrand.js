@@ -45,7 +45,7 @@ const FindBasisBrand = () => {
             </Typography>
             <Grid container spacing={1} maxWidth="md" mx="auto">
               {cars?.map((car) => (
-                <SingleFindBasisBrand car={car} />
+                <SingleFindBasisBrand key={car._id} car={car} />
               ))}
             </Grid>
           </Box>

@@ -3,9 +3,9 @@
     margin-top: 40px;
     
 }
-/* .margin_top{
-    margin: 20px 0 0 20px !important;
-} */
+.margin_top{
+    margin-left: 10px !important;
+}
 
 .clean_image{
     width: 70%;
