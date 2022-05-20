@@ -40,6 +40,9 @@ import CarRent from './pages/Home/FindCar/FindSingleCar/rent/CarRent';
 import ManageOrder from './pages/Home/Services/HomeServices/ManageOrder/ManageOrder';
 import NewService from './pages/NewService/NewService';
 import Blog from './pages/Blog/Blog';
+import Courses from './pages/Courses/Courses';
+import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
+import Drivers from './pages/Home/Drivers/Drivers';
 
 function App() {
 
@@ -63,6 +66,7 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/myOrders' element={<MyOrders />} />
+            <Route path='/drivers' element={<Drivers />} />
             <Route path='/addService' element={<AddService />} />
             <Route path='/pay' element={<PayNow />} />
             <Route path='/profileHome' element={<ProfileHome />} />
@@ -82,7 +86,8 @@ function App() {
               <Route path='/newDashbord/addblog' element={<AddBlog />} />
             </Route>
 
-            <Route path='/CourseHome' element={<CourseHome />} />
+            <Route path='/course' element={<Courses />} />
+            <Route path='/course/:id' element={<SingleCourse />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='AboutUs' element={<AboutUs />} />
             <Route path='/GetCourses' element={<GetCourses />} />
@@ -93,7 +98,7 @@ function App() {
             {/* <Route path="singleCar/:carName" element={<FindSingleCar />} /> */}
             <Route path='/userdetails/:id' element={<UserDetails />} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
-            <Route path='/paymentsuccess/:tran_id' element={<Success></Success>} />
+            {/* <Route path='/paymentsuccess/:tran_id' element={<Success></Success>} /> */}
             <Route path='/paymentcancel' element={<Cancel></Cancel>} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />
