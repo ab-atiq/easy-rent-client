@@ -25,7 +25,7 @@ const Register = () => {
 
         console.log(data)
     };
-    
+
 
     // const handleClick = (e, data) => {
     //     registerUser(data.email, data.password, data.name)
@@ -116,3 +116,4 @@ const Register = () => {
 };
 
 export default Register;
+
