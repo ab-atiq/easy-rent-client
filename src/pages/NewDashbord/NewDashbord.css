@@ -35,7 +35,6 @@
     overflow-x: hidden;
 }
 .dashboard-backround img{
-    display: block;
     width: 100%;
 }
 .dashboard-container{
@@ -415,7 +414,8 @@ main .table-single-link{
 @media screen and (max-width: 768px){
 
     .dashboard-container{  
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
         grid-template-columns: 1fr; 
 
     }
