@@ -69,7 +69,7 @@ const OurDriver = (props) => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <button onClick={rentNow} className="rent-button">Rent Now</button>
+                        <button onClick={rentNow} className="rent-button">Hire Now</button>
                     </CardActions>
                 </Card>
             </Grid>
