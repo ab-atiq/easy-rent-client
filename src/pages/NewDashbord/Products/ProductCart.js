@@ -1,14 +1,9 @@
-import * as React from "react";
-import "./NurServices.css";
-import { Link } from "react-router-dom";
-import Grid from "@mui/material/Grid";
+import React from 'react'
 
-const NurService = ({ alldata }) => {
-const { _id, name, price, image, year, type, fual, kilo } = alldata;
-
+const ProductCart = ({alldata, deletfunc}) => {
+    const { _id, name, price, image, year, type, fual, kilo } = alldata;
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3}>
-      <div className="box">
+    <div className="product-box">
         <div>
           <div className="car-box">
             <img src={image} alt="" />
@@ -26,14 +21,12 @@ const { _id, name, price, image, year, type, fual, kilo } = alldata;
             </div>
           </div>
         </div>
-        <div className=" my-3 d-flex             justify-content-between">
-          <Link to={`/book/${_id}`}>
-            <button className="service-button">Rent Now</button>
-          </Link>
+        <div className=" my-3 d-flex justify-content-between">
+
+            <button onClick={() => deletfunc(_id)} className="deleteservice-button">Delete Product</button>
         </div>
       </div>
-    </Grid>
-  );
-};
+  )
+}
 
-export default NurService;
+export default ProductCart

@@ -14,6 +14,7 @@ import CleanCar from "../CleanCar/CleanCar";
 import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
 import Reviews from "../Reviews/Reviews";
+// import NewService from "../../../pages/NewService/NewService";
 import Footer from "../../Shared/Footer/Footer";
 import OurDrivers from "../OurDrivers/OurDrivers";
 
@@ -26,6 +27,8 @@ const Home = () => {
       <NurBanner></NurBanner>
       <Hero></Hero>
       <SearchedCar></SearchedCar>
+      {/* <NewService></NewService> */}
+      <Porsche></Porsche>
       {/* <Porsche></Porsche> */}
       <OurDrivers></OurDrivers>
       <Banner></Banner>
