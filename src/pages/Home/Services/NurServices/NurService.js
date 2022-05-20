@@ -2,6 +2,7 @@ import * as React from "react";
 import "./NurServices.css";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
+
 const NurService = ({ alldata }) => {
 const { _id, name, price, image, year, type, fual, kilo } = alldata;
 

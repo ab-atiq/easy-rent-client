@@ -2,18 +2,20 @@ import { useState, useEffect } from "react";
 import React from 'react';
 import MyOrder from "./MyOrder";
 import { Container, Grid, Typography } from "@mui/material";
+import useAuth from "../../../hooks/useAuth";
 
 const MyOrders = () => {
 
+    const { user } = useAuth();
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/find/singleCarRent')
+        fetch("https://guarded-taiga-13015.herokuapp.com/api/find/rentAllCars")
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);
 
-    // console.log(Orders);
+    console.log(orders);
 
     return (
         <Container>

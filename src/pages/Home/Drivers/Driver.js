@@ -64,11 +64,11 @@ const Driver = (props) => {
                             Phone: {phone}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            Price: {price}
+                            Price per Day: ${price}
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <button onClick={rentNow} className="service-button">Rent Now</button>
+                        <button onClick={rentNow} className="rent-button">Hire Now</button>
                     </CardActions>
                 </Card>
             </Grid>

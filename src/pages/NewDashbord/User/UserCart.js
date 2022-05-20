@@ -9,7 +9,7 @@ const UserCart = ({userdata}) => {
                 <tr>
                     <td>{userName}</td>
                     <td>{email}</td>
-                    <td className='warning'>{_id}</td>
+                    <td className='hide-id warning'>{_id}</td>
                     <td className='primary'>{password}</td>
 
                 </tr>

@@ -55,8 +55,19 @@
     }
 }
 @media screen and (max-width: 768px){
-    .dashbord-review{
+    /* .dashbord-review{
         margin: 1rem 1rem 1rem 1rem;
+    } */
+    .dashbord-review-cart{        
+        grid-template-columns: repeat(2, 1fr);  
+         
+    }
+}
+
+@media screen and (max-width: 600px){
+    .dashbord-review{
+        margin: 1rem 2rem 1rem 1rem;
+        
     }
     .dashbord-review-cart{        
         grid-template-columns: 1fr; 
