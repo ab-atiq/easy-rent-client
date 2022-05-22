@@ -14,13 +14,17 @@ import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
 import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
 import NewDashbord from "./pages/NewDashbord/NewDashbord";
+import ManageAllOrder from "./pages/NewDashbord/ManageAllOrder/ManageAllOrder";
 import Popup from "./pages/Home/Services/Popup/Popup";
 import ChatApp from './pages/Chat/ChatApp';
 import './App.css';
 import DashboardHome from './pages/NewDashbord/DashbordHome/DashboardHome';
 import User from './pages/NewDashbord/User/User';
+import AddBlog from './pages/NewDashbord/AddBlog/AddBlog';
 import UserOrder from './pages/NewDashbord/UserOrder/UserOrder';
 import AllReview from './pages/NewDashbord/AllReview/AllReview';
+import Products from './pages/NewDashbord/Products/Products';
+import AddProduct from './pages/NewDashbord/AddProduct/AddProduct';
 import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
@@ -34,8 +38,13 @@ import AboutUs from './pages/Home/AboutUs/AboutUs';
 import MyOrders from './pages/UserProfile/MyOrders/MyOrders';
 import CarRent from './pages/Home/FindCar/FindSingleCar/rent/CarRent';
 import ManageOrder from './pages/Home/Services/HomeServices/ManageOrder/ManageOrder';
+import NewService from './pages/NewService/NewService';
+import Blog from './pages/Blog/Blog';
 import Courses from './pages/Courses/Courses';
 import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
+import Drivers from './pages/Home/Drivers/Drivers';
+import Clock from './pages/Home/Clock/Clock';
+// import Clock from "../src/pages/Home/Clock";
 
 function App() {
 
@@ -46,6 +55,7 @@ function App() {
 
         <BrowserRouter>
           {/* <Appbar></Appbar> */}
+          <Clock />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />
@@ -59,10 +69,13 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/myOrders' element={<MyOrders />} />
+            <Route path='/drivers' element={<Drivers />} />
             <Route path='/addService' element={<AddService />} />
             <Route path='/pay' element={<PayNow />} />
             <Route path='/profileHome' element={<ProfileHome />} />
             <Route path='/manageOrder' element={<ManageOrder />} />
+            <Route path='/newService' element={<NewService />} />
+            <Route path='/blog' element={<Blog />} />
 
 
             <Route path='/newDashbord' element={<NewDashbord />}>
@@ -70,6 +83,10 @@ function App() {
               <Route path='/newDashbord/userOrder' element={<UserOrder />} />
               <Route path='/newDashbord/user' element={<User />} />
               <Route path='/newDashbord/dashreview' element={<AllReview />} />
+              <Route path='/newDashbord/manageallorder' element={<ManageAllOrder />} />
+              <Route path='/newDashbord/addproduct' element={<AddProduct />} />
+              <Route path='/newDashbord/products' element={<Products />} />
+              <Route path='/newDashbord/addblog' element={<AddBlog />} />
             </Route>
 
             <Route path='/course' element={<Courses />} />

@@ -56,7 +56,7 @@ const CarRent = () => {
         <Grid item xs={6}>
           <Typography variant="body1">Name: {cus_name}</Typography>
           <Typography variant="body1">Email: {cus_email}</Typography>
-          <Typography variant="body1">Car Name: {product_name}</Typography>
+          <Typography variant="body1">Product Name: {product_name}</Typography>
           <Typography variant="body1">Start Date: {date_start}</Typography>
           <Typography variant="body1">End Date: {date_end}</Typography>
           <Typography variant="body1">Amount: {total_amount}</Typography>
