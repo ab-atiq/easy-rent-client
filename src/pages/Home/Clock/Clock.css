@@ -1,6 +1,9 @@
 .title-word {
     animation: color-animation 4s linear infinite;
 }
+.clock{
+    margin-top: 20px !important;
+}
 
 .title-word-1 {
     --color-1: #DF8453;

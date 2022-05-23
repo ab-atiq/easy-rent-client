@@ -32,8 +32,8 @@ const Clock = () => {
                             <span className="title-word title-word-4">compare rental</span>
                         </span>
                     </Grid>
-                    <Grid item xs={2}>
-                        <span className='clock'>
+                    <Grid className='clock' item xs={2}>
+                        <span >
                             {clock}
                         </span>
                     </Grid>
