@@ -19,21 +19,19 @@ const Register = () => {
 
 
     const onSubmit = data => {
-        registerUser(data.email, data.password, data.name, navigate)
+        registerUser(data.email, data.password, data.name)
 
         navigate('/home')
 
         console.log(data)
     };
 
+
     // const handleClick = (e, data) => {
     //     registerUser(data.email, data.password, data.name)
-
-
     //     console.log(data)
     //     e.preventDefault();
     //     // register(dispatch, { userName, email, password });
-
     // };
 
 
@@ -118,4 +116,3 @@ const Register = () => {
 };
 
 export default Register;
-

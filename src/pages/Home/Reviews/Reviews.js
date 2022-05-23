@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Review from './Review';
 import { Swiper, SwiperSlide } from "swiper/react";
+import './Review.css'
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,14 +12,25 @@ import { Navigation } from "swiper";
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-taiga-13015.herokuapp.com/api/addreview')
+        fetch('http://localhost:5000/api/addreview')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
     return (
         <div>
             <Swiper
-                slidesPerView={4}
+                breakpoints={{
+                    // when window width is >= 640px
+                    640: {
+                        width: 640,
+                        slidesPerView: 1,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        width: 768,
+                        slidesPerView: 2,
+                    },
+                }}
                 spaceBetween={30}
                 slidesPerGroup={3}
                 loop={true}

@@ -21,6 +21,7 @@
 .login-input{
     width: 70%;
     padding-bottom: 2rem !important;
+    color: aqua !important;
 }
 .login{
     font-size: 50px;

@@ -3,8 +3,8 @@ import { Container, Grid, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import SingleFindBasisBrand from "./SingleFindBasisBrand";
 import { Box } from "@mui/system";
-import Footer from "../../../Shared/Footer/Footer";
 import Appbar from "../../../Shared/Appbar/Appbar";
+import NurFooter from "../../../Shared/Footer/NurFooter";
 
 const FindBasisBrand = () => {
   const [cars, setCars] = useState();
@@ -15,9 +15,7 @@ const FindBasisBrand = () => {
     fetch("http://localhost:5000/api/find/findBrand")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         const filterCar = data.filter((data) => data.name.includes(carName));
-        // console.log(filterCar);
         setCars(filterCar);
       });
   }, []);
@@ -30,8 +28,6 @@ const FindBasisBrand = () => {
         setData(filterData[0]);
       });
   }, []);
-
-  // console.log(data);
 
   return (
     <>
@@ -49,7 +45,7 @@ const FindBasisBrand = () => {
             </Typography>
             <Grid container spacing={1} maxWidth="md" mx="auto">
               {cars?.map((car) => (
-                <SingleFindBasisBrand car={car} />
+                <SingleFindBasisBrand key={car._id} car={car} />
               ))}
             </Grid>
           </Box>
@@ -102,7 +98,7 @@ const FindBasisBrand = () => {
             </Grid>
           </Box>
         </Container>
-        <Footer />
+        <NurFooter />
       </Box>
     </>
   );
