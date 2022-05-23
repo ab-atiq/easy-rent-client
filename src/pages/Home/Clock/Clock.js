@@ -18,7 +18,7 @@ const Clock = () => {
     return (
 
         <Box style={{
-            fontSize: "20px", marginBottom: "10px", backgroundColor: '#202020',
+            fontSize: "20px", marginBottom: "20px", backgroundColor: '#202020',
         }}>
 
             <Container className="container2">
