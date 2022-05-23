@@ -14,7 +14,7 @@ export default function CourseCard({ course }) {
   const [paymentCourse, setPaymentCourse] = React.useState();
 
   React.useEffect(() => {
-    fetch(`http://localhost:5000/api/find/coursePayed/${user?.email}`)
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/coursePayed/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setPaymentCourse(data[0]));
   }, [user?.email]);
