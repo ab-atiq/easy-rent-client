@@ -18,7 +18,9 @@ const CourseVideo = ({ courseId }) => {
   // console.log(videoCompleteId);
 
   useEffect(() => {
-    fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/singleCourse/${courseId}`)
+    fetch(
+      `https://guarded-taiga-13015.herokuapp.com/api/find/singleCourse/${courseId}`
+    )
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [courseId]);

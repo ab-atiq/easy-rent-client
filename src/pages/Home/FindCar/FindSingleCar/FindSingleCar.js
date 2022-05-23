@@ -53,7 +53,7 @@ const FindSingleCar = () => {
     location: location,
     imgUrl: image,
     rentStatus: "pending",
-    product_category: "brand",
+    product_category: "Brand",
   };
   // console.log(initialInfo);
 

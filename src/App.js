@@ -45,7 +45,7 @@ import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
 import Drivers from './pages/Home/Drivers/Drivers';
 import Clock from './pages/Home/Clock/Clock';
 // import Clock from "../src/pages/Home/Clock";
-
+import CourseDetails from "./pages/Courses/CourseDetails";
 function App() {
 
   return (
@@ -90,6 +90,7 @@ function App() {
             </Route>
 
             <Route path='/course' element={<Courses />} />
+            <Route path='/course/details/:courseName' element={<CourseDetails />} />
             <Route path='/course/:courseId' element={<SingleCourse />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='AboutUs' element={<AboutUs />} />
@@ -98,10 +99,8 @@ function App() {
             <Route path="car/:carName" element={<FindBasisBrand />} />
             <Route path="singleCar/:carName" element={<FindSingleCar />} />
             <Route path="/rent/:tranId" element={<CarRent />} />
-            {/* <Route path="singleCar/:carName" element={<FindSingleCar />} /> */}
             <Route path='/userdetails/:id' element={<UserDetails />} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
-            {/* <Route path='/paymentsuccess/:tran_id' element={<Success></Success>} /> */}
             <Route path='/paymentcancel' element={<Cancel></Cancel>} />
             <Route path='/addreview' element={<AddReview></AddReview>} />
             <Route path='*' element={<NotFound />} />

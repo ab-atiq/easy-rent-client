@@ -5,11 +5,21 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
+import useAuth from "../../hooks/useAuth";
 
 export default function CourseCard({ course }) {
-  const { _id, courseId, courseTitle, trainer, description, bannerImg } =
-    course;
+  const { user } = useAuth();
+  const { courseId, courseTitle, trainer, description, bannerImg } = course;
+  const [paymentCourse, setPaymentCourse] = React.useState();
+
+  React.useEffect(() => {
+    fetch(`http://localhost:5000/api/find/coursePayed/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => setPaymentCourse(data[0]));
+  }, [user?.email]);
+  console.log(paymentCourse);
+
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card
@@ -37,11 +47,19 @@ export default function CourseCard({ course }) {
           </Typography>
         </CardContent>
         <Typography sx={{ textAlign: "center", pb: 2 }}>
-          <Link to={`/course/${courseId}`}>
-            <Button sx={{ backgroundColor: "orange" }} variant="contained">
-              Continue
-            </Button>
-          </Link>
+          {paymentCourse?.product_name == courseId ? (
+            <Link to={`/course/${courseId}`}>
+              <Button sx={{ backgroundColor: "orange" }} variant="contained">
+                Continue
+              </Button>
+            </Link>
+          ) : (
+            <Link to={`/course/details/${courseId}`}>
+              <Button sx={{ backgroundColor: "orange" }} variant="contained">
+                View Details
+              </Button>
+            </Link>
+          )}
         </Typography>
       </Card>
     </Grid>
