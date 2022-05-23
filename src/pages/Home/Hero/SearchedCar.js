@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const SearchedCar = ({ car, findCars, buttonSubmitted }) => {
-    const { brandName, model, rating, trips, price, pickup, status, imgUrl, _id } = car || {}
+    const { brandName, model, rating, trips, price, pickup, status, imgUrl, _id, product_catogary } = car || {}
     const navigate = useNavigate()
     const handleUserDetails = () => {
         navigate(`/userdetails/${_id}`)
@@ -19,48 +19,48 @@ const SearchedCar = ({ car, findCars, buttonSubmitted }) => {
         padding: theme.spacing(1),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-      }));
+    }));
     return (
         <>
             {
                 buttonSubmitted &&
 
                 ((findCars?.length) ?
-                    <div className='car-card-container'>
-                        <Grid container>
-                            <Grid item md={4} className='car-card'>
-                                <Item>
-                                <img className='car-card-img' src={imgUrl} alt="" />
-                                <Typography variant="h4" component="div" gutterBottom>
-                                    {`Brand: ${brandName}`}
-                                </Typography>
-                                <Typography variant="h6" component="div" gutterBottom>
-                                    {`Model: ${model}`}
-                                </Typography>
-                                <Rating
-                                    initialRating={rating}
-                                    emptySymbol={<AiIcons.AiOutlineStar className='emptystar' />}
-                                    fullSymbol={<AiIcons.AiFillStar className='fillstar' />}
-                                    readonly
-                                />
-                                <Typography variant="h6" component="div" gutterBottom>
-                                    {`(${trips} trips)`}
-                                </Typography>
-                                <hr />
-                                <Typography variant="h6" component="div" gutterBottom>
-                                    {`Pickup: ${pickup}`}
-                                </Typography>
-                                <Typography variant="h6" component="div" gutterBottom>
-                                    {`Price:$ ${price}`}
-                                </Typography>
-                                <Typography variant="h6" component="div" gutterBottom>
-                                    {`Status: ${status}`}
-                                </Typography>
-                                <Button onClick={handleUserDetails} variant="contained">Book Now</Button>
-                                </Item>
-                            </Grid>
-                        </Grid>
-                    </div> :
+                    <Grid item md={4} sx={{ margin: '100px 0px' }}>
+                        <Item>
+                            <img className='car-card-img' src={imgUrl} alt="" />
+                            <Typography variant="h4" component="div" gutterBottom>
+                                {`Brand: ${brandName}`}
+                            </Typography>
+                            <Typography variant="h6" component="div" gutterBottom>
+                                {`Model: ${model}`}
+                            </Typography>
+                            <Rating
+                                initialRating={rating}
+                                emptySymbol={<AiIcons.AiOutlineStar className='emptystar' />}
+                                fullSymbol={<AiIcons.AiFillStar className='fillstar' />}
+                                readonly
+                            />
+                            <Typography variant="h6" component="div" gutterBottom>
+                                {`Product catagory: ${product_catogary}`}
+                            </Typography>
+                            <Typography variant="h6" component="div" gutterBottom>
+                                {`(${trips} trips)`}
+                            </Typography>
+                            <hr />
+                            <Typography variant="h6" component="div" gutterBottom>
+                                {`Pickup: ${pickup}`}
+                            </Typography>
+                            <Typography variant="h6" component="div" gutterBottom sx={{ fontWeight: 'bold' }}>
+                                {`Price:BDT ${price}`}
+                            </Typography>
+                            <Typography variant="h6" component="div" gutterBottom>
+                                {`Status: ${status}`}
+                            </Typography>
+                            <Button onClick={handleUserDetails} variant="contained">Book Now</Button>
+                        </Item>
+                    </Grid>
+                    :
                     <div>
                         <Typography variant="h6" component="div" gutterBottom>
                             No car available

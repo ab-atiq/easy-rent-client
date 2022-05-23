@@ -2,8 +2,7 @@ import { Container, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import DetailsCar from "../DetailsCar/DetailsCar";
 import NurService from "../NurServices/NurService";
-// import DetailsCar from "../DetailsCar/DetailsCar";
-// import NurService from "../NurServices/NurService";
+
 
 
 const Pickup = () => {

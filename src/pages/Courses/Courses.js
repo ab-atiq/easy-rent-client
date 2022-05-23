@@ -14,19 +14,20 @@ const Courses = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+  
   return (
     <div>
       <Appbar />
       <Container>
-        <Typography variant="h4" fontWeight="bold" py={2}>
+        <Typography variant="h4" fontWeight="bold" pb={2}>
           Welcome
           <span style={{ color: "orange" }}> {user.displayName}</span>, ready
           for start lesson?
         </Typography>
         <Grid container spacing={2} alignContent="center">
-            {
-                data?.map(course=><CourseCard course={course} />)
-            }
+          {data?.map((course) => (
+            <CourseCard course={course} />
+          ))}
         </Grid>
       </Container>
       <Footer />

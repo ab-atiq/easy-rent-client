@@ -2,18 +2,20 @@ import { useState, useEffect } from "react";
 import React from 'react';
 import MyOrder from "./MyOrder";
 import { Container, Grid, Typography } from "@mui/material";
+import useAuth from "../../../hooks/useAuth";
 
 const MyOrders = () => {
 
+    const { user } = useAuth();
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/find/singleCarRent')
+        fetch(`http://localhost:5000/api/find/rentSingleOrder/${user.email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);
 
-    // console.log(myOrder);
+    console.log(orders);
 
     return (
         <Container>

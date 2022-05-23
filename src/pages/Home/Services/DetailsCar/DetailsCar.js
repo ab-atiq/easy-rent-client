@@ -1,4 +1,4 @@
-import { Button, Container, Grid } from "@mui/material";
+import {  Container, Grid } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./DetailsCar.css";
@@ -8,7 +8,7 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { FaBeer } from 'react-icons/fa';
+
 
 
 const DetailsCar = () => {

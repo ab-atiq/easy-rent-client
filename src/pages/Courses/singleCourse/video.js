@@ -10,7 +10,8 @@ const Video = ({
   setVideoId,
   videoCompleteId,
 }) => {
-  const { _id, name, link } = video;
+  const { v_id, name, link } = video;
+  // console.log(v_id);
   const setVideoLink = (id) => {
     setVideo(link);
     setImage("");
@@ -25,13 +26,13 @@ const Video = ({
         m: 1,
       }}
     >
-      <ListItemButton onClick={() => setVideoLink(_id)} sx={{ bgcolor: "" }}>
+      <ListItemButton onClick={() => setVideoLink(v_id)} sx={{ bgcolor: "" }}>
         <Grid container alignContent="space-between" alignItems="center">
           <Grid item xs={11}>
             <Typography variant="body1">{name}</Typography>
           </Grid>
           <Grid item xs={1}>
-            {videoCompleteId === _id ? (
+            {videoCompleteId === v_id ? (
               <CheckCircleIcon sx={{ color: "green" }} />
             ) : (
               <CheckCircleOutlineIcon sx={{ color: "green" }} />
@@ -39,18 +40,6 @@ const Video = ({
           </Grid>
         </Grid>
       </ListItemButton>
-      {/* {videoComplete === false && (
-        <ListItemButton onClick={setVideoLink} sx={{ bgcolor: "" }}>
-          <Grid container alignContent="space-between" alignItems="center">
-            <Grid item xs={11}>
-              <Typography variant="body1">{name}</Typography>
-            </Grid>
-            <Grid item xs={1}>
-              <CheckCircleOutlineIcon sx={{ color: "green" }} />
-            </Grid>
-          </Grid>
-        </ListItemButton>
-      )} */}
     </Box>
   );
 };

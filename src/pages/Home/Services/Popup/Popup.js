@@ -1,4 +1,11 @@
-import { Box, Container, Grid, TextField } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  TextField,
+  Button,
+ 
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Popup.css";
@@ -11,20 +18,53 @@ const Popup = () => {
   const [orderData, setOrderData] = useState({});
   const { user } = useAuth();
   const navigate = useNavigate();
+  // console.log(orderData);
+  useEffect(() => {
+    fetch(`http://localhost:5000/api/service/${BookingId}`)
+      .then((res) => res.json())
+      .then((data) => setService(data));
+  }, [BookingId]);
+
+  const handleChange = (e) => {
+    setOrderData({ ...orderData, [e.target.name]: e.target.value });
+  };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const data = { ...orderData, serviceId: BookingId, userId: user?.email };
+
+  //   try {
+  //     const res = await axios.post(
+  //       "http://localhost:5000/api/createOrder",
+  //       data
+  //     );
+
+  //     console.log("api res => ", res);
+
+  //     //Ekohn tmi client side run kore ekta order create koro r console e dkeho ki ashe
+
+  //     if (res.data) {
+  //       alert("Order Created");
+  //     }
+  //   } catch (err) {}
+
+  //   navigate("/pay");
+  // };
 
   const initialInfo = {
-    name: user.displayName,
-    email: user.email,
-    photoURL: user.photoURL,
-    carName: service.name,
-    startDate: "",
-    endDate: "",
-    rent: service.price,
-    location: "location",
-    imgUrl: service.image,
+    name: user?.displayName,
+    email: user?.email,
+    photoURL: user?.photoURL,
+    carName: service?.name,
+    startDate: "17/12/21",
+    endDate: "19/12/21",
+    rent: service?.price,
+    location: orderData?.division,
+    imgUrl: service?.image,
     rentStatus: "pending",
   };
-  console.log(service);
+  console.log(initialInfo);
 
   const rentNow = () => {
     const rentCar = { ...initialInfo };
@@ -40,38 +80,6 @@ const Popup = () => {
         console.log(data);
         window.location.replace(data);
       });
-  };
-
-  useEffect(() => {
-    fetch(`http://localhost:5000/api/service/${BookingId}`)
-      .then((res) => res.json())
-      .then((data) => setService(data));
-  }, [BookingId]);
-
-  const handleChange = (e) => {
-    setOrderData({ ...orderData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-  const data = { ...orderData, serviceId: BookingId, userId: user?.email };
-
-  try {
-    const res = await axios.post(
-      "http://localhost:5000/api/createOrder",
-      data
-    );
-
-    console.log("api res => ", res);
-
-    //Ekohn tmi client side run kore ekta order create koro r console e dkeho ki ashe
-
-    if (res.data) {
-      alert("Order Created");
-    }
-  } catch (err) {}
-
   };
 
   return (
@@ -94,67 +102,66 @@ const Popup = () => {
           </Grid>
 
           <Grid className="text_center" item sx={12} sm={6} md={6} lg={6}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={rentNow}>
               <Box
-                onSubmit={handleSubmit}
                 sx={{
                   "& .MuiTextField-root": { m: 1, width: "50ch" },
                 }}
                 noValidate
                 autoComplete="off"
               >
-                <div>
-                  <TextField
-                    id="filled-error"
-                    // label="FullName"
-                    defaultValue=""
-                    variant="filled"
-                    name="fullName"
-                    value={user.displayName}
-                    required
-                    onBlur={handleChange}
-                  />
-                </div>
-                <div>
-                  <TextField
-                    id="filled-error"
-                    label="Address"
-                    defaultValue=""
-                    variant="filled"
-                    name="address"
-                    required
-                    onBlur={handleChange}
-                  />
-                  <TextField
-                    id="filled-error-helper-text"
-                    label="division"
-                    defaultValue=""
-                    variant="filled"
-                    name="division"
-                    required
-                    onBlur={handleChange}
-                  />
-                  <TextField
-                    id="filled-error-helper-text"
-                    label="Year"
-                    defaultValue=""
-                    variant="filled"
-                    name="year"
-                    type="number"
-                    required
-                    onBlur={handleChange}
-                  />
-                </div>
+                {/* <div> */}
+                <TextField
+                  id="filled-error"
+                  label="FullName"
+                  defaultValue=""
+                  variant="filled"
+                  name="fullName"
+                  required
+                  onBlur={handleChange}
+                />
+                <TextField
+                  id="filled-error"
+                  label="Address"
+                  defaultValue=""
+                  variant="filled"
+                  name="address"
+                  required
+                  onBlur={handleChange}
+                />
+                <TextField
+                  id="filled-error-helper-text"
+                  label="division"
+                  defaultValue=""
+                  variant="filled"
+                  name="division"
+                  required
+                  onBlur={handleChange}
+                />
+                <TextField
+                  id="filled-error-helper-text"
+                  label="Year"
+                  defaultValue=""
+                  variant="filled"
+                  name="year"
+                  type="number"
+                  required
+                  onBlur={handleChange}
+                />
+                {/* </div> */}
 
                 <Box sx={{ width: 500 }}>
-                  <input
+                  {/* <input
                     onClick={rentNow}
                     required
                     type="submit"
                     className="button_design"
                     variant="contained"
                     value="Continew with pay"
-                  />
+                  /> */}
+                  <Button onClick={rentNow} variant="contained">
+                  Continue with pay
+                </Button>
                 </Box>
               </Box>
             </form>

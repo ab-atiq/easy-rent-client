@@ -44,7 +44,7 @@ const Appbar = () => {
           <Link className='single-link' to='/course'>Courses</Link>
           <Link className='single-link' to='/contactUs'>Contact Us</Link>
           <Link className='single-link' to='/AboutUs'>About Us</Link>
-          <Link className='single-link' to='/ChatApp'>Live Chat</Link>
+          {/* <Link className='single-link' to='/ChatApp'>Live Chat</Link> */}
 
 
           {!user.email &&
@@ -66,7 +66,15 @@ const Appbar = () => {
               onClick={handleMenu}
               color="inherit"
             >
-              <AccountCircle />
+
+              {user.photoURL &&
+                <img className='photosize' src={user?.photoURL} alt="" />
+              }
+
+              {!user.photoURL &&
+                <AccountCircle />
+              }
+
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -86,6 +94,9 @@ const Appbar = () => {
               <MenuItem onClick={handleClose}><Link as={Link} to="/profile" className='single-link-btn'>Profile</Link></MenuItem>
               <MenuItem onClick={handleClose}>
                 <Link className='single-link-btn' to='/newDashbord'>Dashboard</Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link className='single-link-btn' to='/blog'>Blog</Link>
               </MenuItem>
               <MenuItem onClick={handleClose}><Link as={Link} to="/login" className='single-link-btn'>
                 <button className='nav-btn' onClick={logOut}>Logout</button>

@@ -21,6 +21,7 @@
 .login-input{
     width: 70%;
     padding-bottom: 2rem !important;
+    color: aqua !important;
 }
 .login{
     font-size: 50px;
@@ -36,4 +37,16 @@
     color: #E72734;
     position: relative;
     top: 16px;
+}
+
+@media only screen and (max-width:640px){
+    .login-header{
+        font-size: 16px !important;
+    }
+    .login-container{
+        padding-left: 0px;
+    }
+    .login-img{
+        max-width: 80%;
+    }
 }

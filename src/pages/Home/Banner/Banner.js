@@ -30,9 +30,9 @@ const Banner = () => {
           </Box>
         </Grid>
         <Grid item md={6} xs={12} sm={12}>
-          <div className="">
-            <img width="100%" src="https://i.ibb.co/5n7NQtC/undraw-Trip-re-f724.png" alt="imagecar"/>
-             
+          <div className="imgbn">
+            <img width="100%" src="https://i.ibb.co/5n7NQtC/undraw-Trip-re-f724.png" alt="imagecar" />
+
           </div>
         </Grid>
       </Grid>
