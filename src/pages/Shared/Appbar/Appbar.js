@@ -66,8 +66,15 @@ const Appbar = () => {
               onClick={handleMenu}
               color="inherit"
             >
-              <img className='photosize' src={user?.photoURL} alt="" />
-              {/* <AccountCircle /> */}
+
+              {user.photoURL &&
+                <img className='photosize' src={user?.photoURL} alt="" />
+              }
+
+              {!user.photoURL &&
+                <AccountCircle />
+              }
+
             </IconButton>
             <Menu
               id="menu-appbar"

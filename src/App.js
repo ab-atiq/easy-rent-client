@@ -90,7 +90,7 @@ function App() {
             </Route>
 
             <Route path='/course' element={<Courses />} />
-            <Route path='/course/:id' element={<SingleCourse />} />
+            <Route path='/course/:courseId' element={<SingleCourse />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='AboutUs' element={<AboutUs />} />
             <Route path='/GetCourses' element={<GetCourses />} />

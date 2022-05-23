@@ -5,9 +5,9 @@ import Milestone from "./Milestone";
 import ReactPlayer from "react-player";
 import SearchLesson from "./SearchLesson";
 
-const CourseVideo = () => {
+const CourseVideo = ({ courseId }) => {
   const [image, setImage] = useState(
-    "https://phero-web.nyc3.cdn.digitaloceanspaces.com/promotional-images/Frame-1.jpg"
+    "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJpdmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
   );
   const [title, setTitle] = useState("Milestone 0: Orientation");
   const [video, setVideo] = useState("");
@@ -18,10 +18,10 @@ const CourseVideo = () => {
   // console.log(videoCompleteId);
 
   useEffect(() => {
-    fetch(`https://doctorportalserver-production.up.railway.app/course`)
+    fetch(`http://localhost:5000/api/find/singleCourse/${courseId}`)
       .then((res) => res.json())
-      .then((data) => setData(data[0]));
-  }, []);
+      .then((data) => setData(data));
+  }, [courseId]);
   // console.log(data);
   return (
     <Container>
@@ -109,7 +109,7 @@ const CourseVideo = () => {
               >
                 {data?.data?.map((milestone) => (
                   <Milestone
-                    key={milestone?._id}
+                    key={milestone?.m_id}
                     milestone={milestone}
                     setImage={setImage}
                     setTitle={setTitle}

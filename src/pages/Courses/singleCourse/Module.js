@@ -35,7 +35,7 @@ const Module = ({ module, setVideo, setImage,  setVideoId,videoCompleteId }) => 
       <Collapse in={open} timeout="auto" unmountOnExit>
         {videos?.map((video) => (
           <Video
-            key={video?._id}
+            key={video?.name}
             video={video}
             setVideo={setVideo}
             setImage={setImage}
