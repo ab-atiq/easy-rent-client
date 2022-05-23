@@ -9,7 +9,7 @@ import Small from './pages/Home/Services/CarType/Small';
 import MainService from './pages/Home/Services/DetailsCar/MainService';
 import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
-import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
+// import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
 import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
 import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
@@ -28,7 +28,7 @@ import AddProduct from './pages/NewDashbord/AddProduct/AddProduct';
 import UserDetails from './pages/UserDetails/UserDetails'
 import FindSingleCar from './pages/Home/FindCar/FindSingleCar/FindSingleCar';
 import AddReview from './pages/AddReview/AddReview';
-import Success from './pages/Payment/Success';
+// import Success from './pages/Payment/Success';
 import Cancel from './pages/Payment/Cancel';
 import ProfileHome from './pages/UserProfile/ProfileHome/ProfileHome';
 import Profile from './pages/UserProfile/Profile/Profile';
@@ -43,7 +43,7 @@ import Blog from './pages/Blog/Blog';
 import Courses from './pages/Courses/Courses';
 import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
 import Drivers from './pages/Home/Drivers/Drivers';
-import Clock from './pages/Home/Clock/Clock';
+// import Clock from './pages/Home/Clock/Clock';
 // import Clock from "../src/pages/Home/Clock";
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
 
         <BrowserRouter>
           {/* <Appbar></Appbar> */}
-          <Clock />
+          {/* <Clock /> */}
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />

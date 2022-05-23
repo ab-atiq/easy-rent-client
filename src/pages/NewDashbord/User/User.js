@@ -12,7 +12,28 @@ const User = () => {
             .then(data => setAllUsers(data));
 
     }, []);
-    console.log(allUsers)
+
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/api/users/deleteUser/${id}`, {
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'}
+        })
+        .then(res => res.json())
+        .then(result => {
+            if(result.message){
+              Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'User has been Deleted',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        const remainig = allUsers.filter(service => service._id !== id);
+        setAllUsers(remainig);
+            }
+            
+        });
+        }
     return (
         <div className='all-users'>
             <h1>All Users</h1>
@@ -22,8 +43,8 @@ const User = () => {
                     <tr>
                         <th>User Name</th>
                         <th>User Email</th>
-                        <th>User Id</th>
-                        <th className='th-none'>User Password</th>
+                        <th className='hide-id'>User Id</th>
+                        <th>Delete User</th>
                     </tr>
                 </thead>
 
@@ -33,8 +54,8 @@ const User = () => {
                         <tr>
                             <td>{data.userName}</td>
                             <td>{data.email}</td>
-                            <td className='warning'>{data._id}</td>
-                            <td className='primary th-none'>{data.password}</td>
+                            <td className='warning hide-id'>{data._id}</td>
+                            <td className='primary'><button onClick={() => handleDelete(data._id)} className="user-delete-btn" ><DeleteIcon></DeleteIcon></button></td>
 
                         </tr>
 

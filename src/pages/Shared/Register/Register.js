@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import image from '../../../images/undraw_press_play_re_85bj.svg';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { Box, Grid } from "@mui/material";
-import { useDispatch, useSelector } from 'react-redux';
+import { Box } from "@mui/material";
 import './Register.css';
-import { register } from '../../../app/redux/callAPI';
 import useAuth from '../../../hooks/useAuth';
 import { useForm } from "react-hook-form";
 
 
 const Register = () => {
     const { register, handleSubmit } = useForm();
-    const { registerUser, error, signInWithGoogle, } = useAuth()
+    const { registerUser,  signInWithGoogle, } = useAuth()
 
 
-    const dispatch = useDispatch();
     const navigate = useNavigate()
 
 

@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './ManageAllOrder.css'
-import ManageAllOrderCart from './ManageAllOrderCart'
+// import ManageAllOrderCart from './ManageAllOrderCart'
 import DeleteIcon from '@mui/icons-material/Delete';
 import Swal from 'sweetalert2';
 
 const ManageAllOrder = () => {
-    // lerader vai er order
-    const [allOrder, setAllOrder] = useState([]);
+        // Final order
+    const [finalallOrder, setFinalAllOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/find/singleCarRent')
+        fetch('http://localhost:5000/api/find/rentAllCars')
         .then(res => res.json())
-        .then(data => setAllOrder(data));
+        .then(data => setFinalAllOrder(data));
 
     }, []);
+    console.log(finalallOrder)
 
-
-    const handleDelete = id => {
-        fetch(`http://localhost:5000/api/find/deletesingleCarRent/${id}`, {
+    const handleDeletefinal = id => {
+        fetch(`http://localhost:5000/api/find/rentCarsdelete/${id}`, {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'}
         })
@@ -30,38 +30,8 @@ const ManageAllOrder = () => {
                 showConfirmButton: false,
                 timer: 1500
             })
-        const remainig = allOrder.filter(service => service._id !== id);
-        setAllOrder(remainig);
-            }
-            
-        });
-        }
-        // rony baier order
-    const [secallOrder, setSecAllOrder] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/api/allOrders')
-        .then(res => res.json())
-        .then(data => setSecAllOrder(data));
-
-    }, []);
-
-    const handleDeleteSec = id => {
-        fetch(`http://localhost:5000/api/deleteallOrders/${id}`, {
-            method: 'DELETE',
-            headers: {'Content-Type': 'application/json'}
-        })
-        .then(res => res.json())
-        .then(result => {
-            if(result.message){
-              Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Order has been Deleted',
-                showConfirmButton: false,
-                timer: 1500
-            })
-        const remainig = secallOrder.filter(service => service._id !== id);
-        setSecAllOrder(remainig);
+        const remainig = finalallOrder.filter(service => service._id !== id);
+        setFinalAllOrder(remainig);
             }
             
         });
@@ -69,29 +39,30 @@ const ManageAllOrder = () => {
 
   return (
     <div className="manageallorderbody">
-        <h1>ManageAllOrder {allOrder.length}</h1>
+        <h1>ManageAllOrder {finalallOrder.length}</h1>
         <div className="manageallordercart">
         {
-            allOrder.map(data => <ManageAllOrderCart
-            alldata={data}
-            key={data._id}
-            deletfunc={handleDelete}
-            ></ManageAllOrderCart>)
-        }
-        </div>
-        <br />
-        <h1>ManageAllOrder {secallOrder.length}</h1>
-        <div className="manageallordercart">
-        {
-            secallOrder.map(data => <div 
+            finalallOrder.map(data => <div 
             key={data._id}>
-                <p><strong>{data.fullName}</strong></p>
-                <p>{data.userId}</p>
-                <p>{data.address}</p>
-                <p>{data.year}</p>
-                <p>{data.division}</p> 
-                <p>{data.serviceId}</p> 
-                <button onClick={() => handleDeleteSec(data._id)} className="delete-btn" ><DeleteIcon></DeleteIcon></button>              
+                
+                <img style={{width: "200px"}} src={data.product_imgUrl} alt="" />
+                <p><strong>{data.cus_name}</strong></p>
+                <p><strong>{data.product_name}</strong></p>
+                <p>{data.cus_email}</p>
+                <p>{data.cus_phone}</p> 
+                <p>{data.cus_add1}, {data.cus_city}, {data.cus_country}</p>               
+                <p>{data.date_start} - {data.date_end}</p>
+                <p>{data.ship_city}, {data.ship_country}</p> 
+                <p><strong>৳</strong> {data.total_amount}</p>
+                {   
+                    (data.paymentStatus === "Successful") ?
+                        <p><strong className="color-success">{data.paymentStatus}</strong></p> :
+                    
+                        <p><strong className="color-warning">{data.paymentStatus}</strong></p>
+                    
+                } 
+                 
+                <button onClick={() => handleDeletefinal(data._id)} className="delete-btn" ><DeleteIcon></DeleteIcon></button>              
             </div>)
         }
         </div>

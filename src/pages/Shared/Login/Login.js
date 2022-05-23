@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import loginImage from '../../../images/login.jpg';
 import Typography from '@mui/material/Typography';
 import './Login.css';
-import { Button, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
 import { AiOutlineMail } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
-import { login } from '../../../app/redux/callAPI';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
@@ -18,7 +15,7 @@ const Login = () => {
     const { signInWithGoogle, logInUser, error } = useAuth()
 
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     // const { isFetching, error } = useSelector((state) => state.login);
     const navigate = useNavigate()
 

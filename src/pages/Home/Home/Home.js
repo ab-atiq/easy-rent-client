@@ -15,7 +15,7 @@ import FindCar from "../FindCar/FindCar";
 import Appbar from "../../Shared/Appbar/Appbar";
 import Reviews from "../Reviews/Reviews";
 // import NewService from "../../../pages/NewService/NewService";
-import Footer from "../../Shared/Footer/Footer";
+// import Footer from "../../Shared/Footer/Footer";
 import OurDrivers from "../OurDrivers/OurDrivers";
 
 

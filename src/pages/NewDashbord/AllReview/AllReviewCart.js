@@ -3,7 +3,7 @@ import Rating from '@mui/material/Rating';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 
-const AllReviewCart = ({reviewdata, funck}) => {
+const AllReviewCart = ({reviewdata, dfunc}) => {
     const {name, imgUrl, rating, designation, _id} = reviewdata
   return (
     <div className='review-cart'> 
@@ -15,7 +15,7 @@ const AllReviewCart = ({reviewdata, funck}) => {
         <Rating name="read-only" value={rating} readOnly />
 
         <div className="btn-body">
-          <button onClick={() => funck(_id)} className='red-btn' ><DeleteIcon></DeleteIcon></button>
+          <button onClick={() => dfunc(_id)} className='red-btn' ><DeleteIcon></DeleteIcon></button>
           </div>
         
         
