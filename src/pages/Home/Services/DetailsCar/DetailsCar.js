@@ -1,17 +1,31 @@
-import { Container, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import ButtonNavigation from "./ButtonNavigation";
 import "./DetailsCar.css";
-import RangeSlider from "./RangeSlider";
+import Box from "@mui/material/Box";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import RestoreIcon from "@mui/icons-material/Restore";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { FaBeer } from 'react-icons/fa';
+
 
 const DetailsCar = () => {
+  const [value, setValue] = React.useState(0);
+
   return (
-    <div >
+    <div>
+    
       <Container>
+      {/* <Link to="/home"> <Button value="contain">  ⏮</Button></Link> */}
         <div>
           <Grid container spacing={2}>
-            <Grid item spacing={{ xs: 2, md: 3, lg: 5 }} columns={{ xs: 10, sm: 5, md: 5, lg: 5 }}>
+            <Grid
+              item
+              spacing={{ xs: 2, md: 3, lg: 5 }}
+              columns={{ xs: 10, sm: 5, md: 5, lg: 5 }}
+            >
               <Grid container spacing={2}>
                 <Grid item xs={6}>
                   <p>Car type</p>
@@ -21,7 +35,11 @@ const DetailsCar = () => {
                 </Grid>
               </Grid>
               <Grid container spacing={1}>
-                <Grid item spacing={{ xs: 2, md: 3, lg: 5 }} columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
+                <Grid
+                  item
+                  spacing={{ xs: 2, md: 3, lg: 5 }}
+                  columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}
+                >
                   <Link className="_btn" to="/small">
                     <div className="small_box">
                       <img
@@ -34,7 +52,11 @@ const DetailsCar = () => {
                     </div>
                   </Link>
                 </Grid>
-                <Grid item spacing={{ xs: 2, md: 3, lg: 5 }} columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
+                <Grid
+                  item
+                  spacing={{ xs: 2, md: 3, lg: 5 }}
+                  columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}
+                >
                   <Link className="_btn" to="/medium">
                     <div className="small_box">
                       <img
@@ -47,7 +69,11 @@ const DetailsCar = () => {
                     </div>
                   </Link>
                 </Grid>
-                <Grid item spacing={{ xs: 2, md: 3, lg: 5 }} columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
+                <Grid
+                  item
+                  spacing={{ xs: 2, md: 3, lg: 5 }}
+                  columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}
+                >
                   <Link className="_btn" to="/large">
                     <div className="small_box">
                       <img
@@ -60,7 +86,11 @@ const DetailsCar = () => {
                     </div>
                   </Link>
                 </Grid>
-                <Grid item spacing={{ xs: 2, md: 3, lg: 5 }} columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
+                <Grid
+                  item
+                  spacing={{ xs: 2, md: 3, lg: 5 }}
+                  columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}
+                >
                   <Link className="_btn" to="/details">
                     <div className="small_box">
                       <img
@@ -73,20 +103,71 @@ const DetailsCar = () => {
                     </div>
                   </Link>
                 </Grid>
-                <Grid item columns={{ xs: 12, sm: 6, md: 2.4, lg: 2.4 }}>
-                  <div className="Range_slider ">
-                    <RangeSlider></RangeSlider>
-                  </div>
-                </Grid>
               </Grid>
             </Grid>
 
-            <Grid item spacing={{ xs: 2, md: 2, lg: 2 }} columns={{ xs: 2, sm: 2, md: 2, lg: 2 }}></Grid>
-            <Grid item spacing={{ xs: 2, md: 3, lg: 5 }} columns={{ xs: 10, sm: 5, md: 5, lg: 5 }}>
-              <ButtonNavigation></ButtonNavigation>
+            <Grid
+              item
+              spacing={{ xs: 2, md: 3, lg: 6 }}
+              columns={{ xs: 10, sm: 5, md: 5, lg: 5 }}
+            >
+              <div className="navigation_btn">
+                <Box sx={{ width: "100%" }}>
+                  <BottomNavigation
+                    showLabels
+                    value={value}
+                    onChange={(event, newValue) => {
+                      setValue(newValue);
+                    }}
+                  >
+
+
+
+
+                    
+                    <Link to="/truck">
+                      {" "}
+                      <BottomNavigationAction
+                        label="Small Car"
+                        icon={<RestoreIcon />}
+                      />{" Truck "}
+                    </Link>
+                    <Link to="/pickup">
+                      {" "}
+                      <BottomNavigationAction
+                        label="Medium"
+                        icon={<FavoriteIcon />}
+                      />
+                     PickUp
+                    </Link>
+                    <Link to="/small">
+                      <BottomNavigationAction
+                        label="Large"
+                        icon={<LocationOnIcon />}
+                      />
+                      Small Car
+                    </Link>
+                    <Link to="/large">
+                      <BottomNavigationAction
+                        label="Large"
+                        icon={<LocationOnIcon />}
+                      />
+                      Large Car
+                    </Link>
+                    <Link to="/details">
+                      {" "}
+                      <BottomNavigationAction
+                        label="All Car"
+                        icon={<FavoriteIcon />}
+                      />
+                      All Car
+                    </Link>
+                  
+                  </BottomNavigation>
+                </Box>
+              </div>
             </Grid>
           </Grid>
-
         </div>
       </Container>
     </div>

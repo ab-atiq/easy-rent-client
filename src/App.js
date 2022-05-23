@@ -36,6 +36,9 @@ import CarRent from './pages/Home/FindCar/FindSingleCar/rent/CarRent';
 import ManageOrder from './pages/Home/Services/HomeServices/ManageOrder/ManageOrder';
 import Courses from './pages/Courses/Courses';
 import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
+import TruckCar from './pages/Home/Services/CarType/TruckCar';
+import Pickup from './pages/Home/Services/CarType/PicupCar';
+
 
 function App() {
 
@@ -63,6 +66,9 @@ function App() {
             <Route path='/pay' element={<PayNow />} />
             <Route path='/profileHome' element={<ProfileHome />} />
             <Route path='/manageOrder' element={<ManageOrder />} />
+            <Route path='/truck' element={<TruckCar />} />
+            <Route path='/pickup' element={<Pickup />} />
+            
 
 
             <Route path='/newDashbord' element={<NewDashbord />}>

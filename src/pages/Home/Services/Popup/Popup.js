@@ -1,6 +1,6 @@
 import { Box, Container, Grid, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import {  useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./Popup.css";
 import axios from "axios";
 import useAuth from "../../../../hooks/useAuth";
@@ -11,6 +11,36 @@ const Popup = () => {
   const [orderData, setOrderData] = useState({});
   const { user } = useAuth();
   const navigate = useNavigate();
+
+  const initialInfo = {
+    name: user.displayName,
+    email: user.email,
+    photoURL: user.photoURL,
+    carName: service.name,
+    startDate: "",
+    endDate: "",
+    rent: service.price,
+    location: "location",
+    imgUrl: service.image,
+    rentStatus: "pending",
+  };
+  console.log(service);
+
+  const rentNow = () => {
+    const rentCar = { ...initialInfo };
+    fetch(`http://localhost:5000/api/find/init`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(rentCar),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        window.location.replace(data);
+      });
+  };
 
   useEffect(() => {
     fetch(`http://localhost:5000/api/service/${BookingId}`)
@@ -25,24 +55,23 @@ const Popup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = { ...orderData, serviceId: BookingId, userId: user?.email };
+  const data = { ...orderData, serviceId: BookingId, userId: user?.email };
 
-    try {
-      const res = await axios.post(
-        "http://localhost:5000/api/createOrder",
-        data
-      );
+  try {
+    const res = await axios.post(
+      "http://localhost:5000/api/createOrder",
+      data
+    );
 
-      console.log("api res => ", res);
+    console.log("api res => ", res);
 
-      //Ekohn tmi client side run kore ekta order create koro r console e dkeho ki ashe
+    //Ekohn tmi client side run kore ekta order create koro r console e dkeho ki ashe
 
-      if (res.data) {
-        alert("Order Created");
-      }
-    } catch (err) {}
+    if (res.data) {
+      alert("Order Created");
+    }
+  } catch (err) {}
 
-    navigate("/pay");
   };
 
   return (
@@ -77,10 +106,11 @@ const Popup = () => {
                 <div>
                   <TextField
                     id="filled-error"
-                    label="FullName"
+                    // label="FullName"
                     defaultValue=""
                     variant="filled"
                     name="fullName"
+                    value={user.displayName}
                     required
                     onBlur={handleChange}
                   />
@@ -118,7 +148,7 @@ const Popup = () => {
 
                 <Box sx={{ width: 500 }}>
                   <input
-                    // onClick={handelButton}
+                    onClick={rentNow}
                     required
                     type="submit"
                     className="button_design"
