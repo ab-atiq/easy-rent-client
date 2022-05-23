@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 
 const NurService = ({ alldata }) => {
-const { _id, name, price, image, year, type, fual, kilo } = alldata;
+const { _id, name, price, image, year, type, fual, kilo, picture } = alldata;
 
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <div className="box">
         <div>
           <div className="car-box">
-            <img src={image} alt="" />
+          {!picture ? <img src={image} alt="" /> : 
+        <img src={`data:img/png;base64,${picture}`} alt="" />}
+            {/* <img src={image} alt="" /> */}
           </div>
           <div className="cart-text">
             <p className="year-text">{year}</p>
