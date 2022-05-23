@@ -43,6 +43,8 @@ import Blog from './pages/Blog/Blog';
 import Courses from './pages/Courses/Courses';
 import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
 import Drivers from './pages/Home/Drivers/Drivers';
+import Clock from './pages/Home/Clock/Clock';
+// import Clock from "../src/pages/Home/Clock";
 
 function App() {
 
@@ -53,6 +55,7 @@ function App() {
 
         <BrowserRouter>
           {/* <Appbar></Appbar> */}
+          <Clock />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />
@@ -87,7 +90,7 @@ function App() {
             </Route>
 
             <Route path='/course' element={<Courses />} />
-            <Route path='/course/:id' element={<SingleCourse />} />
+            <Route path='/course/:courseId' element={<SingleCourse />} />
             <Route path='/book/:BookingId' element={<Popup />} />
             <Route path='AboutUs' element={<AboutUs />} />
             <Route path='/GetCourses' element={<GetCourses />} />

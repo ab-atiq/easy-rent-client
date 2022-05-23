@@ -51,7 +51,7 @@ const Milestone = ({
         <Typography variant="h6" p={1}>
           {modules?.map((module) => (
             <Module
-              key={module?._id}
+              key={module?.name}
               module={module}
               setVideo={setVideo}
               setImage={setImage}

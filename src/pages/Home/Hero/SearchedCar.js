@@ -26,9 +26,7 @@ const SearchedCar = ({ car, findCars, buttonSubmitted }) => {
                 buttonSubmitted &&
 
                 ((findCars?.length) ?
-                    <div className='car-card-container'>
-                        <Grid container>
-                            <Grid item md={4} className='car-card'>
+                            <Grid item md={4} sx={{margin:'100px 0px'}}>
                                 <Item>
                                 <img className='car-card-img' src={imgUrl} alt="" />
                                 <Typography variant="h4" component="div" gutterBottom>
@@ -50,8 +48,8 @@ const SearchedCar = ({ car, findCars, buttonSubmitted }) => {
                                 <Typography variant="h6" component="div" gutterBottom>
                                     {`Pickup: ${pickup}`}
                                 </Typography>
-                                <Typography variant="h6" component="div" gutterBottom>
-                                    {`Price:$ ${price}`}
+                                <Typography variant="h6" component="div" gutterBottom sx={{fontWeight:'bold'}}>
+                                    {`Price:BDT ${price}`}
                                 </Typography>
                                 <Typography variant="h6" component="div" gutterBottom>
                                     {`Status: ${status}`}
@@ -59,8 +57,7 @@ const SearchedCar = ({ car, findCars, buttonSubmitted }) => {
                                 <Button onClick={handleUserDetails} variant="contained">Book Now</Button>
                                 </Item>
                             </Grid>
-                        </Grid>
-                    </div> :
+                            :
                     <div>
                         <Typography variant="h6" component="div" gutterBottom>
                             No car available

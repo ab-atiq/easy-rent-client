@@ -38,7 +38,10 @@
     color: #FFCC00;
     font-size: 30px;
 }
-@media only screen and (max-width:600px){
+.swiper-container {
+    width: 480px;
+  }
+@media only screen and (max-width:640px){
     .title{
         padding-top: 100px;
         padding-bottom: 50px;
@@ -46,4 +49,13 @@
         line-height: 40px;
         text-align: center;
     }
+    .swiper-container {
+        width: 640px;
+      }
 }
+  
+  @media screen and (min-width: 768px) {
+    .swiper-container {
+      width: 768px;
+    }
+  }
