@@ -39,7 +39,7 @@ const FindSingleCar = () => {
         const filterCar = data.filter((data) => data.name.includes(carName));
         setImage(filterCar[0].imgUrl);
         setRent(filterCar[0].rent);
-      }); 
+      });
   }, []);
 
   const initialInfo = {
@@ -53,6 +53,7 @@ const FindSingleCar = () => {
     location: location,
     imgUrl: image,
     rentStatus: "pending",
+    product_category: "brand",
   };
   // console.log(initialInfo);
 
