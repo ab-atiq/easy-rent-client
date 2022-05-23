@@ -9,7 +9,6 @@ import Small from './pages/Home/Services/CarType/Small';
 import MainService from './pages/Home/Services/DetailsCar/MainService';
 import Medium from './pages/Home/Services/CarType/Medium';
 import Large from './pages/Home/Services/CarType/Large';
-// import CourseHome from './pages/Home/FullCourses/CourseHome/CourseHome';
 import GetCourses from './pages/Home/FullCourses/GetCourse/GetCourses';
 import AuthProvider from './contexts/AuthProvider';
 import FindBasisBrand from "./pages/Home/FindCar/FindBasisBrand/FindBasisBrand";
@@ -42,6 +41,9 @@ import NewService from './pages/NewService/NewService';
 import Blog from './pages/Blog/Blog';
 import Courses from './pages/Courses/Courses';
 import SingleCourse from './pages/Courses/singleCourse/SingleCourse';
+import TruckCar from './pages/Home/Services/CarType/TruckCar';
+import Pickup from './pages/Home/Services/CarType/PicupCar';
+
 import Drivers from './pages/Home/Drivers/Drivers';
 // import Clock from './pages/Home/Clock/Clock';
 // import Clock from "../src/pages/Home/Clock";
@@ -74,6 +76,9 @@ function App() {
             <Route path='/pay' element={<PayNow />} />
             <Route path='/profileHome' element={<ProfileHome />} />
             <Route path='/manageOrder' element={<ManageOrder />} />
+            <Route path='/truck' element={<TruckCar />} />
+            <Route path='/pickup' element={<Pickup />} />
+            
             <Route path='/newService' element={<NewService />} />
             <Route path='/blog' element={<Blog />} />
 

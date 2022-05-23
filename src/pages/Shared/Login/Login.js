@@ -1,3 +1,4 @@
+import React from 'react';
 import Grid from '@mui/material/Grid';
 import loginImage from '../../../images/login.jpg';
 import Typography from '@mui/material/Typography';
@@ -14,8 +15,6 @@ const Login = () => {
     const { register, handleSubmit } = useForm();
     const { signInWithGoogle, logInUser, error } = useAuth()
 
-
-    // const dispatch = useDispatch();
     // const { isFetching, error } = useSelector((state) => state.login);
     const navigate = useNavigate()
 
@@ -51,20 +50,20 @@ const Login = () => {
             <div className='login-grid'>
                 <Grid container spacing={3} maxWidth="lg" justifyContent="center"
                     alignItems="center">
-                    <Grid item xs={12} md={6}>
+                    <Grid sx={{padding:0}} item xs={12} md={6}>
                         <img className='login-img' src={loginImage} alt="" /> <br />
                         <Link to='/register'>New here? Please Sign up </Link>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input {...register("email")} className='login-input' type="email" placeholder="Email" label="Email" variant="outlined" required /> <br />
-                            <input className='login-input' type="password" placeholder="Password" label="Password" variant="outlined" required {...register("password")} /> <br />
+                        <TextField {...register("email")} type='email' id="outlined-basic" label="Email" variant="outlined" /> <br />
+                        <TextField {...register("password")} type='password' id="outlined-basic" label="Password" variant="outlined" /> <br />
                             {/* <Button type="submit" variant="contained" color="primary" onClick={handleClick} disabled={isFetching}>Login</Button> */}
                             <input type="submit" className="btn solid" />
                         </form>
                         {error && <TextField>Something went wrong...</TextField>}
                     </Grid>
-                    <Typography> or Log in with <AiOutlineMail onClick={handleGoogleSignIn} className='login google'></AiOutlineMail> </Typography>
+                    <Typography sx={{marginBottom:'16px'}}> or Log in with <AiOutlineMail onClick={handleGoogleSignIn} className='login google'></AiOutlineMail> </Typography>
                 </Grid>
             </div>
         </div>

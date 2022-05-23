@@ -28,7 +28,7 @@ const { _id, name, price, image, year, type, fual, kilo, picture } = alldata;
             </div>
           </div>
         </div>
-        <div className=" my-3 d-flex             justify-content-between">
+        <div className=" my-3 d-flex justify-content-between">
           <Link to={`/book/${_id}`}>
             <button className="service-button">Rent Now</button>
           </Link>

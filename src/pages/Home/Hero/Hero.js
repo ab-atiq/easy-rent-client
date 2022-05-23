@@ -47,11 +47,16 @@ const Hero = () => {
   return (
     <>
       <div className="hero">
-        <Typography className="title" gutterBottom variant="h3">
+        <Typography
+          display='flex'
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          className="hero-title" gutterBottom variant="h3">
           Car Rental - Search, Compare and Save
         </Typography>
         <Grid container>
-          <Grid item md={6} style={{ margin: "0 auto" }}>
+          <Grid item md={6} style={{ margin: "40px auto" }}>
             <Box sx={{ fontSize: 18 }}>
 
               <Card className="background_color">
@@ -59,26 +64,15 @@ const Hero = () => {
                   <form className="from_control" onSubmit={handleSubmit(onSubmit)}>
                     <Grid container spacing={1}>
                       <Grid item xs={12} className="input_group">
-                      <FormControl variant="filled" sx={{ m: 1, minWidth: '100%' }}>
-                                <InputLabel id="demo-simple-select-filled-label">Pickup</InputLabel>
-                                <Select {...register("pickup")}>
-                                    <MenuItem value={'Dhaka'}>Dhaka</MenuItem>
-                                    <MenuItem value={'Rajshahi'}>Rajshahi</MenuItem>
-                                    <MenuItem value={'Khulna'}>Khulna</MenuItem>
-                                    <MenuItem value={'Rangpur'}>Rangpur</MenuItem>
-                                </Select>
-                            </FormControl>
-                      </Grid>
-                      <Grid item xs={12}>
-                        <TextField
-                          {...register("number")}
-                          type="number"
-                          placeholder="Enter phone number"
-                          label="Phone"
-                          variant="outlined"
-                          fullWidth
-                          required
-                        />
+                        <FormControl variant="filled" sx={{ m: 1, minWidth: '100%' }}>
+                          <InputLabel id="demo-simple-select-filled-label">Pickup</InputLabel>
+                          <Select {...register("pickup")}>
+                            <MenuItem value={'Dhaka'}>Dhaka</MenuItem>
+                            <MenuItem value={'Rajshahi'}>Rajshahi</MenuItem>
+                            <MenuItem value={'Khulna'}>Khulna</MenuItem>
+                            <MenuItem value={'Rangpur'}>Rangpur</MenuItem>
+                          </Select>
+                        </FormControl>
                       </Grid>
                       <Grid item xs={12}>
                         <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -125,24 +119,6 @@ const Hero = () => {
               </Card>
             </Box>
           </Grid>
-          <Grid item md={12} style={{ margin: "0 auto" }}>
-            <Typography
-              style={{ margin: "0 0 30px 0" }}
-              className="title"
-              gutterBottom
-              variant="h5"
-            >
-              <span style={{ marginRight: "3rem" }}>
-                {" "}
-                Free cancellations on most bookings{" "}
-              </span>{" "}
-              <span style={{ marginRight: "3rem" }}>60,000+ locations </span>{" "}
-              <span style={{ marginRight: "3rem" }}>
-                {" "}
-                Customer support in 40+ languages{" "}
-              </span>
-            </Typography>
-          </Grid>
         </Grid>
       </div>
       {
@@ -150,7 +126,10 @@ const Hero = () => {
           <Box sx={{ display: 'flex' }}>
             <CircularProgress />
           </Box> :
-          <Grid container spacing={4}>
+          <Grid
+            className="hero-card-grid"
+            container
+            spacing={4}>
             {
               findCars.map(car => <SearchedCar key={car?._id} car={car} findCars={findCars} buttonSubmitted={buttonSubmitted}></SearchedCar>)
             }

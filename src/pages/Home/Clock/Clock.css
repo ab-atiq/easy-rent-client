@@ -1,6 +1,9 @@
 .title-word {
     animation: color-animation 4s linear infinite;
 }
+.clock{
+    margin-top: 15px !important;
+}
 
 .title-word-1 {
     --color-1: #DF8453;
@@ -11,7 +14,7 @@
 .title-word-2 {
     --color-1: #DBAD4A;
     --color-2: #ACCFCB;
-    --color-3: #17494D;
+    --color-3: #22bcc7;
 }
 
 .title-word-3 {
@@ -68,9 +71,9 @@
     font-weight: 800;
     font-size: 15px;
     text-transform: uppercase;
-    padding: 0px;
+
     text-align: left;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 
