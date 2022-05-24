@@ -3,6 +3,8 @@ import React from 'react';
 import MyOrder from "./MyOrder";
 import { Container, Grid, Typography } from "@mui/material";
 import useAuth from "../../../hooks/useAuth";
+import Swal from 'sweetalert2';
+
 
 const MyOrders = () => {
 
@@ -15,7 +17,29 @@ const MyOrders = () => {
             .then((data) => setOrders(data));
     }, []);
 
-    console.log(orders);
+    // console.log(orders);
+
+    const handleDeleteFinal = id => {
+        fetch(`http://localhost:5000/api/find/rentCarsdelete/${id}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.message) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Order has been Canceled',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    const remaining = orders.filter(service => service._id !== id);
+                    setOrders(remaining);
+                }
+
+            });
+    }
 
     return (
         <Container>
@@ -28,6 +52,7 @@ const MyOrders = () => {
                         <MyOrder
                             key={order._id}
                             order={order}
+                            deleteOrder={handleDeleteFinal}
                         ></MyOrder>)
                 }
             </Grid>
