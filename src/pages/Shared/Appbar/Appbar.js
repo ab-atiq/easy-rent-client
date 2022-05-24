@@ -96,7 +96,7 @@ const Appbar = () => {
                 <Link className='single-link-btn' to='/newDashbord'>Dashboard</Link>
               </MenuItem>
               <MenuItem onClick={handleClose}>
-                <Link className='single-link-btn' to='/blog'>Blog</Link>
+                <Link className='single-link-btn' to='/blog'>Blogs</Link>
               </MenuItem>
               <MenuItem onClick={handleClose}><Link as={Link} to="/login" className='single-link-btn'>
                 <button className='nav-btn' onClick={logOut}>Logout</button>

@@ -65,3 +65,14 @@
     font-weight: bold;
     
 }
+
+@media screen and (max-width: 600px){
+    .addproductbody{
+        margin: 1rem 1rem 1rem 1rem;
+        
+    }
+    .d-product-box {
+        padding: 20px;
+        width: 100%;
+    }
+}

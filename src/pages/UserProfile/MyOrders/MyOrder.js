@@ -2,9 +2,11 @@ import { Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/mat
 import './MyOrder.css';
 import React from 'react';
 
-const MyOrder = (props) => {
+const MyOrder = ({ order, deleteOrder }) => {
 
-    const { product_name, product_imgUrl, cus_email, cus_name, date_start, date_end, total_amount } = props.order || {}
+    const { _id, product_name, product_imgUrl, cus_email, cus_name, date_start, date_end, total_amount } = order || {}
+
+
 
     return (
         <>
@@ -57,11 +59,12 @@ const MyOrder = (props) => {
                         <Typography sx={{ marginBottom: "4px" }} variant="body2" color="text.secondary">
                             Return Date: {date_end}
                         </Typography>
-                        <Button variant="contained" style={{
+                        <Button onClick={() => deleteOrder(_id)} variant="contained" style={{
                             backgroundColor: "#212121",
                         }}>
                             Cancel Order
                         </Button>
+                        {/* <button className="delete-btn" ><DeleteIcon></DeleteIcon></button> */}
                         {/* <button className="deleteservice-button">Delete Order</button> */}
                     </CardContent>
                 </Card>
@@ -72,4 +75,3 @@ const MyOrder = (props) => {
 };
 
 export default MyOrder;
-// onClick={() => deletfunc(_id)}
