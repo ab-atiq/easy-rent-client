@@ -75,3 +75,19 @@
     font-weight: bold;
     
 }
+/* @media screen and (max-width: 1200px){
+    
+}
+@media screen and (max-width: 768px){
+
+} */
+@media screen and (max-width: 600px){
+    .addblogbody{
+        margin: 1rem 1rem 1rem 1rem;
+        
+    }
+    .blog-box {
+        padding: 20px;
+        width: 100%;
+    }
+}

@@ -7,3 +7,7 @@
 .bolgcartbody p{
     margin-top: 10px;
 }
+
+.blog-img img{
+    width: 100%;
+}
