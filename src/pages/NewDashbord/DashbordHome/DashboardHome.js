@@ -91,7 +91,7 @@ const DashboardHome = () => {
                     <thead>
                         <tr>
                             <th>Product Name</th>
-                            <th>Product Number</th>
+                            <th className='hide-id'>Product Number</th>
                             <th>Payment</th>
                             <th>Status</th>
                         </tr>
@@ -100,7 +100,7 @@ const DashboardHome = () => {
                         allOrder.map(data => <tbody>
                             <tr>
                                 <td>{data.carName}</td>
-                                <td>{data._id}</td>
+                                <td className='hide-id'>{data._id}</td>
                                 <td className='warning'>Due</td>
                                 <td className='primary'>Details</td>
     
