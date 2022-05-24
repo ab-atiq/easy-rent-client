@@ -11,6 +11,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
 
+    // my orders
     useEffect(() => {
         fetch(`http://localhost:5000/api/find/rentSingleOrder/${user.email}`)
             .then((res) => res.json())
@@ -19,6 +20,7 @@ const MyOrders = () => {
 
     // console.log(orders);
 
+    // my orders canceling
     const handleDeleteFinal = id => {
         fetch(`http://localhost:5000/api/find/rentCarsdelete/${id}`, {
             method: 'DELETE',
