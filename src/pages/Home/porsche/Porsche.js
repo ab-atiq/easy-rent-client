@@ -1,28 +1,25 @@
 import Car from "../../../images/car.png";
 import './Porsche.css';
 import React from 'react';
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Porsche = () => {
     return (
         <div className="main">
             <div className="text">
-                <h1>Long-Journey experience with
-                    <br /> short commute convenience.</h1>
+                <h1>Long-Journey experience with short
+                    <br />commute convenience. Rent Our</h1>
+                <h1>Vehicles and Drivers Based</h1>
+                <h1>on your preference Enjoy</h1>
+                <h1>Your Rides With Our</h1>
+                <h1>Various Services</h1>
                 <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero</p>
-                {/* <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita ver</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem exped</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exerc</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro e</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero</p>
-                <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero</p> */}
-                {/* <p className="abs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem expedita vero cumque
-                    <br /> cumque veritatis nisi qui voluptatem, deleniti tempora modi alias iure, a amet beatae repudiandae
-                    <br /> repudiandae neque officiis. Dolore culpa reiciendis sequi ullam, quibusdam, voluptatibus a itaque
-                    <br /> itaque dignissimos non neque, quam nobis enim ipsam quae totam. Fugiat cupiditate expedita <br /> explicabo praesentium corporis. repudiandae neque officiis. Dolore culpa reiciendis. sequi ullam, quibusdam, voluptatibus a itaque. </p> */}
+                <Link to='/details'> <Button variant="contained" style={{
+                    backgroundColor: "#212121",
+                }}>
+                    Get Now
+                </Button></Link>
             </div>
             <div className="car">
                 <img src={Car} alt="" />
