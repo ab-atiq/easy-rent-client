@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 
 const DashboardHome = () => {
+    const [allOrder, setAllOrder] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/api/find/singleCarRent')
+        .then(res => res.json())
+        .then(data => setAllOrder(data.slice(0, 6)));
+
+    }, []);
+    console.log(allOrder)
 
   return (
     <div>
@@ -86,59 +94,21 @@ const DashboardHome = () => {
                             <th>Product Number</th>
                             <th>Payment</th>
                             <th>Status</th>
-                            <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td className='warning'>Pending</td>
-                            <td className='primary'>Details</td>
-
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td className='warning'>Pending</td>
-                            <td className='primary'>Details</td>
-
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td className='warning'>Pending</td>
-                            <td className='primary'>Details</td>
-
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td className='warning'>Pending</td>
-                            <td className='primary'>Details</td>
-
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td className='warning'>Pending</td>
-                            <td className='primary'>Details</td>
-
-                        </tr>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td className='warning'>Pending</td>
-                            <td className='primary'>Details</td>
-
-                        </tr>
-                    </tbody>
+                    {
+                        allOrder.map(data => <tbody>
+                            <tr>
+                                <td>{data.carName}</td>
+                                <td>{data._id}</td>
+                                <td className='warning'>Due</td>
+                                <td className='primary'>Details</td>
+    
+                            </tr>
+                            
+                        </tbody> )
+                    }
+                    
                 </table>
                 <Link className='table-single-link'  to='#'>Show All</Link>
                 

@@ -13,28 +13,28 @@ const AllReview = () => {
         .then(data => setReview(data));
   }, []);
 
-    const handleAllDelete = id => {
-      fetch(`https://guarded-taiga-13015.herokuapp.com/api/delete/${id}`, {
-          method: 'DELETE',
-          headers: {'Content-Type': 'application/json'}
-      })
-      .then(res => res.json())
-      .then(result => {
-          if(result.message){
-            Swal.fire({
-              position: 'center',
-              icon: 'success',
-              title: 'Review has been Deleted',
-              showConfirmButton: false,
-              timer: 1500
-          })
-      const remainig = review.filter(service => service._id !== id);
-      setReview(remainig);
-          }
-          
-      });
-      }
-    
+  const handleDelete = id => {
+    fetch(`http://localhost:5000/api/delete/${id}`, {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+    .then(result => {
+        if(result.message){
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Review has been Deleted',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    const remainig = review.filter(service => service._id !== id);
+    setReview(remainig);
+        }
+        
+    });
+    }
+
   return (
     <div className='dashbord-review'>
         {/* <Container> */}
@@ -47,6 +47,7 @@ const AllReview = () => {
           review.map((data) => <AllReviewCart
             key={data._id}
             reviewdata={data}
+            dfunc={handleDelete}
           ></AllReviewCart>)
         }
 

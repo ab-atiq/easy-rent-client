@@ -72,7 +72,3 @@
     animation-iteration-count: infinite;
     cursor: pointer;
 }
-
-img:hover {
-    opacity: 0.6;
-}

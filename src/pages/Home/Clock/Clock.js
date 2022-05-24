@@ -18,7 +18,7 @@ const Clock = () => {
     return (
 
         <Box style={{
-            fontSize: "20px", marginBottom: "10px", backgroundColor: '#202020',
+            fontSize: "20px", marginBottom: "20px", backgroundColor: '#202020',
         }}>
 
             <Container className="container2">
@@ -32,8 +32,8 @@ const Clock = () => {
                             <span className="title-word title-word-4">compare rental</span>
                         </span>
                     </Grid>
-                    <Grid item xs={2}>
-                        <span className='clock'>
+                    <Grid className='clock' item xs={2}>
+                        <span >
                             {clock}
                         </span>
                     </Grid>

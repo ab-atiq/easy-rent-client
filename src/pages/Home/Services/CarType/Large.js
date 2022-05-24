@@ -1,7 +1,6 @@
 import { Container, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import DetailsCar from '../DetailsCar/DetailsCar';
-// import { data } from '../FakeData/FakeData'
 import NurService from '../NurServices/NurService';
 const Large = () => {
 

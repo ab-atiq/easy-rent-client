@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react'
 import './AddProduct.css';
 import Dropfileinput from '../AddBlog/Dropfileinput';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
 
 const AddProduct = () => {
+  const [img, setImg] = useState(null)
   const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => {   
-        fetch('https://guarded-taiga-13015.herokuapp.com/api/addService', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+    const onSubmit = data => { 
+      const formData = new FormData(); 
+      formData.append('name', data.name);
+      formData.append('year', data.year);
+      formData.append('price', data.price);
+      formData.append('kilo', data.kilo);
+      formData.append('type', data.type);
+      formData.append('fual', data.fual);
+      formData.append('discountPrice', data.discountPrice);
+      formData.append('picture', img); 
+        fetch('http://localhost:5000/api/addService', {
+          method: 'POST',
+          body: formData
     })
         .then(res => res.json())
         .then(data => {
@@ -27,28 +36,18 @@ const AddProduct = () => {
         })                   
     };
 
-
-    // const onSubmit = data => {   
-    //   console.log(data);
-    //   reset();    
-                         
-    // };
-
-    const onFileChange = (files) => {
-      console.log(files)
-    }
   return (
     <div className="addproductbody">
         <h1>AddProduct</h1>
         <div className="productfileuploadbody">
           <div className="d-product-box">
               <Dropfileinput 
-              onFileChange={(files) => onFileChange(files)}
+              onFileChange={(files) => setImg(files[0])}
               />
           
           <form onSubmit={handleSubmit(onSubmit)}>
                
-                <input type="text" {...register("image")} placeholder="Image Link" /> <br />
+                {/* <input type="text" {...register("image")} placeholder="Image Link" /> <br /> */}
                 
                 <input type="text" {...register("name")} placeholder="Car Name" /> <br />
                 <input type="text" {...register("year")} placeholder="Model Year" /> <br />

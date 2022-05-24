@@ -20,6 +20,12 @@
     color: var(--color-primar);
     margin-top: 10px;
 }
+.color-success{
+    color: var(--color-primar);
+}
+.color-warning{
+    color: var(--color-danger);
+}
 @media screen and (max-width: 1200px){
     .manageallordercart{        
         grid-template-columns: repeat(2, 1fr);       

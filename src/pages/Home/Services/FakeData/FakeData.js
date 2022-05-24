@@ -131,18 +131,29 @@
 //       "details":
 //         "nAssociate Medical Director, Center for Bioengineering Innovation and Design, Department of Biomedical EngineeringnAssistant Professor of Medicine"
 //     },
-//     {
-//       "image": "https://www.pngall.com/wp-content/uploads/7/White-Tesla-Electric-Car-PNG-Free-Image.png",
-//       "year": 2012,
-//       "name": "White Tesla Electric Car",
-//       "price": 35,
-//       "kilo": 35,
-//       "type": "Auto",
-//       "fual": "Diesel",
-//       "discountPrice": 800,
-//       "details":
-//         "nAssociate Medical Director, Center for Bioengineering Innovation and Design, Department of Biomedical EngineeringnAssistant Professor of Medicine"
-//     },
+
+
+
+ 
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //     {
 //       "image": "https://purepng.com/public/uploads/large/purepng.com-blue-toyota-rav4-hybrid-carcarvehicletransporttoyota-961524645526athex.png",
 //       "year": 2019,
