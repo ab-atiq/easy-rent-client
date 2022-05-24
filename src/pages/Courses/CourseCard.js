@@ -18,7 +18,7 @@ export default function CourseCard({ course }) {
       .then((res) => res.json())
       .then((data) => setPaymentCourse(data[0]));
   }, [user?.email]);
-  console.log(paymentCourse);
+  // console.log(paymentCourse);
 
   return (
     <Grid item xs={12} sm={6} md={4}>

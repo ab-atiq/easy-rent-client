@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/find/rentSingleOrder/${user.email}`)
+        fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/rentSingleOrder/${user.email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);

@@ -17,7 +17,7 @@ const AddProduct = () => {
       formData.append('fual', data.fual);
       formData.append('discountPrice', data.discountPrice);
       formData.append('picture', img); 
-        fetch('http://localhost:5000/api/addService', {
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/addService', {
           method: 'POST',
           body: formData
     })

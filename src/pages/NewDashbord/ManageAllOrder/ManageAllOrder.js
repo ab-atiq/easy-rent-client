@@ -8,15 +8,15 @@ const ManageAllOrder = () => {
         // Final order
     const [finalallOrder, setFinalAllOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/find/rentAllCars')
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/find/rentAllCars')
         .then(res => res.json())
         .then(data => setFinalAllOrder(data));
 
     }, []);
-    console.log(finalallOrder)
+    // console.log(finalallOrder)
 
     const handleDeletefinal = id => {
-        fetch(`http://localhost:5000/api/find/rentCarsdelete/${id}`, {
+        fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/rentCarsdelete/${id}`, {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'}
         })

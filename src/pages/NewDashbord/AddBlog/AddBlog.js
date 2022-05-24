@@ -13,7 +13,7 @@ const AddBlog = () => {
       formData.append('image', data.image);
       formData.append('details', data.details);
       formData.append('picture', img);
-        fetch('http://localhost:5000/api/blog', {
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/blog', {
         method: 'POST',
         body: formData
     })

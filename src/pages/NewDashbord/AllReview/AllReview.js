@@ -14,7 +14,7 @@ const AllReview = () => {
   }, []);
 
   const handleDelete = id => {
-    fetch(`http://localhost:5000/api/delete/${id}`, {
+    fetch(`https://guarded-taiga-13015.herokuapp.com/api/delete/${id}`, {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'}
     })

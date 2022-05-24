@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const DashboardHome = () => {
     const [allOrder, setAllOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/api/find/singleCarRent')
+        fetch('https://guarded-taiga-13015.herokuapp.com/api/find/singleCarRent')
         .then(res => res.json())
         .then(data => setAllOrder(data.slice(0, 6)));
 
