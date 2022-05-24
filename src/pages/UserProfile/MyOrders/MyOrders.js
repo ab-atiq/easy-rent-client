@@ -22,7 +22,7 @@ const MyOrders = () => {
 
     // my orders canceling
     const handleDeleteFinal = id => {
-        fetch(`http://localhost:5000/api/find/rentCarsdelete/${id}`, {
+        fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/rentCarsdelete/${id}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         })
