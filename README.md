@@ -1,5 +1,6 @@
 # EASY RENT
-live website link: https://easyrent-85ae2.web.app/ <br/>
+Firebase live website link: https://easyrent-85ae2.web.app/ <br/>
+Vercel Live website link: https://easyrent-rosy.vercel.app/
 live server link: https://guarded-taiga-13015.herokuapp.com
 
 # How to run this poject
