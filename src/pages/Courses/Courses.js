@@ -10,7 +10,7 @@ const Courses = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/courses`)
+    fetch(`https://easy-rent-server.onrender.com/api/find/courses`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

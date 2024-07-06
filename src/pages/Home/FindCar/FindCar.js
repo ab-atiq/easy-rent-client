@@ -12,7 +12,7 @@ import CarSlide from "./CarSlide";
 const FindCar = () => {
   const [cars, setCars] = useState();
   useEffect(() => {
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findCar")
+    fetch("https://easy-rent-server.onrender.com/api/find/findCar")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);

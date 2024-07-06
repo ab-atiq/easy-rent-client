@@ -8,7 +8,7 @@ const Small = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/service")
+    fetch("https://easy-rent-server.onrender.com/api/service")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [services]);

@@ -3,19 +3,15 @@ import { useEffect, useState } from "react";
 import DetailsCar from "../DetailsCar/DetailsCar";
 import NurService from "../NurServices/NurService";
 
-
-
 const Pickup = () => {
-
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/service")
+    fetch("https://easy-rent-server.onrender.com/api/service")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [services]);
 
-  
   const filterService = services.filter((data) => data.type == "pickup");
 
   return (

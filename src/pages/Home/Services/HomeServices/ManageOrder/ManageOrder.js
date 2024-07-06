@@ -1,19 +1,18 @@
-
 import { Container, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../../../../hooks/useAuth";
 import ManageOrderCart from "./ManageOrderCart";
- 
+
 const ManageOrder = () => {
   const [services, setServices] = useState([]);
   const { user } = useAuth();
- 
+
   useEffect(() => {
-    fetch(`https://guarded-taiga-13015.herokuapp.com/api/orders/${user?.email}`)
+    fetch(`https://easy-rent-server.onrender.com/api/orders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [user?.email]);
- 
+
   return (
     <div>
       <Container>
@@ -42,5 +41,5 @@ const ManageOrder = () => {
     </div>
   );
 };
- 
+
 export default ManageOrder;

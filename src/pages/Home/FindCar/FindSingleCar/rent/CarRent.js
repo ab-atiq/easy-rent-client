@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography, Container, Button, Divider } from "@mui/material";
-import {  useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 const CarRent = () => {
   const { tranId } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [order, setOrder] = useState({});
   const {
     cus_name,
@@ -20,7 +20,7 @@ const CarRent = () => {
     val_id,
   } = order;
   useEffect(() => {
-    fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/orderCar/${tranId}`)
+    fetch(`https://easy-rent-server.onrender.com/api/find/orderCar/${tranId}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [tranId]);
@@ -30,18 +30,20 @@ const CarRent = () => {
       tran_id: tranId,
       val_id: val_id,
     };
-    axios.post(`https://guarded-taiga-13015.herokuapp.com/api/find/confirm`, data).then((res) => {
-      if (res.data === "Successful") {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Your Payment valided and order confirmed",
-          showConfirmButton: false,
-          timer: 2500,
-        });
-        navigate("/home");
-      }
-    });
+    axios
+      .post(`https://easy-rent-server.onrender.com/api/find/confirm`, data)
+      .then((res) => {
+        if (res.data === "Successful") {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your Payment valided and order confirmed",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+          navigate("/home");
+        }
+      });
   };
 
   return (

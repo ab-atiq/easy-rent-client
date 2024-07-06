@@ -8,7 +8,7 @@ const ManageOrderCart = ({ alldata, services, setServices }) => {
   const deleteOrder = async () => {
     try {
       const res = await axios.delete(
-        `https://guarded-taiga-13015.herokuapp.com/api/orders/delete/${_id}`
+        `https://easy-rent-server.onrender.com/api/orders/delete/${_id}`
       );
       console.log(res);
       if (res.data._id) {

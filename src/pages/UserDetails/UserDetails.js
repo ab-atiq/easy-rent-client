@@ -15,12 +15,12 @@ const UserDetails = () => {
   const { id } = useParams();
   const [singleCar, setSingleCar] = useState({});
   useEffect(() => {
-    fetch(`https://guarded-taiga-13015.herokuapp.com/api/car/${id}`)
+    fetch(`https://easy-rent-server.onrender.com/api/car/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleCar(data));
   }, [id]);
   const { user } = useAuth();
-  const { brandName, model, imgUrl, price} = singleCar || {};
+  const { brandName, model, imgUrl, price } = singleCar || {};
   const initialInfo = {
     name: user?.displayName,
     email: user?.email,
@@ -39,7 +39,7 @@ const UserDetails = () => {
     // data.email = user?.email;
     // data.imgURL = user?.photoURL;
     const rentCar = { ...initialInfo };
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/init", {
+    fetch("https://easy-rent-server.onrender.com/api/find/init", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -77,12 +77,31 @@ const UserDetails = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <form onSubmit={handleSubmit(onSubmit)}>
-            <TextField {...register("name")} type='text' id="outlined-basic" label="Name" variant="outlined" />
+              <TextField
+                {...register("name")}
+                type="text"
+                id="outlined-basic"
+                label="Name"
+                variant="outlined"
+              />
               <br />
-            <TextField {...register("number")} type='number' id="outlined-basic" label="Number" variant="outlined" />
+              <TextField
+                {...register("number")}
+                type="number"
+                id="outlined-basic"
+                label="Number"
+                variant="outlined"
+              />
               <br />
               {errors.exampleRequired && <span>This field is required</span>}
-              <Button sx={{marginBottom:'10px'}} type="submit" variant="contained" color="primary" >Pay BDT: {price}</Button>
+              <Button
+                sx={{ marginBottom: "10px" }}
+                type="submit"
+                variant="contained"
+                color="primary"
+              >
+                Pay BDT: {price}
+              </Button>
             </form>
           </Grid>
           <Button variant="contained" onClick={() => navigate(-1)}>

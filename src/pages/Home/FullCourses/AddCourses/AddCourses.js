@@ -1,59 +1,65 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Typography } from '@mui/material';
-import './AddCourses.css';
+import axios from "axios";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Typography } from "@mui/material";
+import "./AddCourses.css";
 
 const AddCourses = () => {
-    const [Courses, setCourses] = useState([])
-    const { register, handleSubmit } = useForm();
+  const [Courses, setCourses] = useState([]);
+  const { register, handleSubmit } = useForm();
 
-    const onSubmit = (data) => {
-        return (dispatch) => {
-            axios.post('https://guarded-taiga-13015.herokuapp.com/courseAdd', data)
-                .then(res => {
-                    dispatch(setCourses(res.data))
-                })
-                .catch(error => {
-                    console.log(error.message)
-                })
-        }
-    }
-    return (
-        <div>
+  const onSubmit = (data) => {
+    return (dispatch) => {
+      axios
+        .post("https://easy-rent-server.onrender.com/courseAdd", data)
+        .then((res) => {
+          dispatch(setCourses(res.data));
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    };
+  };
+  return (
+    <div>
+      <div className="mx-auto">
+        <Typography
+          variant="h4"
+          style={{
+            textAlign: "center",
+            fontSize: "70px",
+            fontStyle: "italic",
+            margin: "30px auto",
+            color: "#E78E52",
+          }}
+        >
+          Add Course Here
+        </Typography>
 
-            <div className='mx-auto'>
+        <form onSubmit={handleSubmit(onSubmit)} className="input-area">
+          <input
+            {...register("title", { required: true })}
+            required
+            placeholder="Enter your name"
+          />
 
-                <Typography variant='h4' style={{ textAlign: "center", fontSize: '70px', fontStyle: 'italic', margin: '30px auto', color: "#E78E52" }}>Add Course Here</Typography>
+          <textarea
+            {...register("description", { required: true })}
+            required
+            placeholder="Write description"
+            className="mx-auto"
+          />
 
-                <form onSubmit={handleSubmit(onSubmit)} className='input-area'>
-                    <input
-                        {...register("title",
-                            { required: true })}
-                        required
-                        placeholder='Enter your name'
-                    />
+          <input
+            {...register("youtube_video_link", { required: true })}
+            required
+            placeholder="enter img link"
+          />
 
-                    <textarea
-                        {...register("description",
-                            { required: true })}
-                        required
-                        placeholder='Write description'
-                        className='mx-auto'
-
-                    />
-
-                    <input
-                        {...register("youtube_video_link",
-                            { required: true })}
-                        required
-                        placeholder='enter img link'
-                    />
-
-                    <input type="submit" className="submit" />
-                </form>
-            </div>
-        </div>
-    );
-}
+          <input type="submit" className="submit" />
+        </form>
+      </div>
+    </div>
+  );
+};
 export default AddCourses;

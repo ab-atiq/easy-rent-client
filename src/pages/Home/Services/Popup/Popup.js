@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  TextField,
-  Button,
- 
-} from "@mui/material";
+import { Box, Container, Grid, TextField, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Popup.css";
@@ -20,7 +13,7 @@ const Popup = () => {
   const navigate = useNavigate();
   // console.log(orderData);
   useEffect(() => {
-    fetch(`https://guarded-taiga-13015.herokuapp.com/api/service/${BookingId}`)
+    fetch(`https://easy-rent-server.onrender.com/api/service/${BookingId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [BookingId]);
@@ -68,7 +61,7 @@ const Popup = () => {
 
   const rentNow = () => {
     const rentCar = { ...initialInfo };
-    fetch(`https://guarded-taiga-13015.herokuapp.com/api/find/init`, {
+    fetch(`https://easy-rent-server.onrender.com/api/find/init`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -160,8 +153,8 @@ const Popup = () => {
                     value="Continew with pay"
                   /> */}
                   <Button onClick={rentNow} variant="contained">
-                  Continue with pay
-                </Button>
+                    Continue with pay
+                  </Button>
                 </Box>
               </Box>
             </form>

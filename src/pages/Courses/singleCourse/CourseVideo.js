@@ -19,7 +19,7 @@ const CourseVideo = ({ courseId }) => {
 
   useEffect(() => {
     fetch(
-      `https://guarded-taiga-13015.herokuapp.com/api/find/singleCourse/${courseId}`
+      `https://easy-rent-server.onrender.com/api/find/singleCourse/${courseId}`
     )
       .then((res) => res.json())
       .then((data) => setData(data));

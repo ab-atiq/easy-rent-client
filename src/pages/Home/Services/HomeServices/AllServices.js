@@ -9,7 +9,7 @@ const AllServices = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/service_main")
+    fetch("https://easy-rent-server.onrender.com/api/service_main")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [services]);

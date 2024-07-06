@@ -23,7 +23,7 @@ const ReviewSingleCar = ({ carName }) => {
 
   const handleReviewSubmit = (e) => {
     const reviewAdd = { ...review, star: star };
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/carReview", {
+    fetch("https://easy-rent-server.onrender.com/api/find/carReview", {
       method: "POST",
       headers: {
         "content-type": "application/json",

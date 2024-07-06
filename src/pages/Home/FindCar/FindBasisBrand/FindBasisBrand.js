@@ -12,7 +12,7 @@ const FindBasisBrand = () => {
   const { carName } = useParams();
 
   useEffect(() => {
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findBrand")
+    fetch("https://easy-rent-server.onrender.com/api/find/findBrand")
       .then((res) => res.json())
       .then((data) => {
         const filterCar = data.filter((data) => data.name.includes(carName));
@@ -21,7 +21,7 @@ const FindBasisBrand = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://guarded-taiga-13015.herokuapp.com/api/find/findDataBrand")
+    fetch("https://easy-rent-server.onrender.com/api/find/findDataBrand")
       .then((res) => res.json())
       .then((data) => {
         const filterData = data.filter((data) => data.brand.includes(carName));
