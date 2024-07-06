@@ -15,6 +15,7 @@ git clone https://github.com/ab-atiq/easy-rent-client.git
 Step-2:
 
 ```sh
+cd easy-rent-client
 npm install
 ```
 

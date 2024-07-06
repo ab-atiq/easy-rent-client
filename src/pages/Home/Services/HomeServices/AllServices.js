@@ -12,7 +12,7 @@ const AllServices = () => {
     fetch("https://easy-rent-server.onrender.com/api/service_main")
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, [services]);
+  }, []);
 
   return (
     <div>
