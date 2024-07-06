@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./Popup.css";
 import axios from "axios";
 import useAuth from "../../../../hooks/useAuth";
+import NurFooter from "../../../Shared/Footer/NurFooter";
+import Appbar from "../../../Shared/Appbar/Appbar";
 
 const Popup = () => {
   const { BookingId } = useParams();
@@ -77,6 +79,7 @@ const Popup = () => {
 
   return (
     <div className="design_popup">
+      <Appbar/>
       <Container>
         <Grid container spacing={2} sx={{ mt: 8 }}>
           <Grid className="text_center" item sx={12} sm={6} md={6} lg={6}>
@@ -161,6 +164,7 @@ const Popup = () => {
           </Grid>
         </Grid>
       </Container>
+      <NurFooter/>
     </div>
   );
 };

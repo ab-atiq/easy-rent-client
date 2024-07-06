@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './AboutUs.css';
-import Footer from '../../Shared/Footer/Footer';
+import NurFooter from '../../Shared/Footer/NurFooter';
 
 
 const AboutUs = () => {
@@ -118,7 +118,7 @@ const AboutUs = () => {
 
         </Grid>
       </Container >
-      <Footer />
+      <NurFooter />
     </>
   );
 };

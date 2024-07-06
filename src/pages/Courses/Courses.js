@@ -2,8 +2,8 @@ import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import Appbar from "../Shared/Appbar/Appbar";
-import Footer from "../Shared/Footer/Footer";
 import CourseCard from "./CourseCard";
+import NurFooter from "../Shared/Footer/NurFooter";
 
 const Courses = () => {
   const { user } = useAuth();
@@ -30,7 +30,7 @@ const Courses = () => {
           ))}
         </Grid>
       </Container>
-      <Footer />
+      <NurFooter />
     </div>
   );
 };

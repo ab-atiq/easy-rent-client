@@ -1,13 +1,15 @@
-.blogbody{
-    margin: 100px 0;
+.blogbody {
+  margin: 10px 0;
 }
 .bolgcartbody {
-    margin-bottom: 100px;
+  width: 400px;
+  height: 500px;
+  margin-bottom: 10px;
 }
-.bolgcartbody p{
-    margin-top: 10px;
+.bolgcartbody p {
+  margin-top: 10px;
 }
 
-.blog-img img{
-    width: 100%;
+.blog-img img {
+  width: 100%;
 }

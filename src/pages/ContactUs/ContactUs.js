@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import React from "react";
 import Appbar from "../Shared/Appbar/Appbar";
 import "./ContactUs.css";
+import NurFooter from "../Shared/Footer/NurFooter";
 
 const ContactUs = () => {
   const sendEmail = (e) => {
@@ -68,6 +69,7 @@ const ContactUs = () => {
           </div>
         </form>
       </div>
+      <NurFooter/>
     </div>
   );
 };

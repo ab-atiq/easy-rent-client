@@ -24,3 +24,7 @@ Step-3:
 ```sh
 npm start
 ```
+
+# Check chat application
+Username: abcd
+Password: abcd

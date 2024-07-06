@@ -16,7 +16,7 @@ const NurFooter = () => {
           <Grid item xs={12} sm={12} md={6} lg={3}>
             <div className='first-div'>
               <img src={logo} alt="" />
-              <p>©2022 Sworkit® by Nexercise.
+              <p>©2022 by EasyRent.
                 Terms of Service I Privacy Policy</p>
             </div>
           </Grid>
