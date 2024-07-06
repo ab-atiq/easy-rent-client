@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "easy-rent-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -69,5 +69,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/ab-atiq/easy-rent-client",
+  "author": "atiqur rahman <abulbasharatiqur@gmail.com>",
+  "license": "MIT"
 }

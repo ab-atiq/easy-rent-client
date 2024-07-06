@@ -9,7 +9,7 @@ const Large = () => {
     fetch("https://easy-rent-server.onrender.com/api/service")
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, [services]);
+  }, []);
 
   const filterService = services?.filter((data) => data.price == "45");
 

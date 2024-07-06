@@ -9,7 +9,7 @@ const Products = () => {
     fetch("https://easy-rent-server.onrender.com/api/service")
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, [services]);
+  }, []);
 
   const handleDelete = (id) => {
     fetch(`https://easy-rent-server.onrender.com/api/deleteservices/${id}`, {

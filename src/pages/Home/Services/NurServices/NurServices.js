@@ -12,7 +12,7 @@ const NurServices = () => {
     fetch("https://easy-rent-server.onrender.com/api/service")
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, [services]);
+  }, []);
 
   return (
     <div>
